@@ -4,6 +4,7 @@ var less = require('gulp-less');
 var colors = require('colors');
 var minifyCSS = require('gulp-minify-css');
 var watch = require('gulp-watch');
+var rename = require('gulp-rename');
 
 var paths = {
   less: ['./src/**/*.less', './src/*.less'],
@@ -29,10 +30,11 @@ gulp.task('less', function() {
 
 gulp.task('build', function() {
 	console.log('[LESS] recompiling'.yellow);
-  gulp.src(paths.distCss)
+  gulp.src(paths.appLess)
     .pipe(less())
     .pipe(minifyCSS())
-    .pipe(gulp.dest(paths.css));
+    .pipe(rename('rise.min.css'))
+    .pipe(gulp.dest(paths.distCss));
   console.log('[CSS] minifying'.yellow);
 
   console.log('[COPY] copying over fonts'.yellow);
