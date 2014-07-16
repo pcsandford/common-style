@@ -1,26 +1,29 @@
 var gulp = require('gulp');
 var connect = require('gulp-connect');
 var less = require('gulp-less');
+var sass = require('gulp-sass');
 var colors = require('colors');
 var minifyCSS = require('gulp-minify-css');
 var watch = require('gulp-watch');
 var rename = require('gulp-rename');
 
 var paths = {
-  less: ['./src/**/*.less', './src/*.less'],
-  appLess: './src/app.less',
-  css: './www',
+  sass: ['./src/**/*.scss', './src/*.scss'],
+  appSass: './src/app.scss',
+  css: './www/css',
   dist: './dist',
   distfonts: './dist/fonts',
   distCss: './dist/css',
-  fonts: './bower-components/bootstrap/fonts/*.*'
+  fonts: './bower-components/bootstrap-sass-official/assets/fonts/bootstrap/*.*'
 };
 
 
-gulp.task('less', function() {
-	console.log('[LESS] recompiling'.yellow);
-  gulp.src(paths.appLess)
-    .pipe(less())
+gulp.task('sass', function() {
+  console.log('[SASS] recompiling'.yellow);
+  gulp.src(paths.appSass)
+    .pipe(sass({
+      errLogToConsole: true
+    }))
     .pipe(minifyCSS())
     .pipe(gulp.dest(paths.css))
     .pipe(connect.reload());
@@ -29,9 +32,11 @@ gulp.task('less', function() {
 
 
 gulp.task('build', function() {
-	console.log('[LESS] recompiling'.yellow);
-  gulp.src(paths.appLess)
-    .pipe(less())
+	console.log('[SASS] recompiling'.yellow);
+  gulp.src(paths.appSass)
+    .pipe(sass({
+      errLogToConsole: true
+    }))
     .pipe(minifyCSS())
     .pipe(rename('rise.min.css'))
     .pipe(gulp.dest(paths.distCss));
@@ -45,10 +50,10 @@ gulp.task('build', function() {
 
 gulp.task('dev', function() {
 	// Compile LESS on start once
-	gulp.run('less');
+	gulp.run('sass');
 	// Watch Less files for changes
-	gulp.watch(paths.less, ['less']);
-  console.log('[LESS] Watching for changes in less files'.yellow.inverse);
+	gulp.watch(paths.sass, ['sass']);
+  console.log('[SASS] Watching for changes in SASS files'.yellow.inverse);
   // Start a server
   connect.server({
     root: 'www',
@@ -67,8 +72,8 @@ gulp.task('dev', function() {
 
 gulp.task('default', [], function() {
   console.log('***********************'.yellow);
-  console.log('  gulp dev: start a server in the www folder and watch less files'.yellow);
-  console.log('  gulp less: compile less and minify css'.yellow);
+  console.log('  gulp dev: start a server in the www folder and watch LESS files'.yellow);
+  console.log('  gulp sass: compile SASS and minify CSS'.yellow);
   console.log('  gulp build: build a distribution version'.yellow);
   console.log('***********************'.yellow);
   return true;

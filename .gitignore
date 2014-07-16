@@ -13,3 +13,5 @@ node_modules
 bower-components
 build
 dist
+www/css
+www/fonts
