@@ -1,0 +1,82 @@
+$brand-primary:         #2d60ad;
+$brand-primary2:        #5cb85c;
+$brand-bg:              #f4f4f4;
+$brand-success:         #45b864;
+$brand-success2:        #5cb85c;
+
+$font-size-h1:            floor(($font-size-base * 2.15)); // ~30px
+$font-size-h2:            floor(($font-size-base * 1.72)); // ~24px
+$font-size-h3:            ceil(($font-size-base * 1.25)); // ~18px
+
+$border-radius-base:        0px;
+$border-radius-base2:       4px;
+
+$btn-default-color:              #777;
+$btn-default-bg:                 $brand-bg;
+
+$btn-default-border-disabled:    $brand-bg;
+
+$btn-primary-border:             $btn-primary-bg;
+
+$btn-success-border:             $btn-success-bg;
+
+$input-border-radius:            $border-radius-base2;
+
+$dropdown-header-color:          $gray-dark;
+
+$navbar-border-radius:           $border-radius-base2;
+
+$navbar-default-bg:                #fff;
+$navbar-default-border:            #e5e5e5;
+$navbar-default-dropdown-link-color:      #383838;
+
+$navbar-default-link-hover-color:          #fff;
+$navbar-default-li-link-hover-color:       #2d60ad;
+$navbar-default-link-hover-bg:             $brand-bg;
+$navbar-default-link-active-color:         #fff;
+$navbar-default-link-active-bg:            #2d60ad;
+$navbar-default-link-border-color:         #e5e5e5;
+
+$navbar-inverse-link-active-bg:             #080808;
+$navbar-inverse-link-active-border-color:   #e5e5e5;
+
+$nav-pills-border-radius:                   $border-radius-base2;
+
+$label-primary-color-hover:   #3071a9;
+
+$label-success-bg:            $brand-success2;
+$label-success-color-hover:      #449d44;
+
+$modal-backdrop-bg:           #fff;
+
+$modal-backdrop-opacity:      .7;
+
+$alert-border-radius:         4px;
+
+$alert-warning-text:          #333;
+
+$alert-danger-text:           #333;
+$progress-bar-success-bg:     $brand-success2;
+$list-group-border-radius:     $border-radius-base2;
+$list-group-active-bg:          #428bca;
+$list-group-active-text-color:  #e1edf7;
+$panel-body-bg:               $brand-bg;
+$panel-border-radius:         $border-radius-base2;
+$panel-default-heading-bg:    #fff;
+$panel-default-font-weight:   700;
+$panel-primary-border:        #428bca;
+$panel-primary-heading-bg:    #428bca;
+$thumbnail-border-radius:     $border-radius-base2;
+$hr-border:                   #cbcbcb;
+
+$btn-default-border-disabled:    $brand-bg;
+
+$border-radius-base2:       4px;
+
+
+$label-primary-color-hover:   #3071a9;
+$label-success-color-hover:   #449d44;
+
+$panel-body-bg:		$brand-bg;
+
+$panel-default-font-weight:   700;
