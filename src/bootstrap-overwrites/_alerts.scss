@@ -1,6 +1,3 @@
-// Alternate styles
-//
-// Generate contextual modifier classes for colorizing the alert.
 .alert-warning {
   @include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text, #66512c);
 }

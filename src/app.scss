@@ -1,11 +1,16 @@
-// Variables
+/* Variables
+   ========================================================================== */
 @import "bootstrap-variables";
 @import "variables";
 
-// Bootstrap Core
+
+/* Bootstrap Core
+   ========================================================================== */
 @import "../bower-components/bootstrap-sass-official/assets/stylesheets/bootstrap";
 
-// Bootstrap Overwrites
+
+/* Bootstrap Overwrites
+   ========================================================================== */
 @import "bootstrap-overwrites/mixins";
 @import "bootstrap-overwrites/alerts";
 @import "bootstrap-overwrites/buttons";
@@ -18,3 +23,21 @@
 @import "bootstrap-overwrites/panels";
 @import "bootstrap-overwrites/responsive-utilities";
 @import "bootstrap-overwrites/tooltip";
+
+
+/* Core
+   ========================================================================== */
+@import "core/global";
+@import "core/glyphicons";
+@import "core/media";
+@import "core/print";
+
+
+/* UI-Components
+   ========================================================================== */
+@import "ui-components/font-picker";
+
+
+/* Sections/Views
+   ========================================================================== */
+@import "sections/widgets";
