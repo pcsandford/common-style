@@ -32,7 +32,7 @@ gulp.task('sass', function() {
 
 
 gulp.task('build', function() {
-	console.log('[SASS] recompiling'.yellow);
+  console.log('[SASS] recompiling'.yellow);
   gulp.src(paths.appSass)
     .pipe(sass({
       errLogToConsole: true
@@ -44,15 +44,15 @@ gulp.task('build', function() {
 
   console.log('[COPY] copying over fonts'.yellow);
   gulp.src(paths.fonts)
- 		.pipe(gulp.dest(paths.distfonts));
+    .pipe(gulp.dest(paths.distfonts));
 });
 
 
 gulp.task('dev', function() {
-	// Compile LESS on start once
-	gulp.run('sass');
-	// Watch Less files for changes
-	gulp.watch(paths.sass, ['sass']);
+  // Compile LESS on start once
+  gulp.run('sass');
+  // Watch Less files for changes
+  gulp.watch(paths.sass, ['sass']);
   console.log('[SASS] Watching for changes in SASS files'.yellow.inverse);
   // Start a server
   connect.server({
@@ -64,7 +64,7 @@ gulp.task('dev', function() {
   // Watch HTML files for changes
   console.log('[CONNECT] Watching HTML files for live-reload'.blue);
   watch({
-    glob: ['./www/**/*.html']
+    glob: ['./www/**/*.html', './www/**/*.js']
   })
     .pipe(connect.reload());
 });
