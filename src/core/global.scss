@@ -842,6 +842,8 @@ ul.social {
   background-color: $rise-blue;
   font-weight: bold;
 
+  .log_in { color: #fff; }
+
   .glyphicons::before {
     color: #fff;
   }
@@ -856,6 +858,8 @@ ul.social {
 /* Sign In button that is part of a navbar. */
 .navbar-default .navbar-nav .sign-in {
   @extend .btn-sign-in;
+
+  .glyphicons:before { color: #fff !important; }
 }
 
 /* Sign In button that is part of a modal. */
