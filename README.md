@@ -28,6 +28,12 @@ Run `$ gulp` to see a list of available tasks and `$ gulp dev` to watch for and 
 To build run `$gulp build`. This will generate a `dist` folder with `css` and `font` folders.
 
 
+## Usage
+Install the style-guide using bower `$ bower install rise-vision-style-guide`
+
+The `dist` folder contains the compiled CSS `css/rise.min.css` and all required fonts.
+
+
 ## Documentation
 If you have any questions or problems please don't hesitate to join our lively and responsive community at http://community.risevision.com.
 
