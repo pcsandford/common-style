@@ -6,7 +6,8 @@ Rise Vision Style Guide
 *Use of this software is governed by the GPLv3 license (available in the LICENSE file).*
 
 ## Introduction
-Common CSS styling to be shared across Rise Vision apps, widgets and components.
+Common CSS styling to be shared across Rise Vision apps, widgets and components. The style guide is plublished as github pages is available as reference documentation for all Rise Vision UI-components:
+**http://rise-vision.github.io/style-guide**
 
 
 ## Installation
