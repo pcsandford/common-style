@@ -33,6 +33,11 @@ Install the style-guide using bower `$ bower install rise-vision-style-guide`
 
 The `dist` folder contains the compiled CSS `css/rise.min.css` and all required fonts.
 
+## Github Pages
+The `www` folder is deployed as github pages. To do so, run:
+
+`git subtree push --prefix www origin gh-pages`
+
 
 ## Documentation
 If you have any questions or problems please don't hesitate to join our lively and responsive community at http://community.risevision.com.
