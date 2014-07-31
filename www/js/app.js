@@ -10,7 +10,9 @@ angular.module('styleGuideApp', [
   'styleGuideApp.controllers',
   'styleGuideApp.directives',
   'commonHeader',
-  'risevision.widget.common.financial'
+  'risevision.widget.common.financial',
+  'risevision.widget.common.tooltip',
+  'risevision.widget.common.scroll-setting'
 ])
   .config(function(hljsServiceProvider) {
     hljsServiceProvider.setOptions({
