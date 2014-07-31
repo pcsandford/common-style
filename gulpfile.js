@@ -6,13 +6,14 @@ var colors = require('colors');
 var minifyCSS = require('gulp-minify-css');
 var watch = require('gulp-watch');
 var rename = require('gulp-rename');
+var mainBowerFiles = require('main-bower-files');
 
 var paths = {
   sass: ['./src/**/*.scss', './src/*.scss'],
   appSass: './src/app.scss',
   css: './www/css',
   dist: './dist',
-  distfonts: './dist/fonts',
+  distFonts: './dist/fonts',
   distCss: './dist/css',
   fonts: './bower-components/bootstrap-sass-official/assets/fonts/bootstrap/*.*'
 };
@@ -31,6 +32,14 @@ gulp.task('sass', function() {
 });
 
 
+gulp.task('pickFromBower', function() {
+  return gulp.src(mainBowerFiles(), {
+      base: './bower-components',
+    })
+    .pipe(gulp.dest('./www/bower-components'));
+});
+
+
 gulp.task('build', function() {
   console.log('[SASS] recompiling'.yellow);
   gulp.src(paths.appSass)
@@ -44,7 +53,7 @@ gulp.task('build', function() {
 
   console.log('[COPY] copying over fonts'.yellow);
   gulp.src(paths.fonts)
-    .pipe(gulp.dest(paths.distfonts));
+    .pipe(gulp.dest(paths.distFonts));
 });
 
 

@@ -10,6 +10,6 @@ Thumbs.db
 TODO.md
 .sass-cache
 node_modules
-bower-components
+bower_components
 build
 www/fonts
