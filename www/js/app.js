@@ -10,9 +10,14 @@ angular.module('styleGuideApp', [
   'styleGuideApp.controllers',
   'styleGuideApp.directives',
   'commonHeader',
+  'risevision.widget.common.alignment',
+  'risevision.widget.common.color-picker',
   'risevision.widget.common.financial',
   'risevision.widget.common.tooltip',
-  'risevision.widget.common.scroll-setting'
+  'risevision.widget.common.font-setting',
+  'risevision.widget.common.scroll-setting',
+  'risevision.widget.common.column-setting',
+  'risevision.widget.common.table-setting'
 ])
   .config(function(hljsServiceProvider) {
     hljsServiceProvider.setOptions({
