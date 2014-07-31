@@ -72,7 +72,13 @@ angular.module('styleGuideApp.controllers')
       {
         title: 'Table Setting',
         template: 'bower_components/widget-settings-ui-components/demos/table-setting-demo.html'
+      },
+      {
+        title: 'Typeahead Multiselect',
+        template: 'components/bootstrap-based/ui-select2.html'
       }];
+
+      $scope.things = ['Spectacles', 'Giraffe', 'Turtle', 'Shark', 'Lamp', 'Chocolate', 'Beef', 'Drawer', 'Brocolli', 'Tomato', 'Plate', 'Zebra'];
 
       $scope.color = "transparent";
       $scope.column = {

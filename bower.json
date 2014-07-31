@@ -14,11 +14,14 @@
   "dependencies": {
     "bootstrap-sass-official": "~3.2.0",
     "component-financial-selector": "git@github.com:Rise-Vision/component-financial-selector.git",
-    "widget-settings-ui-components": "git://github.com/Rise-Vision/widget-settings-ui-components"
+    "widget-settings-ui-components": "git://github.com/Rise-Vision/widget-settings-ui-components",
+    "angular-ui-select2": "~0.0.5"
   },
   "overrides": {
     "bootstrap-sass-official": {
-      "main": ["assets/javascripts/bootstrap.js"]
+      "main": [
+        "assets/javascripts/bootstrap.js"
+      ]
     },
     "jquery": {
       "main": {
@@ -39,7 +42,10 @@
       }
     },
     "component-financial-selector": {
-      "main": ["demos/financial-selector-demo.html", "dist/js/financial-selector.js"]
+      "main": [
+        "demos/financial-selector-demo.html",
+        "dist/js/financial-selector.js"
+      ]
     },
     "widget-settings-ui-components": {
       "main": [
