@@ -1,5 +1,5 @@
 <!-- Common Header Navbar -->
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
+<nav class="navbar navbar-default navbar-static-top" ng-class="{'double-margin': subCompanySelected}" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" ng-click="navCollapsed = !navCollapsed">
@@ -20,7 +20,7 @@
 					<a ng-href="{{opt.link}}" target="{{opt.target}}">{{opt.title}}</a>
 				</li>
 				<li class="dropdown">
-					<a href="" class="dropdown-toggle">
+					<a href="" class="dropdown-toggle remove-radius">
 						Help
 					</a>
 					<ul class="dropdown-menu">
@@ -43,7 +43,7 @@
 		<!-- If User Authenticated -->
 		<ul class="nav navbar-nav navbar-right actions-nav" ng-show="authStatus == 1">
 			<!-- Notifications -->
-			<li class="dropdown">
+			<li class="dropdown" ng-if="companyLoaded">
 				<a href="" class="dropdown-toggle">
 					<i class="glyphicons bell"></i>
 					<span class="label label-danger">{{messages.length}}</span>
@@ -57,7 +57,7 @@
 				</ul>
 			</li>
 			<!-- Shopping Cart -->
-			<li class="shopping-cart" ng-init="updateCartIcon()" ng-show="isPurchaser">
+			<li class="shopping-cart" ng-init="updateCartIcon()" ng-show="companyLoaded">
 				<a href="">
 					<i class="glyphicons shopping_cart"></i>
 					<span id="cartBadge" class="label label-primary">7</span>
@@ -130,41 +130,43 @@
 						Current Company
 					</li>
 					<li class="dropdown-header">
-						<i class="glyphicons home"></i>
-						<i class="glyphicons warning_sign glyphicon-danger"></i>
+						<!-- home -->
+						<i ng-if="!subCompanySelected" class="glyphicons home"></i>
+						<!-- warning -->
+						<i ng-if="subCompanySelected" class="glyphicons warning_sign glyphicon-danger"></i>
 						{{selectedCompanyName}}
-						<div class="danger">Your Current Company is not the<br> same Company your User Account is<br> associated with.</div>
+						<div ng-if="subCompanySelected" class="danger">This is a Sub-Company of your Company.</div>
 					</li>
-					<li class="divider"></li>
-					<li ng-show="canChangeCompany">
+					<li ng-if="subCompanySelected" class="divider"></li>
+					<li ng-if="subCompanySelected">
 						<a href="" ng-click="resetCompany()">
 							<i class="glyphicons home"></i>
 							<span class="item-name">Switch To My Company</span>
 						</a>
 					</li>
-					<li class="divider" ng-show="canChangeCompany"></li>
-					<li ng-show="canChangeCompany">
+					<li class="divider"></li>
+					<li>
 						<a href="" ng-click="switchCompany()">
 							<i class="glyphicons new_window"></i>
 							<span class="item-name">Select Sub-Company</span>
 						</a>
 					</li>
-					<li class="divider" ng-show="canChangeCompany"></li>
-					<li>
+					<li ng-if="isAdmin" class="divider"></li>
+					<li ng-if="isAdmin">
 						<a href="" data-toggle="modal" data-target="#sub-company-modal" ng-click="addSubCompany()">
 							<i class="glyphicons plus"></i>
 							<span class="item-name">Add Sub-Company</span>
 						</a>
 					</li>
-					<li class="divider"></li>
-					<li>
+					<li ng-if="isAdmin" class="divider"></li>
+					<li ng-if="isAdmin">
 						<a href="" ng-click="companySettings()">
 							<i class="glyphicons cogwheels"></i>
 							<span class="item-name">Company Settings</span>
 						</a>
 					</li>
-					<li class="divider"></li>
-					<li>
+					<li ng-if="isAdmin" class="divider"></li>
+					<li ng-if="isAdmin">
 						<a href="" data-toggle="modal" data-target="#company-users-modal">
 							<i class="glyphicons group"></i>
 							<span class="item-name">Company Users</span>
@@ -222,6 +224,9 @@
 		<ul class="nav navbar-nav navbar-right" ng-show="authStatus == -1">
 			<li>Loading...</li>
 		</ul>
+	</div>
+	<div ng-if="subCompanySelected" class="sub-company-alert">
+		You’re in a Sub-Company of your Company. Current Company - {{selectedCompanyName}}
 	</div>
 </nav>
 <!-- END Common Header Navbar -->

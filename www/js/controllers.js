@@ -9,11 +9,11 @@ angular.module('styleGuideApp.controllers')
   .controller('CommonHeaderCtrl', ['$scope',
     function($scope) {
       $scope.authStatus = 1;
-      $scope.isPurchaser = true;
+      $scope.isAdmin = true;
       // Company
       $scope.companyLoaded = true;
-      $scope.canChangeCompany = true;
       $scope.selectedCompanyName = 'Rise Vision';
+      $scope.subCompanySelected = true;
       // User
       $scope.userProfileName = 'Alfredo Sanchez';
       $scope.userProfileEmail = 'alfredo.sanchez90@example.com';
