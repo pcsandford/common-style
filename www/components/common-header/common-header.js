@@ -10,10 +10,10 @@ angular.module('commonHeader', [
         templateUrl: 'components/common-header/common-header.html',
         scope: {
           authStatus: '=',
-          isPurchaser: '=',
           companyLoaded: '=',
+          isAdmin: '=',
+          subCompanySelected: '=',
           selectedCompanyName: '=',
-          canChangeCompany: '=',
           userProfilePicture: '=',
           userProfileName: '=',
           userProfileEmail: '=',

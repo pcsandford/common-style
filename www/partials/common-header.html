@@ -15,9 +15,9 @@
 <common-header
   nav-options="navOptions"
   auth-status="0"
-  is-purchaser="false"
+  is-admin="true"
+  sub-company-selected="true"
   company-loaded="true"
-  can-change-company="true"
   selected-company-name="'Rise Vision'"
   user-profile-picture="'http://api.randomuser.me/portraits/med/men/33.jpg'"
   user-profile-name="'Alfredo Sanchez'"
@@ -76,10 +76,10 @@ $scope.messages = [
           <input type="radio" name="inlineRadioOptions" value="1" ng-model="authStatus"> 1
         </label>
       </div>
-      <!-- Is Purchaser -->
+      <!-- Is Admin -->
       <div class="checkbox">
         <label>
-          <input type="checkbox" ng-model="isPurchaser"> Is Purchaser
+          <input type="checkbox" ng-model="isAdmin"> Is Administrator
         </label>
       </div>
       <!-- Company Loaded -->
@@ -88,10 +88,10 @@ $scope.messages = [
           <input type="checkbox" ng-model="companyLoaded"> Company Loaded
         </label>
       </div>
-      <!-- Can Change Company -->
+      <!-- Sub Company Selected -->
       <div class="checkbox">
         <label>
-          <input type="checkbox" ng-model="canChangeCompany"> Can Change Company
+          <input type="checkbox" ng-model="subCompanySelected"> Sub Company Selected
         </label>
       </div>
       <!-- Selected Company Name -->
@@ -113,9 +113,9 @@ $scope.messages = [
     <common-header
       navOptions="navOptions"
       auth-status="authStatus"
-      is-purchaser="isPurchaser"
+      is-admin="isAdmin"
+      sub-company-selected="subCompanySelected"
       company-loaded="companyLoaded"
-      can-change-company="canChangeCompany"
       selected-company-name="selectedCompanyName"
       user-profile-name="userProfileName"
       user-profile-email="userProfileEmail"
