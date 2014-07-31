@@ -1,5 +1,5 @@
 {
-  "name": "rise-vision-style-guide",
+  "name": "rv-style-guide",
   "version": "0.2.0",
   "license": "MIT",
   "private": false,
@@ -13,14 +13,12 @@
   ],
   "dependencies": {
     "bootstrap-sass-official": "~3.2.0",
-    "component-financial-selector": "git@github.com:Rise-Vision/component-financial-selector.git"
+    "component-financial-selector": "git@github.com:Rise-Vision/component-financial-selector.git",
+    "widget-settings-ui-components": "git://github.com/Rise-Vision/widget-settings-ui-components"
   },
   "overrides": {
     "bootstrap-sass-official": {
-      "main": {
-        "development": null,
-        "production": null
-      }
+      "main": ["assets/javascripts/bootstrap.js"]
     },
     "jquery": {
       "main": {
@@ -41,7 +39,10 @@
       }
     },
     "component-financial-selector": {
-      "main": ["dist/js/financial-selector.js", "dist/css/all.min.css"]
+      "main": ["demos/financial-selector-demo.html", "dist/js/financial-selector.js"]
+    },
+    "widget-settings-ui-components": {
+      "main": ["demos/*.html", "dist/js/angular/tooltip.js", "dist/js/angular/scroll-setting.js"]
     }
   }
 }

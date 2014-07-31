@@ -15,7 +15,7 @@ var paths = {
   dist: './dist',
   distFonts: './dist/fonts',
   distCss: './dist/css',
-  fonts: './bower-components/bootstrap-sass-official/assets/fonts/bootstrap/*.*'
+  fonts: './bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*.*'
 };
 
 
@@ -34,9 +34,9 @@ gulp.task('sass', function() {
 
 gulp.task('pickFromBower', function() {
   return gulp.src(mainBowerFiles(), {
-      base: './bower-components',
+      base: './bower_components',
     })
-    .pipe(gulp.dest('./www/bower-components'));
+    .pipe(gulp.dest('./www/bower_components'));
 });
 
 

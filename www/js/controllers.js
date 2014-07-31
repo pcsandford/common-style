@@ -48,11 +48,21 @@ angular.module('styleGuideApp.controllers')
       $scope.uiComponents = [{
         title: 'Action-bar',
         template: 'components/bootstrap-based/action-bar.html'
-      }, {
+      },
+      {
         title: 'Financial Selector',
-        template: 'components/financial-selector.html'
+        template: 'bower_components/component-financial-selector/demos/financial-selector-demo.html'
+      },
+      {
+        title: 'Tooltip',
+        template: 'bower_components/widget-settings-ui-components/demos/tooltip-demo.html'
+      },
+      {
+        title: 'Scroll Setting',
+        template: 'bower_components/widget-settings-ui-components/demos/scroll-setting-demo.html'
       }];
 
+      $scope.scroll = {};
       $scope.instruments = [
         "AA.N",
         "AXP.N",
