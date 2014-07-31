@@ -42,7 +42,17 @@
       "main": ["demos/financial-selector-demo.html", "dist/js/financial-selector.js"]
     },
     "widget-settings-ui-components": {
-      "main": ["demos/*.html", "dist/js/angular/tooltip.js", "dist/js/angular/scroll-setting.js"]
+      "main": [
+        "demos/*.html",
+        "dist/js/alignment.js",
+        "dist/js/angular/alignment.js",
+        "dist/js/angular/color-picker.js",
+        "dist/js/angular/font-setting.js",
+        "dist/js/angular/column-setting.js",
+        "dist/js/angular/tooltip.js",
+        "dist/js/angular/scroll-setting.js",
+        "dist/js/angular/table-setting.js"
+      ]
     }
   }
 }

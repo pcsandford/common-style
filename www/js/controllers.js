@@ -60,9 +60,26 @@ angular.module('styleGuideApp.controllers')
       {
         title: 'Scroll Setting',
         template: 'bower_components/widget-settings-ui-components/demos/scroll-setting-demo.html'
+      },
+      {
+        title: 'Column Setting',
+        template: 'bower_components/widget-settings-ui-components/demos/column-setting-demo.html'
+      },
+      {
+        title: 'Color Picker',
+        template: 'bower_components/widget-settings-ui-components/demos/color-picker-demo.html'
+      },
+      {
+        title: 'Table Setting',
+        template: 'bower_components/widget-settings-ui-components/demos/table-setting-demo.html'
       }];
 
+      $scope.color = "transparent";
+      $scope.column = {
+        name: "Example"
+      };
       $scope.scroll = {};
+      $scope.table = {};
       $scope.instruments = [
         "AA.N",
         "AXP.N",
