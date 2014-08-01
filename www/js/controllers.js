@@ -47,6 +47,10 @@ angular.module('styleGuideApp.controllers')
         template: 'components/bootstrap-based/action-bar.html'
       },
       {
+        title: 'Alignment',
+        template: 'bower_components/widget-settings-ui-components/demos/alignment-demo.html'
+      },
+      {
         title: 'Financial Selector',
         template: 'bower_components/component-financial-selector/demos/financial-selector-demo.html'
       },
@@ -103,5 +107,7 @@ angular.module('styleGuideApp.controllers')
         "WMT.N",
         "XOM.N"
       ];
+
+      $scope.alignText = 'right';
     }
   ]);
