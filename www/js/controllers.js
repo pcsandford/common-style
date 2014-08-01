@@ -107,5 +107,7 @@ angular.module('styleGuideApp.controllers')
         "WMT.N",
         "XOM.N"
       ];
+
+      $scope.alignText = 'right';
     }
   ]);
