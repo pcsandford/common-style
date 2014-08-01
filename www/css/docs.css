@@ -10,6 +10,11 @@ pre,
 .hljs {
 	padding: 0px;
 	border-radius: 2px;
-	height: 340px;
+	min-height: auto;
+	max-height: 340px;
 	overflow-y: scroll;
+}
+
+.fixed > pre {
+	height: 340px !important;
 }
