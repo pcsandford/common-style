@@ -61,6 +61,22 @@ angular.module('commonHeader', [
               size: size
             });
           };
+          // Show Company Selector Modal
+          scope.companySelector = function(size) {
+            var modalInstance = $modal.open({
+              templateUrl: 'company-selector-modal.html',
+              controller: 'CompanySelectorModalCtrl',
+              size: size
+            });
+          };
+          // Show Company Users Modal
+          scope.companyUsers = function(size) {
+            var modalInstance = $modal.open({
+              templateUrl: 'company-users-modal.html',
+              controller: 'CompanyUsersModalCtrl',
+              size: size
+            });
+          };
 
           // If nav options not provided use defaults
           if (!scope.navOptions)
@@ -147,6 +163,27 @@ angular.module('commonHeader', [
     function($scope, $modalInstance) {
       $scope.closeModal = function() {
         $modalInstance.dismiss('cancel');
+      };
+    }
+  ])
+  .controller('CompanySelectorModalCtrl', ['$scope', '$modalInstance',
+    function($scope, $modalInstance) {
+      $scope.closeModal = function() {
+        $modalInstance.dismiss('cancel');
+      };
+    }
+  ])
+  .controller('CompanyUsersModalCtrl', ['$scope', '$modalInstance', '$modal',
+    function($scope, $modalInstance, $modal) {
+      $scope.closeModal = function() {
+        $modalInstance.dismiss('cancel');
+      };
+      $scope.userSettings = function(size) {
+        var modalInstance = $modal.open({
+          templateUrl: 'user-settings-modal.html',
+          controller: 'UserSettingsModalCtrl',
+          size: size
+        });
       };
     }
   ]);
