@@ -81,9 +81,6 @@ angular.module('commonHeader', [
           // If nav options not provided use defaults
           if (!scope.navOptions)
             scope.navOptions = [{
-              title: 'Home',
-              link: '#/'
-            }, {
               title: 'Store',
               link: ''
             }, {

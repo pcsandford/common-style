@@ -22,9 +22,6 @@ angular.module('styleGuideApp.controllers')
       $scope.messages = ['<li class="system-message">Lorem ipsum dolor sit amet</li>', '<li class="system-message">Consectetur adipiscing elit</li>', '<li class="system-message">Suspendisse convallis leo sed</li>'];
       // Navigation choices
       $scope.navOptions = [{
-        title: 'Home',
-        link: '#/'
-      }, {
         title: 'Store',
         link: ''
       }, {
