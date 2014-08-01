@@ -29,7 +29,7 @@ To build run `$gulp build`. This will generate a `dist` folder with `css` and `f
 
 
 ## Usage
-Install the style-guide using bower `$ bower install https://github.com/Rise-Vision/style-guide.git`
+Install the style-guide using bower `$ bower install https://github.com/Rise-Vision/style-guide.git --save`
 
 The `dist` folder contains the compiled CSS `css/rise.min.css` and all required fonts.
 
