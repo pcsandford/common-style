@@ -11,6 +11,7 @@ angular.module('styleGuideApp', [
   'styleGuideApp.controllers',
   'styleGuideApp.directives',
   'commonHeader',
+  'risevision.widget.common',
   'risevision.widget.common.alignment',
   'risevision.widget.common.color-picker',
   'risevision.widget.common.financial',
