@@ -40,44 +40,54 @@ angular.module('styleGuideApp.controllers')
   .controller('ComponentsCtrl', ['$scope', '$routeParams',
     function($scope, $routeParams) {
 
-      $scope.activeComponent = $routeParams.id ? $routeParams.id : 0;
+      $scope.activeComponent = $routeParams.id ? $routeParams.id : 'action-bar';
 
-      $scope.uiComponents = [{
-        title: 'Action-bar',
-        template: 'components/bootstrap-based/action-bar.html'
-      },
-      {
-        title: 'Alignment',
-        template: 'bower_components/widget-settings-ui-components/demos/alignment-demo.html'
-      },
-      {
-        title: 'Financial Selector',
-        template: 'bower_components/component-financial-selector/demos/financial-selector-demo.html'
-      },
-      {
-        title: 'Tooltip',
-        template: 'bower_components/widget-settings-ui-components/demos/tooltip-demo.html'
-      },
-      {
-        title: 'Scroll Setting',
-        template: 'bower_components/widget-settings-ui-components/demos/scroll-setting-demo.html'
-      },
-      {
-        title: 'Column Setting',
-        template: 'bower_components/widget-settings-ui-components/demos/column-setting-demo.html'
-      },
-      {
-        title: 'Color Picker',
-        template: 'bower_components/widget-settings-ui-components/demos/color-picker-demo.html'
-      },
-      {
-        title: 'Table Setting',
-        template: 'bower_components/widget-settings-ui-components/demos/table-setting-demo.html'
-      },
-      {
-        title: 'Typeahead Multiselect',
-        template: 'components/bootstrap-based/ui-select2.html'
-      }];
+      $scope.getTemplate = function (id) {
+        // $scope.uiComponents[]
+      };
+
+      $scope.uiComponents = {
+        'action-bar': {
+          title: 'Action-bar',
+          template: 'components/bootstrap-based/action-bar.html'
+        },
+        'typeahead-multiselect': {
+          title: 'Typeahead Multiselect',
+          template: 'components/bootstrap-based/ui-select2.html'
+        },
+        'alignment': {
+          title: 'Alignment',
+          template: 'bower_components/widget-settings-ui-components/demos/alignment-demo.html'
+        },
+        'color-picker': {
+          title: 'Color Picker',
+          template: 'bower_components/widget-settings-ui-components/demos/color-picker-demo.html'
+        },
+        'column-setting': {
+          title: 'Column Setting',
+          template: 'bower_components/widget-settings-ui-components/demos/column-setting-demo.html'
+        },
+        'financial-selector': {
+          title: 'Financial Selector',
+          template: 'bower_components/component-financial-selector/demos/financial-selector-demo.html'
+        },
+        'scroll-setting': {
+          title: 'Scroll Setting',
+          template: 'bower_components/widget-settings-ui-components/demos/scroll-setting-demo.html'
+        },
+        'table-setting': {
+          title: 'Table Setting',
+          template: 'bower_components/widget-settings-ui-components/demos/table-setting-demo.html'
+        },
+        'tooltip': {
+          title: 'Tooltip',
+          template: 'bower_components/widget-settings-ui-components/demos/tooltip-demo.html'
+        },
+        'font-style': {
+          title: 'Font Style',
+          template: 'bower_components/widget-settings-ui-components/demos/font-style-demo.html'
+        }
+      };
 
       $scope.things = ['Spectacles', 'Giraffe', 'Turtle', 'Shark', 'Lamp', 'Chocolate', 'Beef', 'Drawer', 'Brocolli', 'Tomato', 'Plate', 'Zebra'];
 
