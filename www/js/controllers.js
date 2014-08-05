@@ -86,6 +86,10 @@ angular.module('styleGuideApp.controllers')
         'font-style': {
           title: 'Font Style',
           template: 'bower_components/widget-settings-ui-components/demos/font-style-demo.html'
+        },
+        'font-size': {
+          title: 'Font Size Picker',
+          template: 'bower_components/bootstrap-form-components/demos/font-size-picker-demo.html'
         }
       };
 
@@ -119,5 +123,10 @@ angular.module('styleGuideApp.controllers')
       ];
 
       $scope.alignText = 'right';
+
+      // console.log(fontSizePicker);
+      // $(".font-size-picker").fontSizePicker({
+      //   "font-size": "18"
+      // });
     }
   ]);

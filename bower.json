@@ -15,7 +15,8 @@
     "bootstrap-sass-official": "~3.2.0",
     "component-financial-selector": "git://github.com/Rise-Vision/component-financial-selector",
     "widget-settings-ui-components": "git://github.com/Rise-Vision/widget-settings-ui-components",
-    "angular-ui-select2": "~0.0.5"
+    "angular-ui-select2": "~0.0.5",
+    "bootstrap-form-components": "git://github.com/Rise-Vision/bootstrap-form-components.git"
   },
   "overrides": {
     "bootstrap-sass-official": {
@@ -60,6 +61,12 @@
         "dist/js/angular/table-setting.js",
         "dist/js/font-style.min.js",
         "dist/js/angular/font-style.min.js"
+      ]
+    },
+    "bootstrap-form-components": {
+      "main": [
+        "demos/font-size-picker-demo.html",
+        "dist/js/bootstrap-font-size-picker.js"
       ]
     }
   }
