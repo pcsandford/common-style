@@ -59,7 +59,7 @@
         "dist/js/angular/scroll-setting.js",
         "dist/js/angular/table-setting.js",
         "dist/js/font-style.min.js",
-        "/dist/js/angular/font-style.min.js"
+        "dist/js/angular/font-style.min.js"
       ]
     }
   }

@@ -1,9 +1,8 @@
-/* global VIEWS */
 (function () {
   "use strict";
 
   angular.module("risevision.widget.common.font-setting", ["risevision.widget.common.translate"])
-    .directive("fontSetting", ["i18nLoader", "$log", function (i18nLoader, $log) {
+    .directive("fontSetting", ["i18nLoader", "$log", "$templateCache", function (i18nLoader, $log, $templateCache) {
       return {
         restrict: "A",
         scope: {
@@ -14,7 +13,7 @@
           fontSizeVisible: "=",
           textVisible: "="
         },
-        template: VIEWS["font-setting/font-setting.html"],
+        template: $templateCache.get("_angular/font-setting/font-setting.html"),
         transclude: false,
         link: function ($scope, elm, attrs) {
           var stripLast = function (str, strToStrip) {
@@ -79,8 +78,13 @@
     }]);
 }());
 
-if(typeof VIEWS === 'undefined') {var VIEWS = {};}
-VIEWS['font-setting/font-setting.html'] = "<div class=\"row\">\n" +
+(function(module) {
+try { app = angular.module("risevision.widget.common.font-setting"); }
+catch(err) { app = angular.module("risevision.widget.common.font-setting", []); }
+app.run(["$templateCache", function($templateCache) {
+  "use strict";
+  $templateCache.put("_angular/font-setting/font-setting.html",
+    "<div class=\"row\">\n" +
     "  <div class=\"col-md-3\">\n" +
     "    <div class=\"font-picker-font form-group\"></div>\n" +
     "  </div>\n" +
@@ -149,4 +153,6 @@ VIEWS['font-setting/font-setting.html'] = "<div class=\"row\">\n" +
     "  </div>\n" +
     "</div>\n" +
     "-->\n" +
-    ""; 
+    "");
+}]);
+})();
