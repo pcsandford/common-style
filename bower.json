@@ -13,7 +13,7 @@
   ],
   "dependencies": {
     "bootstrap-sass-official": "~3.2.0",
-    "component-financial-selector": "git@github.com:Rise-Vision/component-financial-selector.git",
+    "component-financial-selector": "git://github.com/Rise-Vision/component-financial-selector",
     "widget-settings-ui-components": "git://github.com/Rise-Vision/widget-settings-ui-components",
     "angular-ui-select2": "~0.0.5"
   },
