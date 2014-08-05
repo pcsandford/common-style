@@ -19,7 +19,8 @@ angular.module('styleGuideApp', [
   'risevision.widget.common.font-setting',
   'risevision.widget.common.scroll-setting',
   'risevision.widget.common.column-setting',
-  'risevision.widget.common.table-setting'
+  'risevision.widget.common.table-setting',
+  'risevision.widget.common.fontpicker'
 ])
   .config(function(hljsServiceProvider) {
     hljsServiceProvider.setOptions({

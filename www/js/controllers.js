@@ -86,6 +86,10 @@ angular.module('styleGuideApp.controllers')
         'font-style': {
           title: 'Font Style',
           template: 'bower_components/widget-settings-ui-components/demos/font-style-demo.html'
+        },
+        'font-picker': {
+          title: 'Font Picker',
+          template: 'bower_components/bootstrap-form-components/demos/font-picker-demo.html'
         }
       };
 
