@@ -16,7 +16,8 @@
     "component-financial-selector": "git://github.com/Rise-Vision/component-financial-selector",
     "widget-settings-ui-components": "git://github.com/Rise-Vision/widget-settings-ui-components",
     "angular-ui-select2": "~0.0.5",
-    "component-google-spreadsheet-controls": "git://github.com/Rise-Vision/component-google-spreadsheet-controls"
+    "component-google-spreadsheet-controls": "git://github.com/Rise-Vision/component-google-spreadsheet-controls",
+    "component-google-drive-picker": "git://github.com/Rise-Vision/component-google-drive-picker"
   },
   "overrides": {
     "bootstrap-sass-official": {
@@ -70,6 +71,12 @@
       "main": [
         "demos/example.html",
         "dist/js/angular/google-spreadsheet-controls.js"
+      ]
+    },
+    "component-google-drive-picker": {
+      "main": [
+        "demos/example.html",
+        "dist/js/angular/google-drive-picker.js"
       ]
     }
   }

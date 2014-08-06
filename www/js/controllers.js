@@ -106,6 +106,10 @@ angular.module('styleGuideApp.controllers')
         'url-field': {
           title: 'URL Field',
           template: 'bower_components/widget-settings-ui-components/demos/url-field-demo.html'
+        },
+        'google-drive-picker': {
+          title: 'Google Drive Picker',
+          template: 'bower_components/component-google-drive-picker/demos/example.html'
         }
       };
 
