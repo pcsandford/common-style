@@ -98,6 +98,10 @@ angular.module('styleGuideApp.controllers')
         'buttons': {
           title: 'Standard Buttons',
           template: 'components/bootstrap-based/buttons.html'
+        },
+        'google-spreadsheet-controls': {
+          title: 'Google Spreadsheet Controls',
+          template: 'bower_components/component-google-spreadsheet-controls/demos/example.html'
         }
       };
 
