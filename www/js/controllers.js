@@ -102,6 +102,10 @@ angular.module('styleGuideApp.controllers')
         'google-spreadsheet-controls': {
           title: 'Google Spreadsheet Controls',
           template: 'bower_components/component-google-spreadsheet-controls/demos/example.html'
+        },
+        'url-field': {
+          title: 'URL Field',
+          template: 'bower_components/widget-settings-ui-components/demos/url-field-demo.html'
         }
       };
 
