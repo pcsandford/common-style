@@ -104,9 +104,45 @@ angular.module('styleGuideApp.controllers')
       $scope.things = ['Spectacles', 'Giraffe', 'Turtle', 'Shark', 'Lamp', 'Chocolate', 'Beef', 'Drawer', 'Brocolli', 'Tomato', 'Plate', 'Zebra'];
 
       $scope.color = "transparent";
-      $scope.column = {
-        name: "Example"
-      };
+      $scope.columnNames = [
+        {
+          name: "instrument",
+          type: "text"
+        },
+        {
+          name: "instrument-logo",
+          type: "text"
+        },
+        {
+          name: "last-price",
+          type: "int"
+        },
+        {
+          name: "change",
+          type: "int"
+        },
+        {
+          name: "percent-change",
+          type: "int"
+        },
+        {
+          name: "day-high",
+          type: "int"
+        },
+        {
+          name: "day-low",
+          type: "int"
+        }
+      ];
+      $scope.columns = [
+        {
+          name: "instrument",
+          alignment: "right"
+        },
+        {
+          name: "instrument-logo"
+        }
+      ];
       $scope.scroll = {};
       $scope.table = {};
       $scope.instruments = [

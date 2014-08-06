@@ -55,6 +55,7 @@
         "dist/js/angular/color-picker.js",
         "dist/js/angular/font-setting.js",
         "dist/js/angular/column-setting.js",
+        "dist/js/angular/column-selector.js",
         "dist/js/angular/tooltip.js",
         "dist/js/angular/scroll-setting.js",
         "dist/js/angular/table-setting.js",

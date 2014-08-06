@@ -13,8 +13,9 @@
         transclude: false,
         link: function($scope) {
           $scope.defaultSetting = {
+            type: "int",
             alignment: "left",
-            width: 0,
+            width: "100px",
             decimals: 0,
             sign: "arrow",
             colorCondition: "none"
@@ -38,6 +39,10 @@
           $scope.$watch("column", function(column) {
             $scope.defaults(column, $scope.defaultSetting);
           });
+
+          $scope.remove = function() {
+            $scope.$parent.remove($scope.column);
+          };
         }
       };
     }]);
@@ -51,12 +56,12 @@ app.run(["$templateCache", function($templateCache) {
   $templateCache.put("_angular/column-setting/column-setting.html",
     "<div class=\"panel panel-default\">\n" +
     "  <div class=\"collapse-panel panel-heading\">\n" +
-    "    <a class=\"panel-title collapsed\" data-toggle=\"collapse\" data-target=\"#collapse-{{column.name}}\"\n" +
-    "       href=\"#collapse-{{column.name}}\">\n" +
+    "    <a href=\"\" ng-class=\"{'panel-title':true, collapsed:!collapse}\" ng-click=\"collapse=!collapse\">\n" +
     "       {{'columns.' + column.name | translate}}\n" +
     "    </a>\n" +
+    "    <a href=\"\" class=\"glyphicon glyphicon-trash\" ng-click=\"remove()\"></a>\n" +
     "  </div>\n" +
-    "  <div id=\"collapse-{{column.name}}\" class=\"panel-collapse collapse\">\n" +
+    "  <div ng-class=\"{'panel-collapse':true, collapse:true, in:collapse}\">\n" +
     "    <div class=\"panel-body\">\n" +
     "      <div class=\"row\">\n" +
     "        <div class=\"col-md-3\">\n" +
@@ -72,13 +77,16 @@ app.run(["$templateCache", function($templateCache) {
     "        <div class=\"col-md-3\">\n" +
     "          <div class=\"form-group\">\n" +
     "            <label for=\"column-width\">\n" +
-    "              {{'column.width' | translate}}\n" +
+    "              {{'column.width.label' | translate}}\n" +
     "            </label>\n" +
+    "            <tooltip data-toggle=\"popover\" data-placement=\"right\"\n" +
+    "              data-content=\"{{'column.width.tooltip' | translate}}\">\n" +
+    "            </tooltip>\n" +
     "            <input id=\"column-width\" type=\"text\" ng-model=\"column.width\" class=\"form-control\" />\n" +
     "          </div>\n" +
     "        </div>\n" +
     "      </div>\n" +
-    "      <div class=\"row\">\n" +
+    "      <div class=\"row\" ng-if=\"column.type === 'int'\">\n" +
     "        <div class=\"col-md-3\">\n" +
     "          <div class=\"form-group\">\n" +
     "            <label for=\"column-decimals\">\n" +
@@ -94,7 +102,7 @@ app.run(["$templateCache", function($templateCache) {
     "          </div>\n" +
     "        </div>\n" +
     "      </div>\n" +
-    "      <div class=\"row\">\n" +
+    "      <div class=\"row\" ng-if=\"column.type === 'int'\">\n" +
     "        <div class=\"col-md-3\">\n" +
     "          <div class=\"form-group\">\n" +
     "            <label for=\"column-sign\">\n" +
@@ -109,7 +117,7 @@ app.run(["$templateCache", function($templateCache) {
     "          </div>\n" +
     "        </div>\n" +
     "      </div>\n" +
-    "      <div class=\"row\">\n" +
+    "      <div class=\"row\" ng-if=\"column.type === 'int'\">\n" +
     "        <div class=\"col-md-3\">\n" +
     "          <div class=\"form-group\">\n" +
     "            <label for=\"column-color-condition\">\n" +
@@ -129,8 +137,11 @@ app.run(["$templateCache", function($templateCache) {
     "        <div class=\"col-md-3\">\n" +
     "          <div class=\"form-group\">\n" +
     "            <label for=\"column-header-text\">\n" +
-    "              {{'column.header-text' | translate}}\n" +
+    "              {{'column.header-text.label' | translate}}\n" +
     "            </label>\n" +
+    "            <tooltip data-toggle=\"popover\" data-placement=\"right\"\n" +
+    "              data-content=\"{{'column.header-text.tooltip' | translate}}\">\n" +
+    "            </tooltip>\n" +
     "            <input id=\"column-header-text\" type=\"text\" ng-model=\"column.headerText\" class=\"form-control\" />\n" +
     "          </div>\n" +
     "        </div>\n" +
