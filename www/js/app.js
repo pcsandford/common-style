@@ -18,7 +18,7 @@ angular.module('styleGuideApp', [
   'risevision.widget.common.tooltip',
   'risevision.widget.common.font-setting',
   'risevision.widget.common.scroll-setting',
-  'risevision.widget.common.column-setting',
+  'risevision.widget.common.column-selector',
   'risevision.widget.common.table-setting'
 ])
   .config(function(hljsServiceProvider) {
