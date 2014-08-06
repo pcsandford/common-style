@@ -86,6 +86,18 @@ angular.module('styleGuideApp.controllers')
         'font-style': {
           title: 'Font Style',
           template: 'bower_components/widget-settings-ui-components/demos/font-style-demo.html'
+        },
+        'placeholder': {
+          title: 'Placeholder Text',
+          template: 'components/bootstrap-based/placeholder.html'
+        },
+        'loading': {
+          title: 'Loading Spinner',
+          template: 'components/bootstrap-based/loading.html'
+        },
+        'buttons': {
+          title: 'Standard Buttons',
+          template: 'components/bootstrap-based/buttons.html'
         }
       };
 
