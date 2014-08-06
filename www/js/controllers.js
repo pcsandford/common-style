@@ -63,9 +63,9 @@ angular.module('styleGuideApp.controllers')
           title: 'Color Picker',
           template: 'bower_components/widget-settings-ui-components/demos/color-picker-demo.html'
         },
-        'column-setting': {
-          title: 'Column Setting',
-          template: 'bower_components/widget-settings-ui-components/demos/column-setting-demo.html'
+        'column-selector': {
+          title: 'Column Selector',
+          template: 'bower_components/widget-settings-ui-components/demos/column-selector-demo.html'
         },
         'financial-selector': {
           title: 'Financial Selector',
