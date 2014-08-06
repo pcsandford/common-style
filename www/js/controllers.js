@@ -179,5 +179,6 @@ angular.module('styleGuideApp.controllers')
       ];
 
       $scope.alignText = 'right';
+      $scope.spreadsheet = {};
     }
   ]);
