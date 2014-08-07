@@ -7,7 +7,7 @@ Rise Vision Style Guide
 
 ## Introduction
 Common CSS styling to be shared across Rise Vision apps, widgets and components. The style guide is published as github pages is available as reference documentation for all Rise Vision UI-components:
-**http://rise-vision.github.io/style-guide**
+**http://rise-vision.github.io/style-guide-docs**
 
 
 ## Installation
