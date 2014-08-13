@@ -9,13 +9,23 @@ var rename = require('gulp-rename');
 var paths = {
   sass: ['./src/**/*.scss', './src/*.scss'],
   appSass: './src/app.scss',
+  alignmentSass: './src/ui-components/alignment.scss',
   distFonts: './dist/fonts',
   distCss: './dist/css',
   fonts: './bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*.*'
 };
 
+gulp.task('build-alignment', function () {
+  return gulp.src(paths.alignmentSass)
+    .pipe(sass({
+      errLogToConsole: true
+    }))
+    .pipe(minifyCSS({ keepBreaks: true }))
+    .pipe(rename('alignment.min.css'))
+    .pipe(gulp.dest(paths.distCss));
+});
 
-gulp.task('build', function() {
+gulp.task('build', ['build-alignment'], function() {
   console.log('[SASS] recompiling'.yellow);
   gulp.src(paths.appSass)
     .pipe(sass({
