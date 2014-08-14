@@ -1,5 +1,5 @@
 {
-  "name": "style-guide",
+  "name": "rv-common-style",
   "version": "0.0.0",
   "description": "Common CSS/SASS styling to be shared across Rise Vision apps, widgets and components.",
   "scripts": {

@@ -1,4 +1,4 @@
-Rise Vision Style Guide
+Rise Vision Common Style
 ==============
 
 **Copyright © 2014 - Rise Vision Incorporated.**
@@ -7,7 +7,7 @@ Rise Vision Style Guide
 
 ## Introduction
 Common CSS styling to be shared across Rise Vision apps, widgets and components. The style guide is published as github pages is available as reference documentation for all Rise Vision UI-components:
-**http://rise-vision.github.io/style-guide-docs**
+**http://rise-vision.github.io/style-guide**
 
 
 ## Installation
@@ -29,7 +29,7 @@ To build run `$gulp build`. This will generate a `dist` folder with `css` and `f
 
 
 ## Usage
-Install the style-guide using bower `$ bower install git://github.com/Rise-Vision/style-guide --save`
+Install the common-style using bower `$ bower install git://github.com/Rise-Vision/common-style --save`
 
 The `dist` folder contains the compiled CSS `css/rise.min.css` and all required fonts.
 
