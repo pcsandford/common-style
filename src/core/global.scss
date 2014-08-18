@@ -1019,6 +1019,8 @@ ul.social {
 .btn-google-drive.active {
   width: 30px;
   height: 30px;
+  border: none !important;
+  background-repeat: no-repeat;
   background-color: transparent !important;
   background-image: url(http://s3.amazonaws.com/Rise-Images/Icons/widget-icon-drive.png);
   @include background-image-retina('http://s3.amazonaws.com/Rise-Images/Icons/widget-icon-drive', 'png', 30px, 30px);
@@ -1030,6 +1032,8 @@ ul.social {
 .btn-widget-icon-link.active {
   width: 30px;
   height: 30px;
+  border: none !important;
+  background-repeat: no-repeat;
   background-color: transparent !important;
   background-image: url(http://s3.amazonaws.com/Rise-Images/Icons/widget-icon-link.png);
   @include background-image-retina('http://s3.amazonaws.com/Rise-Images/Icons/widget-icon-link', 'png', 30px, 30px);
@@ -1041,6 +1045,8 @@ ul.social {
 .btn-widget-icon-storage.active {
   width: 30px;
   height: 30px;
+  border: none !important;
+  background-repeat: no-repeat;
   background-color: transparent !important;
   background-image: url(http://s3.amazonaws.com/Rise-Images/Icons/widget-icon-storage.png);
   @include background-image-retina('http://s3.amazonaws.com/Rise-Images/Icons/widget-icon-storage', 'png', 30px, 30px);
