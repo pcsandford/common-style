@@ -819,11 +819,14 @@ ul.social {
 }
 
 .btn-rv-help {
-  @extend .btn-info;
+  @extend .btn-default;
+  font-weight: 700;
 
   &:hover,
   &:active {
-    .glyphicons::before { color: #fff !important; }
+    border-color: $btn-default-border;
+    color: $btn-default-color;
+    .glyphicons::before { color: $gray !important; }
   }
 }
 
