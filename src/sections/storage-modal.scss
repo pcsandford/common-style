@@ -25,15 +25,9 @@
   }
 
   .storage-used-info {
-    /* Positioning */
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    /* Display & Box Model */
-    margin-bottom: 10px;
-    /* Visual */
     font-size: 10px;
     text-align: right;
+    float: right;
   }
 
   /* ==========================================================================
