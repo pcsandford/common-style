@@ -821,11 +821,14 @@ ul.social {
 .btn-rv-help {
   @extend .btn-default;
   font-weight: 700;
+  background-color: $btn-default-bg;
 
   &:hover,
   &:active {
     border-color: $btn-default-border;
+    background-color: $btn-default-bg;
     color: $btn-default-color;
+    @include box-shadow(none);
     .glyphicons::before { color: $gray !important; }
   }
 }
