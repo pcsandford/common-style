@@ -17,4 +17,16 @@
 
 .font-select-btn {
   width: 149px;
+  height: 30px;
+  position: relative;
+
+  .bfh-selectbox-option{
+    position: absolute;
+    top:4.5px;
+    left:3.5px;
+  }
+
+  .selectbox-caret{
+    float: right;
+  }
 }
