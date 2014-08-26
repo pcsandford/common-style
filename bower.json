@@ -15,5 +15,8 @@
     "bootstrap-sass-official": "~3.2.0",
     "select2": "~3.4",
     "spectrum": "git://github.com/Rise-Vision/spectrum"
+  },
+  "dependencies": {
+    "font-awesome": "~4.1.0"
   }
 }

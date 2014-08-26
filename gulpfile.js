@@ -12,7 +12,7 @@ var paths = {
   alignmentSass: './src/ui-components/alignment.scss',
   distFonts: './dist/fonts',
   distCss: './dist/css',
-  fonts: './bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*.*'
+  fonts: ['./bower_components/font-awesome/fonts/*.*','./bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*.*']
 };
 
 gulp.task('build-alignment', function () {

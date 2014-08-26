@@ -4,12 +4,16 @@
    ========================================================================== */
 @import "bootstrap-variables";
 @import "variables";
+@import "fonts";
 
 
 /* Bootstrap Core
    ========================================================================== */
 @import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
 
+/* FontAwesome
+   ========================================================================== */
+@import "../bower_components/font-awesome/scss/font-awesome";
 
 /* Bootstrap Overwrites
    ========================================================================== */
@@ -30,6 +34,7 @@
 /* Core
    ========================================================================== */
 @import "core/global";
+@import "core/fontawesome";
 @import "core/glyphicons";
 @import "core/media";
 @import "core/print";
