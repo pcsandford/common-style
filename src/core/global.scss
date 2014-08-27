@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 a:hover {
   text-decoration: none;
 
-  .fa::before, .glyphicon::before {
+  .fa::before, .glyphicons::before {
     color: $dark-gray;
   }
 
@@ -58,7 +58,7 @@ a:hover {
 }
 
 .navbar-nav {
-  .fa::before , .glyphicon::before{
+  .fa::before , .glyphicons::before{
     line-height: 30px;
   }
 }
@@ -143,7 +143,7 @@ a:hover {
 
     > a {
       @extend .fa-box;
-      @extend .fa-glyphicon;
+      @extend .glyphicon-box;
     }
 
     > a:hover {
@@ -223,7 +223,7 @@ a:hover {
         font-weight: bold;
       }
 
-      .fa, .glyphicon {
+      .fa, .glyphicons {
         min-width: 40px;
       }
     }
@@ -290,11 +290,11 @@ a:hover {
       padding-left: 20px;
       padding-right: 20px;
 
-      .fa , .glyphicon{
+      .fa , .glyphicons{
         min-width: 20px;
       }
 
-      .fa::before, .glyphicon::before {
+      .fa::before, .glyphicons::before {
         font-size: 14px;
       }
     }
@@ -309,7 +309,7 @@ a:hover {
     > a,
     > a:hover,
     > a:focus {
-      .fa::before,.glyphicon::before {
+      .fa::before,.glyphicons::before {
         color: $dark-gray;
       }
 
@@ -351,13 +351,13 @@ a:hover {
     font-size: 12px;
   }
 
-  .fa, .glyphicon {
+  .fa, .glyphicons {
     @extend .fa-box;
     @extend .glyphicon-box;
     margin: 0 auto;
   }
 
-  .fa::before , .glyphicon::before{ font-size: 40px; }
+  .fa::before , .glyphicons::before{ font-size: 40px; }
 }
 
 /* Company Selector
@@ -619,7 +619,7 @@ input[type=number]::-webkit-outer-spin-button {
   border: none;
 
     .btn {
-      .fa::before, .glyphicon::before {
+      .fa::before, .glyphicons::before {
         /* Display & Box Modes */
         margin-top: -2px;
 
@@ -653,8 +653,8 @@ input[type=number]::-webkit-outer-spin-button {
 .close {
   opacity: 1;
 
-  .fa::before , .glyphicon::before{ color: $gray; }
-  &:hover .fa::before ,&:hover .glyphicon::before { color: $dark-gray; }
+  .fa::before , .glyphicons::before{ color: $gray; }
+  &:hover .fa::before ,&:hover .glyphicons::before { color: $dark-gray; }
 }
 
 /* Sticky buttons
@@ -782,7 +782,7 @@ ul.social {
 /* Buttons
    ========================================================================== */
 .btn-default {
-  .fa::before, .glyphicon::before { color: $gray; }
+  .fa::before, .glyphicons::before { color: $gray; }
 
   &:hover {
     @extend .button-hover;
@@ -790,7 +790,7 @@ ul.social {
 
   &:hover,
   &:hover .fa::before,
-  &:hover .glyphicon::before {
+  &:hover .glyphicons::before {
     color: $dark-gray;
   }
 }
@@ -817,14 +817,14 @@ ul.social {
     color: $btn-default-color;
     @include box-shadow(none);
     .fa::before,
-    .glyphicon::before {
+    .glyphicons::before {
      color: $gray !important;
     }
   }
 }
 
 .btn-remove .fa::before,
-.btn-remove .glyphicon::before {
+.btn-remove .glyphicons::before {
   color: #d9534f;
   font-size: 16px;
 }
@@ -833,13 +833,13 @@ ul.social {
   background: #fff;
   border-color: #fff;
 
-  .fa {
+  .fa, .glyphicons {
     margin-top: -5px;
   }
 }
 
 .btn-back:hover .fa-back,
-.btn-back:hover .glyphicon-back {
+.btn-back:hover .glyphicons-back {
   background: url('//s3.amazonaws.com/rise-common-test/images/glyphicons-back-active.png') center no-repeat;
 }
 
@@ -852,7 +852,7 @@ ul.social {
   .log_in { color: #fff; }
 
   .fa::before,
-  .glyphicon::before {
+  .glyphicons::before {
     color: #fff;
   }
 
@@ -867,7 +867,7 @@ ul.social {
 .navbar-default .navbar-nav .sign-in {
   @extend .btn-sign-in;
 
-  .fa:before ,.glyphicon:before { color: #fff !important; }
+  .fa:before ,.glyphicons:before { color: #fff !important; }
 }
 
 /* Sign In button that is part of a modal. */
@@ -878,7 +878,7 @@ ul.social {
   /* Positioning */
   float: left;
 
-  .fa::before, .glyphicon::before {
+  .fa::before, .glyphicons::before {
     line-height: 30px; /* TODO: Make this a variable. */
   }
 }
@@ -902,7 +902,7 @@ ul.social {
   text-align: center;
 
   .fa::before ,
-  .glyphicon::before{
+  .glyphicons::before{
     line-height: 30px;
   }
 
@@ -920,7 +920,7 @@ ul.social {
   /* Visual */
 
   .fa::before,
-  .glyphicon::before {
+  .glyphicons::before {
     /* Visual */
     font-size: 18px;
   }
