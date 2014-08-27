@@ -40,11 +40,11 @@ h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 a:hover {
   text-decoration: none;
 
-  .glyphicons::before {
+  .fa::before, .glyphicon::before {
     color: $dark-gray;
   }
 
-  .glyphicon-danger::before {
+  .fa-danger::before , .glyphicon-danger::before{
     color: $danger;
   }
 }
@@ -58,7 +58,7 @@ a:hover {
 }
 
 .navbar-nav {
-  .glyphicons::before {
+  .fa::before , .glyphicon::before{
     line-height: 30px;
   }
 }
@@ -142,7 +142,8 @@ a:hover {
     }
 
     > a {
-      @extend .glyphicon-box;
+      @extend .fa-box;
+      @extend .fa-glyphicon;
     }
 
     > a:hover {
@@ -222,7 +223,7 @@ a:hover {
         font-weight: bold;
       }
 
-      .glyphicons {
+      .fa, .glyphicon {
         min-width: 40px;
       }
     }
@@ -289,11 +290,11 @@ a:hover {
       padding-left: 20px;
       padding-right: 20px;
 
-      .glyphicons {
+      .fa , .glyphicon{
         min-width: 20px;
       }
 
-      .glyphicons::before {
+      .fa::before, .glyphicon::before {
         font-size: 14px;
       }
     }
@@ -308,11 +309,11 @@ a:hover {
     > a,
     > a:hover,
     > a:focus {
-      .glyphicons::before {
+      .fa::before,.glyphicon::before {
         color: $dark-gray;
       }
 
-      .glyphicon-danger::before {
+      .fa-danger::before,.glyphicon-danger::before {
         color: $danger;
       }
     }
@@ -350,12 +351,13 @@ a:hover {
     font-size: 12px;
   }
 
-  .glyphicons {
+  .fa, .glyphicon {
+    @extend .fa-box;
     @extend .glyphicon-box;
     margin: 0 auto;
   }
 
-  .glyphicons::before { font-size: 40px; }
+  .fa::before , .glyphicon::before{ font-size: 40px; }
 }
 
 /* Company Selector
@@ -602,13 +604,6 @@ input[type=number]::-webkit-outer-spin-button {
   z-index: 9999;
 }
 
-/*.modal-header .close {
-  opacity: 1;
-
-  .glyphicons::before { color: $gray; }
-  &:hover .glyphicons::before { color: $dark-gray; }
-}*/
-
 .modal-footer {
   margin-top: 0;
 
@@ -624,7 +619,7 @@ input[type=number]::-webkit-outer-spin-button {
   border: none;
 
     .btn {
-      .glyphicons::before {
+      .fa::before, .glyphicon::before {
         /* Display & Box Modes */
         margin-top: -2px;
 
@@ -658,18 +653,9 @@ input[type=number]::-webkit-outer-spin-button {
 .close {
   opacity: 1;
 
-  .glyphicons::before { color: $gray; }
-  &:hover .glyphicons::before { color: $dark-gray; }
+  .fa::before , .glyphicon::before{ color: $gray; }
+  &:hover .fa::before ,&:hover .glyphicon::before { color: $dark-gray; }
 }
-
-/*.close {
-  opacity: 0.2;
-
-  img {
-    width: 24px;
-    height: 24px;
-  }
-}*/
 
 /* Sticky buttons
    ========================================================================== */
@@ -796,14 +782,15 @@ ul.social {
 /* Buttons
    ========================================================================== */
 .btn-default {
-  .glyphicons::before { color: $gray; }
+  .fa::before, .glyphicon::before { color: $gray; }
 
   &:hover {
     @extend .button-hover;
   }
 
   &:hover,
-  &:hover .glyphicons::before {
+  &:hover .fa::before,
+  &:hover .glyphicon::before {
     color: $dark-gray;
   }
 }
@@ -829,11 +816,15 @@ ul.social {
     background-color: $btn-default-bg;
     color: $btn-default-color;
     @include box-shadow(none);
-    .glyphicons::before { color: $gray !important; }
+    .fa::before,
+    .glyphicon::before {
+     color: $gray !important;
+    }
   }
 }
 
-.btn-remove .glyphicons::before {
+.btn-remove .fa::before,
+.btn-remove .glyphicon::before {
   color: #d9534f;
   font-size: 16px;
 }
@@ -842,12 +833,13 @@ ul.social {
   background: #fff;
   border-color: #fff;
 
-  .glyphicons {
+  .fa {
     margin-top: -5px;
   }
 }
 
-.btn-back:hover .glyphicons-back {
+.btn-back:hover .fa-back,
+.btn-back:hover .glyphicon-back {
   background: url('//s3.amazonaws.com/rise-common-test/images/glyphicons-back-active.png') center no-repeat;
 }
 
@@ -859,7 +851,8 @@ ul.social {
 
   .log_in { color: #fff; }
 
-  .glyphicons::before {
+  .fa::before,
+  .glyphicon::before {
     color: #fff;
   }
 
@@ -874,7 +867,7 @@ ul.social {
 .navbar-default .navbar-nav .sign-in {
   @extend .btn-sign-in;
 
-  .glyphicons:before { color: #fff !important; }
+  .fa:before ,.glyphicon:before { color: #fff !important; }
 }
 
 /* Sign In button that is part of a modal. */
@@ -885,7 +878,7 @@ ul.social {
   /* Positioning */
   float: left;
 
-  .glyphicons::before {
+  .fa::before, .glyphicon::before {
     line-height: 30px; /* TODO: Make this a variable. */
   }
 }
@@ -908,7 +901,8 @@ ul.social {
   /* Visual */
   text-align: center;
 
-  .glyphicons::before {
+  .fa::before ,
+  .glyphicon::before{
     line-height: 30px;
   }
 
@@ -925,7 +919,8 @@ ul.social {
 
   /* Visual */
 
-  .glyphicons::before {
+  .fa::before,
+  .glyphicon::before {
     /* Visual */
     font-size: 18px;
   }
