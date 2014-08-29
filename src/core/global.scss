@@ -927,6 +927,12 @@ ul.social {
 
 }
 
+.btn-github {
+  .fa::before {
+    font-size: 2em !important;
+  }
+}
+
 /* Boxed content
    ========================================================================== */
 .content-box {
