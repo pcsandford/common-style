@@ -31,8 +31,35 @@
   }
 
   /* ==========================================================================
-     Thumbnail View
+     Uploader
      ========================================================================== */
+  .inline-progress {
+      margin-bottom: 0px;
+  }
+
+  .inline-cancel {
+    float: right; 
+    width: auto; 
+    padding-left: 10px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  tbody tr:first-child td {
+    border-top: none;
+  }
+
+  .panel table {
+    margin-bottom: 0px !important;
+  }
+
+  .panel-heading {
+    cursor: pointer;
+  }
+
+  /* ==========================================================================
+  Thumbnail View
+  ========================================================================== */
   /**
    * Single-column layout at mobile resolutions.
    */
@@ -51,12 +78,12 @@
   .thumbnail {
     border: none;
   }
-    .thumbnail .caption {
-      font-size: 12px;
-      text-align: center;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
+  .thumbnail .caption {
+    font-size: 12px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 
   .thumbnail:hover, .thumbnail.active {
     background-color: #f5f5f5;
@@ -67,7 +94,7 @@
   }
 
   /* Media queries
-     ========================================================================== */
+  ========================================================================== */
   /**
    * Three-column layout at tablet resolutions.
    */
