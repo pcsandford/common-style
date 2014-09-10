@@ -14,6 +14,9 @@ body {
   /* Display & Box Model */
   height: 100%;
 
+  /* Fir off Canvas Menu */
+  overflow-x: hidden;
+
   /* Visual */
   background: $lighter-gray;
   -webkit-font-smoothing: antialiased;
