@@ -35,9 +35,13 @@
     margin: 0 !important;
     padding: 0 24px !important;
 
+    &.system-message {
+      padding-bottom: 10px !important;
+    }
+
     &:active { background-color: $gray-lighter; }
 
-    a {
+    a.action {
       display: block;
       height: 40px !important;
       line-height: 40px !important;
