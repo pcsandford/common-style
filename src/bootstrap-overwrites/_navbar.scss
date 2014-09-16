@@ -5,6 +5,11 @@
       margin-left: 0;
     }
   }
+
+  @media (max-width: $screen-xs) {
+    width: 70px;
+    margin-top: 10px;
+  }
 }
 
 

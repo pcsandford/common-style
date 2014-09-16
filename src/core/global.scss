@@ -506,6 +506,13 @@ a:hover {
 
 /* Media queries
    ========================================================================== */
+
+@media (max-width: $screen-xs) {
+  .navbar-default .actions-nav>li>a {
+    min-width: 50px !important;
+  }
+}
+
 @media (min-width: 768px) {
   .navbar-default {
     padding-top: 10px;
