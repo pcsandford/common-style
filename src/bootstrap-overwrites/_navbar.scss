@@ -6,9 +6,15 @@
     }
   }
 
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-lg) {
     width: 70px;
     margin-top: 10px;
+  }
+}
+
+.navbar-collapse.navbar-left {
+  @media (max-width: $screen-lg) {
+    margin-left: 20px;
   }
 }
 

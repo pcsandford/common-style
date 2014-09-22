@@ -606,52 +606,6 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* ==========================================================================
-   Modals
-   ========================================================================== */
-.modal {
-  z-index: 9999;
-}
-
-.modal-footer {
-  margin-top: 0;
-
-  .btn-fixed-width {
-    width: 102px;
-  }
-
-  input[type="checkbox"] { float: none; }
-}
-
-.modal-header,
-.modal-footer {
-  border: none;
-
-    .btn {
-      .fa::before, .glyphicons::before {
-        /* Display & Box Modes */
-        margin-top: -2px;
-
-        /* Visual */
-        font-size: 18px;
-      }
-    }
-}
-
-.modal-backdrop.in {
-  /* Positioning */
-  z-index: 9001;
-}
-
-/**
- * Part of workaround for Bootstrap bug where content shifts when modal
- * is opened.
- *
- * https://github.com/twbs/bootstrap/issues/9855
- */
-.modal-open {
-  overflow: auto;
-}
 
 /* ==========================================================================
    Buttons
@@ -879,18 +833,7 @@ ul.social {
   .fa:before ,.glyphicons:before { color: #fff !important; }
 }
 
-/* Sign In button that is part of a modal. */
-.modal-dialog .sign-in,
-.modal-dialog .sign-in:hover {
-  @extend .btn-sign-in;
 
-  /* Positioning */
-  float: left;
-
-  .fa::before, .glyphicons::before {
-    line-height: 30px; /* TODO: Make this a variable. */
-  }
-}
 
 /* Stripe */
 .stripe { margin-bottom: 10px; }
@@ -967,14 +910,6 @@ ul.social {
   margin-top: 5px;
   margin-bottom: 5px;
   border-top: 2px dashed #cbcbcb;
-}
-
-/* Modal scrollable list
-   ========================================================================== */
-.scrollable-list {
-  max-height: 400px;
-  overflow: auto;
-  cursor: pointer;
 }
 
 /* Other
