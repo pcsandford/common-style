@@ -30,9 +30,9 @@
     float: right;
   }
 
-  .storage-subscription-status {
+  #store-modal {
     .overlay {
-    z-index: $subscription-status-overlay-zindex;
+    z-index: $storage-store-overlay-zindex;
     background-color: #ffffff;
     }
   }
