@@ -1,0 +1,17 @@
+.alerts-app {
+  .alerts-list {
+    color: #333;
+
+    h5 {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding-right: 40px;
+    }
+
+    .media-body {
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
