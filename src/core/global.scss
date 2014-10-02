@@ -809,7 +809,8 @@ ul.social {
 }
 
 /* Sign In button */
-.btn-sign-in {
+.btn-sign-in,
+.sign-in {
   @extend .btn-success;
 
   .log_in { color: #fff; }
