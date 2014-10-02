@@ -809,11 +809,33 @@ ul.social {
 }
 
 /* Sign In button */
-.btn-sign-in,
-.sign-in {
+.btn-sign-in {
   @extend .btn-success;
 
   .log_in { color: #fff; }
+}
+
+.sign-in {
+  @extend .btn;
+  @extend .btn-link;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  border: 0;
+  color: $brand-primary !important;
+
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin-left: 5px;
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
 }
 
 
