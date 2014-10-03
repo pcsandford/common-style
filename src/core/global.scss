@@ -786,6 +786,8 @@ ul.social {
      color: $gray !important;
     }
   }
+
+  &.rounded { border-radius: 30px; margin-left: 10px; }
 }
 
 .btn-remove .fa::before,
@@ -818,7 +820,6 @@ ul.social {
 .sign-in {
   @extend .btn;
   @extend .btn-link;
-  font-weight: bold;
   height: 40px;
   line-height: 40px;
   padding: 0;

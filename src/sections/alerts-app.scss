@@ -3,6 +3,12 @@
 
   .alerts-list {
     color: #333;
+    margin-top: 0;
+    padding: 0 10px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #e5e5e5;
+    }
 
     h5 {
       overflow: hidden;
@@ -13,7 +19,6 @@
 
     .media-body {
       padding: 15px 0;
-      border-bottom: 1px solid #ccc;
     }
   }
 }
