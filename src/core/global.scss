@@ -826,19 +826,20 @@ ul.social {
   border: 0;
   color: $brand-primary !important;
 
-  img {
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
-    margin-left: 5px;
-  }
-
   &:hover,
   &:active {
     text-decoration: none;
   }
 }
 
+.top-auth-button {
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin-left: 5px;
+  }
+}
 
 /* Stripe */
 .stripe { margin-bottom: 10px; }
