@@ -817,7 +817,7 @@ ul.social {
   .log_in { color: #fff; }
 }
 
-.sign-in {
+.sign-in,.top-auth-button {
   @extend .btn;
   @extend .btn-link;
   height: 40px;
