@@ -6,12 +6,21 @@
   h1 { font-size: 64px !important; }
 
   .store-link {
+    display: block;
+    color: $text-color;
     width: 50%;
     font-size: 20px;
     cursor: pointer;
     position: absolute;
-    margin-top: -60px;
+    top: -60px;
     left: 25%;
+
+    @media (max-width: $screen-xs) {
+      width: 75%;
+      left: 12.5%;
+      font-size: 12px;
+      top: -40px;
+    }
 
     .rate {
       height: 60px;
@@ -22,6 +31,8 @@
       border-top: 1px solid #ccc;
       border-left: 1px solid #ccc;
       border-right: 1px solid #ccc;
+
+      @media (max-width: $screen-xs) { height: 40px; line-height: 40px; }
     }
     .subscribe {
       height: 60px;
@@ -31,6 +42,8 @@
       border-bottom-right-radius: 6px;
       border-bottom-left-radius: 6px;
       box-shadow: inset 0 -4px 0 darken($brand-success, 5%);
+
+      @media (max-width: $screen-xs) { height: 40px; line-height: 40px; }
     }
   }
 
@@ -38,6 +51,7 @@
     border-radius: 6px;
     background-color: #424242;
     margin-top: 120px;
+    position: relative;
 
     .cover {
       background-image: url('http://placehold.it/1200x400');
@@ -57,6 +71,8 @@
       border-radius: 20px;
       font-weight: bold;
       color: #ccc;
+
+      @media (max-width: $screen-xs) { font-size: 12px; width: 75%; }
 
       .tab-title {
         display: inline-block;
