@@ -37,7 +37,7 @@
 
     .text-muted { color: #aaa; }
     .text-success { color: $brand-success; }
-    .text-primary { color: $brand-primary; }
+    .text-primary { color: $brand-info; }
     .text-danger { color: $brand-danger; }
     .text-warning { color: $brand-warning; }
 
@@ -58,7 +58,10 @@
     .ticket {
       @extend .row;
       margin: 0;
-      padding: 20px 0;
+      // padding: 20px 0;
+      line-height: 66px;
+
+      a { color: $text-color; }
 
       &:not(:last-child) { border-bottom: 1px solid #eee; }
 
