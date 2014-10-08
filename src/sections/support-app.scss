@@ -1,58 +1,105 @@
 .support-app {
 
+  .support-time {
+    @extend .alert;
+
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-width: 0px;
+    color: #666;
+    margin-top: -$navbar-margin-bottom;
+    margin-bottom: 40px;
+    text-align: center;
+
+    &.alert-warning { border-color: #FAEBCC; }
+    &.alert-success { border-color: #D6E9C6; }
+
+    .text-danger { color: $brand-danger; }
+    .divider { margin: 0 5px; }
+  }
+
   h2 { margin-top: 0px !important; }
 
-  .jumbotron {
-    text-align: center;
-    background-color: transparent;
+  /* Ticket List Table (desktop) */
+  .ticket-list-table {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    margin-bottom: 40px;
 
-    p.open-support-ticket-btn {
-      margin-top: 40px;
-      margin-bottom: 40px;
+    .no-tickets {
+      min-height: 200px;
+      text-align: center;
+      line-height: 200px;
+      color: #aaa;
     }
 
-    p.forum {
+    .text-muted { color: #aaa; }
+    .text-success { color: $brand-success; }
+    .text-primary { color: $brand-primary; }
+    .text-danger { color: $brand-danger; }
+    .text-warning { color: $brand-warning; }
+
+    .title-row {
+      @extend .row;
       font-size: 12px;
+      margin: 0;
+      border-bottom: 1px solid #ccc;
+      padding: 0;
+      line-height: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+    }
+    .ticket {
+      @extend .row;
+      margin: 0;
+      padding: 20px 0;
+
+      &:not(:last-child) { border-bottom: 1px solid #ccc; }
+
+      * {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
     }
   }
-
-  /* ngGrid Styling */
-  .gridStyle {
-    border: 1px solid rgb(212,212,212);
-    width: 100%;
-    height: 500px;
-  }
-
-  .gridStyle .label {
-    display: inline-block;
-    width: 75%;
-  }
-
-  .gridStyle a { color: #333; }
-  .gridStyle .ngCellText { line-height: 40px; }
 
   /* Media Style Ticket List (mobile) */
-  .ticket-list {
-    &.media {
-      margin-top: 0;
-      color: #333;
-      cursor: pointer;
-    }
+  .ticket-list-mobile {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
 
-    .label {
-      width: 60px;
-    }
+    .ticket {
+      &.media {
+        margin-top: 0;
+        color: #333;
+        cursor: pointer;
+      }
 
-    h5 {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      padding-right: 40px;
-    }
+      .label {
+        width: 60px;
+      }
 
-    .ticket-item-mobile {
-      padding: 15px 0;
-      border-bottom: 1px solid #ccc;
+      h5 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-right: 40px;
+      }
+
+      .ticket-item {
+        padding: 15px 0;
+      }
+
+      &:not(:last-child) .ticket-item { border-bottom: 1px solid #ccc; }
     }
   }
 
