@@ -787,7 +787,14 @@ ul.social {
     }
   }
 
-  &.rounded { border-radius: 30px; margin-left: 10px; }
+  &.rounded { border-radius: 30px; }
+}
+
+
+.btn-github {
+  @extend .btn-xs;
+  @extend .btn-rv-help;
+  @extend .rounded;
 }
 
 .btn-remove .fa::before,
@@ -885,12 +892,6 @@ ul.social {
 
 }
 
-.btn-github {
-  .fa::before {
-    font-size: 2em !important;
-  }
-}
-
 /* Boxed content
    ========================================================================== */
 .content-box {
@@ -960,6 +961,10 @@ ul.social {
 .label-disabled {
   color: $light-gray;
 }
+
+
+.add-left { margin-left: 10px !important; }
+.add-right { margin-left: 10px !important; }
 
 .remove-bottom { margin-bottom: 0 !important; }
 .half-bottom { margin-bottom: 10px !important; }
