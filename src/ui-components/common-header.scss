@@ -28,3 +28,14 @@
 	p,
 	.btn { margin-top: 40px; }
 }
+
+.navbar-header {
+	.dropdown-menu {
+		.fa { font-size: 20px !important; }
+	}
+
+	.dropdown-header .fa {
+		width: 40px;
+		&:before { font-size: 20px !important; }
+	}
+}
