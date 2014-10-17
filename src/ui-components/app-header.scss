@@ -1,0 +1,25 @@
+.app-header {
+  @include make-row;
+
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    color: $text-muted;
+    @include make-sm-column(6);
+  }
+
+  .actions {
+    margin-bottom: 40px;
+    text-align: right;
+    @include make-sm-column(6);
+
+    @media (max-width: $screen-sm) {
+      text-align: center;
+
+      a {
+        width: 100%;
+        &:first-child { margin-bottom: 20px; }
+      }
+    }
+  }
+}
