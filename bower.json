@@ -17,6 +17,7 @@
     "spectrum": "git://github.com/Rise-Vision/spectrum"
   },
   "dependencies": {
-    "font-awesome": "~4.1.0"
+    "font-awesome": "~4.1.0",
+    "rv-common-style": "git://github.com/Rise-Vision/common-style"
   }
 }

@@ -1,0 +1,46 @@
+.toolbar {
+	border: 1px solid #d4d4d4;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	border-radius: 6px;
+	.btn-lg {
+	padding: 0 15px;
+	height: 40px;
+	line-height: 36px;
+	font-size: 16px;
+	font-weight: 600;
+	}
+	.toolbar-nav {
+		.btn {
+			&:last-child {
+				border-right: none;
+			}
+		}	
+	}
+	.toolbar-actions {
+		@media(max-width:768px){
+			display: none;
+		}
+		float: right;
+		.btn {
+			&:last-child {
+				border-right: none;
+			}
+		}
+	}
+	.btn {
+		border-radius: 0;
+		background: none;
+		border-right: 1px solid #e6e6e6;
+		line-height: 36px;
+		i {
+			vertical-align: top;
+		}
+	}
+	@media(max-width:768px){	
+		.ellipsed {
+			width: 150px;
+			display: inline-block;
+		}
+	}
+}

@@ -612,6 +612,20 @@ input[type=number]::-webkit-outer-spin-button {
 /* ==========================================================================
    Buttons
    ========================================================================== */
+   
+.btn-cta {
+	background-color: $rise-green;
+	color: $white;
+  &:hover {
+  	color: $white;
+  	background-color: lighten( $rise-green, 10% );
+  }
+  i {
+  	vertical-align: top;
+  	margin-right: 5px;
+  }
+}
+
 
 /* Close button
    ========================================================================== */
@@ -760,9 +774,14 @@ ul.social {
   }
 }
 
+.btn-primary {
+	background: $rise-green;
+	border-color: $rise-green;
+}
+
 .btn-primary:hover {
-  background: $rise-blue;
-  border-color: $rise-blue;
+  background: lighten( $rise-green, 10% );
+  border-color: lighten( $rise-green, 10% );
 }
 
 .btn-success:hover {
@@ -792,7 +811,7 @@ ul.social {
 
 
 .btn-github {
-  @extend .btn-xs;
+  @extend .btn-sm;
   @extend .btn-rv-help;
   @extend .rounded;
 }
@@ -1015,3 +1034,20 @@ ul.social {
   background-image: url(http://s3.amazonaws.com/Rise-Images/Icons/widget-icon-storage.png);
   @include background-image-retina('http://s3.amazonaws.com/Rise-Images/Icons/widget-icon-storage', 'png', 30px, 30px);
 }
+
+/* Utilities
+   ========================================================================== */
+
+.ellipsed {
+	text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.row-no-padding {
+  [class*="col-"] {
+    padding-right: 0 !important;
+  }
+}
+
+

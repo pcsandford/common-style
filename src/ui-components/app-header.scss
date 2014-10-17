@@ -1,0 +1,36 @@
+.app-header {
+	margin-bottom: 20px;
+	h1 {
+		font-size: 32px;
+		font-weight: 400;
+		line-height: 41px;
+		margin: 0 5px 0 0;
+		display: inline-block;
+	}
+	.btn-rv-help {
+		vertical-align: top;
+		margin-top: 8px;
+		border-radius: 20px;
+	}
+	.btn-lg {
+	padding: 0 15px;
+	height: 40px;
+	line-height: 36px;
+	font-size: 16px;
+	font-weight: 600;
+	}
+	.global-actions {
+		margin-top: 4px;
+		float: right;
+		@media(max-width:480px){
+			margin-top: 20px;
+			float: none;
+			text-align: center;
+			.btn {
+				display: block;
+				width: 100%;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
