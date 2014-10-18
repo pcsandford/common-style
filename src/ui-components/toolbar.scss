@@ -1,46 +1,123 @@
-.toolbar {
-	border: 1px solid #d4d4d4;
-	margin-top: 10px;
-	margin-bottom: 20px;
-	border-radius: 6px;
-	.btn-lg {
-	padding: 0 15px;
-	height: 40px;
-	line-height: 36px;
-	font-size: 16px;
-	font-weight: 600;
-	}
-	.toolbar-nav {
-		.btn {
-			&:last-child {
-				border-right: none;
-			}
-		}	
-	}
-	.toolbar-actions {
-		@media(max-width:768px){
-			display: none;
-		}
-		float: right;
-		.btn {
-			&:last-child {
-				border-right: none;
-			}
-		}
-	}
-	.btn {
-		border-radius: 0;
+.bar {
+  border: 1px solid #d4d4d4;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 6px;
+  height: 40px;
+  margin-bottom: 10px;
+  
+  .btn-lg {
+		padding: 0 15px;
+		height: 40px;
+		line-height: 36px;
+		font-size: 16px;
 		background: none;
 		border-right: 1px solid #e6e6e6;
-		line-height: 36px;
-		i {
-			vertical-align: top;
+		border-radius: 0;
+		&:last-child {
+			border-right: none;
 		}
 	}
-	@media(max-width:768px){	
+  
+  .left, .right {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .left { left: 0; }
+  .right { right: 0; }
+  
+  aside { 
+    float: left; width: 50%;
+    transition: all 0.5s;
+    
+    &:last-child { 
+      text-align: right; 
+    }
+  }
+  @media(max-width:768px){	
 		.ellipsed {
 			width: 150px;
 			display: inline-block;
+		}
+	}
+}
+
+@media (max-width:768px) {
+  .bar {
+    aside { 
+      padding: 0 36px;
+      position: absolute;
+      left: 0; top: 0;
+      text-align: center !important;
+      width: 100%; 
+      
+      &:last-child { left: 100%; }
+    }
+    
+    .left, .right {
+      display: block;
+    }
+  }
+}
+
+.table-responsive {
+
+}
+
+.table.filetable {
+	margin-top: 0;
+	margin-bottom: 0;
+	th {
+		border-bottom: none;
+		background: none;
+		padding:10px;
+		input {
+			margin-top: 0;
+			margin-left: 6px;
+		}
+		a {
+			font-size: 12px;
+			text-transform: uppercase;
+			color: $gray;
+		}
+	}
+	td {
+		border-top: none;
+		border-bottom: 1px solid #e6e6e6;
+		padding:10px;
+		vertical-align: middle;
+		color: #999;
+		input {
+			margin-top: 1px;
+			margin-left: 6px;
+		}
+		a {
+			color: $gray;
+		}
+		.fa::before {
+			color: lighten( $rise-green, 20% );
+			margin-right: 5px;
+		}
+	}
+	tr {
+		&:last-child {
+			td {
+			border-bottom: none;
+			}
+		}
+	}
+	@media (max-width:768px) {
+		thead {
+			display: none;
+		}
+		th,td {
+			padding: 10px 5px;
+			font-size: 14px;
 		}
 	}
 }

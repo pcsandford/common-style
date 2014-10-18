@@ -682,7 +682,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-top: 5px;
 
   > thead > tr > th {
-    background: #e6e6e6;
+    background: none;
     border-color: #cbcbcb;
   }
 }
@@ -777,6 +777,7 @@ ul.social {
 .btn-primary {
 	background: $rise-green;
 	border-color: $rise-green;
+	.fa::before, .glyphicons::before { color: $white; }
 }
 
 .btn-primary:hover {
