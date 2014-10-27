@@ -743,7 +743,6 @@ ul.social {
 /* Buttons
    ========================================================================== */
 .btn-default {
-	border-radius: 4px;
   .fa::before, .glyphicons::before { color: $gray; }
 
   &:hover {
@@ -758,7 +757,6 @@ ul.social {
 }
 
 .btn-primary {
-  border-radius: 4px;
   .fa::before, .glyphicons::before { color: $white; }
 }
 
