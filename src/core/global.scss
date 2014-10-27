@@ -1055,7 +1055,7 @@ ul.social {
     position: relative;
 }
 .left-inner-addon input {
-    padding-left: 40px;    
+    padding-left: 40px;
 }
 .left-inner-addon i {
     position: absolute;
@@ -1070,7 +1070,7 @@ ul.social {
     position: relative;
 }
 .right-inner-addon input {
-    padding-right: 40px;    
+    padding-right: 40px;
 }
 .right-inner-addon i {
     position: absolute;
@@ -1079,4 +1079,10 @@ ul.social {
     pointer-events: none;
 }
 
-
+%vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
