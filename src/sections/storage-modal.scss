@@ -151,3 +151,88 @@
     }
   }
 }
+
+//TO BE ORGANIZED
+
+.storage-modal {
+	.table.filetable {
+		margin: 0;
+			th, td {
+				padding:14px 8px;
+				vertical-align: middle;
+				input {
+					margin-top: 0;
+					margin-left: 10px;
+				}
+			}
+			th {
+				border-bottom: none;
+				&.text-right {
+					padding-right: 20px;
+				}
+				a {
+					font-size: 12px;
+					text-transform: uppercase;
+					color: $gray;
+				}
+			}
+			td {
+				border-top: none;
+				border-bottom: 1px solid #f2f2f2;
+				color: #888;
+				font-size: 14px;
+				&.text-right {
+					padding: 10px 20px 10px 10px;
+				}
+				a {
+					color: $dark-gray;
+					.fa::before {
+						color: lighten( $rise-green, 20% );
+						margin-right: 5px;
+						font-size: 20px;
+						vertical-align: middle;
+					}
+				}
+			}
+			.btn-md {
+				padding: 2px;
+				margin-right: 5px;
+			}
+			tr {
+				&:last-child {
+					td {
+						border-bottom: none;
+					}
+				}
+			}
+			@media (max-width:768px) {
+				th,td {
+					padding: 10px 5px;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	
+.share-url {
+	width: 1px;
+}
+
+.table-responsive {
+	border: none;
+}
+
+.content-box {
+	margin: 0 40px;
+	.form-group {
+		margin: 0;
+	}
+	.search-bar input {
+		border: none;
+		background: #f5f5f5;
+		border-radius: 4px 4px 0 0;
+		box-shadow: none;
+		height: 40px;
+	}
+}
+

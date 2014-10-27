@@ -18,7 +18,7 @@ body {
   overflow-x: hidden;
 
   /* Visual */
-  background: $lighter-gray;
+  background: #fcfcfc;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   /*background: transparent;*/
@@ -609,24 +609,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
-/* ==========================================================================
-   Buttons
-   ========================================================================== */
-   
-.btn-cta {
-	background-color: $rise-green;
-	color: $white;
-  &:hover {
-  	color: $white;
-  	background-color: lighten( $rise-green, 10% );
-  }
-  i {
-  	vertical-align: top;
-  	margin-right: 5px;
-  }
-}
-
-
 /* Close button
    ========================================================================== */
 .close {
@@ -761,6 +743,7 @@ ul.social {
 /* Buttons
    ========================================================================== */
 .btn-default {
+	border-radius: 4px;
   .fa::before, .glyphicons::before { color: $gray; }
 
   &:hover {
@@ -775,14 +758,8 @@ ul.social {
 }
 
 .btn-primary {
-	background: $rise-green;
-	border-color: $rise-green;
+	border-radius: 4px;
 	.fa::before, .glyphicons::before { color: $white; }
-}
-
-.btn-primary:hover {
-  background: lighten( $rise-green, 10% );
-  border-color: lighten( $rise-green, 10% );
 }
 
 .btn-success:hover {
@@ -810,10 +787,36 @@ ul.social {
   &.rounded { border-radius: 30px; }
 }
 
+.btn-rv-status {
+  @extend .btn-default;
+  font-weight: 700;
+  background: none;
+  border: 1px solid #F1A9A0;
+
+  &:hover,
+  &:active {
+    border-color: $btn-default-border;
+    background-color: $btn-default-bg;
+    color: $btn-default-color;
+    @include box-shadow(none);
+    .fa::before,
+    .glyphicons::before {
+     color: $gray !important;
+    }
+  }
+
+  &.rounded { border-radius: 30px; }
+}
 
 .btn-github {
   @extend .btn-sm;
   @extend .btn-rv-help;
+  @extend .rounded;
+}
+
+.btn-status {
+  @extend .btn-sm;
+  @extend .btn-rv-status;
   @extend .rounded;
 }
 
@@ -919,12 +922,11 @@ ul.social {
   position: relative;
 
   /* Display & Box Model */
-  padding: 20px;
-  border: $light-border;
 
   /* Visual */
   background: #fff;
-  border-radius: 5px;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
 }
 
 /* Horizontal rule
@@ -1055,19 +1057,22 @@ ul.social {
     position: relative;
 }
 .left-inner-addon input {
-    padding-left: 30px;    
+    padding-left: 40px;    
 }
 .left-inner-addon i {
     position: absolute;
-    padding: 10px 12px;
+    padding: 12px 14px;
     pointer-events: none;
+    &::before {
+    	color: #CCC;
+    }
 }
 
 .right-inner-addon {
     position: relative;
 }
 .right-inner-addon input {
-    padding-right: 30px;    
+    padding-right: 40px;    
 }
 .right-inner-addon i {
     position: absolute;

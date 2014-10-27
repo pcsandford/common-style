@@ -1,35 +1,28 @@
 .bar-wrapper {
 	position: relative;
 	.dropdown-toggle {
-  	border: none;
-  	background: none;
-  	border-right: 1px solid #e6e6e6;
-  	position: absolute;
-  	color: $rise-green;
-  	width: 40px;
-  	height: 40px;
-  	display: block;
-  	top: 1px;
-  	left: 1px;
-  	z-index: 999;
-  	border-radius: 3px 0 0 3px;
+		position: absolute;
+		z-index: 100;
+		height: 49px;
+		border-radius: 0;
+		border: none;
   }
 }
 
 .bar {
-  border: 1px solid #d4d4d4;
-  background: #fcfcfc;
+  background: #FFF;
+  border-bottom: 1px solid #d4d4d4;
   position: relative;
   overflow: hidden;
   width: 100%;
-  border-radius: 4px;
-  height: 42px;
-  margin-bottom: 10px;
-  padding-left: 40px;
+  height: 50px;
+  padding-left: 50px;
+  z-index: 90;
   
   .btn-lg {
-		padding: 0 15px;
+		padding: 0 20px;
 		height: 40px;
+		margin-top: 5px;
 		line-height: 36px;
 		font-size: 16px;
 		background: none;
@@ -64,14 +57,12 @@
   
   .folder-navigation {
   	.fa::before {
-  		margin-right: 10px;
+  		margin-right: 5px;
   	}
   	.current-folder {
-  		display: inline-block;
-  		height: 40px;
-  		line-height: 40px;
+  		line-height: 50px;
+  		font-size: 18px;
   		font-weight: bold;
-  		margin-left: 10px;
   	}
 	}
 	
@@ -95,80 +86,4 @@
     }
   }
 }
-
-.storage-modal {
-	.form-group {
-		input {
-		}
-	}
-	.table.filetable {
-		margin-top: 0;
-		margin-bottom: 0;
-			th, td {
-				font-size: 14px;
-			}
-			th {
-				border-bottom: none;
-				background: none;
-				padding:10px;
-				input {
-					margin-top: 0;
-					margin-left: 6px;
-				}
-				a {
-					font-size: 12px;
-					text-transform: uppercase;
-					color: $gray;
-				}
-			}
-			td {
-				border-top: none;
-				border-bottom: 1px solid #e6e6e6;
-				padding:10px;
-				vertical-align: middle;
-				color: #888;
-				input {
-					margin-top: 0;
-					margin-left: 6px;
-				}
-				a {
-					color: #444;
-				}
-				.fa::before {
-					color: lighten( $rise-green, 20% );
-					margin-right: 5px;
-					font-size: 16px;
-				}
-				.fa-link::before {}
-			}
-			tr {
-				&:last-child {
-					td {
-						border-bottom: none;
-					}
-				}
-			}
-			@media (max-width:768px) {
-				thead {
-					display: none;
-				}
-				th,td {
-					padding: 10px 5px;
-					font-size: 14px;
-				}
-			}
-		}
-	}
-	
-.share-url {
-	width: 1px;
-}
-
-
-
-
-
-
-
-
 

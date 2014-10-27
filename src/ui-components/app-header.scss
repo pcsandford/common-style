@@ -1,41 +1,38 @@
 .app-header {
-	margin-bottom: 20px;
+	overflow:hidden;
+	margin: 0 40px;
 	h1 {
-		font-size: 32px;
+		line-height: 80px;
 		font-weight: 400;
-		line-height: 41px;
 		margin: 0 5px 0 0;
 		display: inline-block;
 	}
-	.btn-rv-help {
+	.btn-github, .btn-status {
 		vertical-align: top;
-		margin-top: 8px;
-		border-radius: 20px;
-	}
-	.btn-lg {
-	padding: 0 15px;
-	height: 40px;
-	line-height: 36px;
-	font-size: 16px;
-	font-weight: 600;
+		margin-top: 28px;
 	}
 	.global-actions {
-		margin-top: 4px;
 		float: right;
-		.btn {
-			float: right;
-			margin-left: 10px;
+		margin-top: 20px;
+	}
+}
+
+
+@media(max-width:768px){
+	.app-header {
+		padding: 0;
+		margin-bottom: 0;
+		h1 {
 		}
-		@media(max-width:768px){
-			margin-top: 20px;
+		.global-actions {
 			float: none;
-			text-align: center;
-			.btn {
+			overflow: hidden;
+			.btn-group {
 				display: block;
-				float: none;
-				margin-left: 0;
+			}
+			.btn {
 				width: 100%;
-				margin-bottom: 10px;
+				margin: 0 0 10px 0;
 			}
 		}
 	}
