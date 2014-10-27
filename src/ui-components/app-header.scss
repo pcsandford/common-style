@@ -1,6 +1,5 @@
 .app-header {
 	overflow:hidden;
-	margin: 0 40px;
 	h1 {
 		line-height: 80px;
 		font-weight: 400;
@@ -20,10 +19,6 @@
 
 @media(max-width:768px){
 	.app-header {
-		padding: 0;
-		margin-bottom: 0;
-		h1 {
-		}
 		.global-actions {
 			float: none;
 			overflow: hidden;
