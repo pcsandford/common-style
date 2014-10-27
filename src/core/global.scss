@@ -609,10 +609,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
-/* ==========================================================================
-   Buttons
-   ========================================================================== */
-
 /* Close button
    ========================================================================== */
 .close {
@@ -668,7 +664,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-top: 5px;
 
   > thead > tr > th {
-    background: #e6e6e6;
+    background: none;
     border-color: #cbcbcb;
   }
 }
@@ -760,9 +756,8 @@ ul.social {
   }
 }
 
-.btn-primary:hover {
-  background: $rise-blue;
-  border-color: $rise-blue;
+.btn-primary {
+  .fa::before, .glyphicons::before { color: $white; }
 }
 
 .btn-success:hover {
@@ -790,10 +785,36 @@ ul.social {
   &.rounded { border-radius: 30px; }
 }
 
+.btn-rv-status {
+  @extend .btn-default;
+  font-weight: 700;
+  background: none;
+  border: 1px solid #F1A9A0;
+
+  &:hover,
+  &:active {
+    border-color: $btn-default-border;
+    background-color: $btn-default-bg;
+    color: $btn-default-color;
+    @include box-shadow(none);
+    .fa::before,
+    .glyphicons::before {
+     color: $gray !important;
+    }
+  }
+
+  &.rounded { border-radius: 30px; }
+}
 
 .btn-github {
-  @extend .btn-xs;
+  @extend .btn-sm;
   @extend .btn-rv-help;
+  @extend .rounded;
+}
+
+.btn-status {
+  @extend .btn-sm;
+  @extend .btn-rv-status;
   @extend .rounded;
 }
 
@@ -899,12 +920,11 @@ ul.social {
   position: relative;
 
   /* Display & Box Model */
-  padding: 20px;
-  border: $light-border;
 
   /* Visual */
   background: #fff;
-  border-radius: 5px;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
 }
 
 /* Horizontal rule
@@ -1015,3 +1035,48 @@ ul.social {
   background-image: url(http://s3.amazonaws.com/Rise-Images/Icons/widget-icon-storage.png);
   @include background-image-retina('http://s3.amazonaws.com/Rise-Images/Icons/widget-icon-storage', 'png', 30px, 30px);
 }
+
+/* Utilities
+   ========================================================================== */
+
+.ellipsed {
+	text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.row-no-padding {
+  [class*="col-"] {
+    padding-right: 0 !important;
+  }
+}
+
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon input {
+    padding-left: 40px;    
+}
+.left-inner-addon i {
+    position: absolute;
+    padding: 12px 14px;
+    pointer-events: none;
+    &::before {
+    	color: #CCC;
+    }
+}
+
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 40px;    
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+
