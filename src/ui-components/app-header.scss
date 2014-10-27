@@ -1,4 +1,8 @@
 .app-header {
+	@include make-row;
+	.app-title {
+		@include make-sm-column(6);	
+	}
 	h1 {
 		line-height: 80px;
 		font-weight: 400;
@@ -10,20 +14,16 @@
 		margin-top: 28px;
 	}
 	.global-actions {
-		float: right;
+		@include make-sm-column(6);
 		margin-top: 20px;
+		.btn {
+			float: right;
+			margin-left: 10px;
+		}
 	}
-}
-
-
-@media(max-width: $screen-sm){
-	.app-header {
+	@media(max-width: $screen-sm){
 		.global-actions {
-			float: none;
-			overflow: hidden;
-			.btn-group {
-				display: block;
-			}
+			float:none;
 			.btn {
 				width: 100%;
 				margin: 0 0 10px 0;
@@ -31,4 +31,7 @@
 		}
 	}
 }
+
+
+
 
