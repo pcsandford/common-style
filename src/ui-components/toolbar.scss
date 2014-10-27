@@ -3,21 +3,21 @@
 	.dropdown-toggle {
 		position: absolute;
 		z-index: 100;
-		height: 49px;
-		border-radius: 0;
+		height: 48px;
+		top: 1px;
 		border: none;
   }
 }
 
 .bar {
-  background: #FFF;
-  border-bottom: 1px solid #d4d4d4;
+  border: 1px solid #d4d4d4;
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 50px;
   padding-left: 50px;
   z-index: 90;
+  border-radius:4px;
   
   .btn-lg {
 		padding: 0 20px;
