@@ -16,7 +16,7 @@
 }
 
 
-@media(max-width:768px){
+@media(max-width: $screen-sm){
 	.app-header {
 		.global-actions {
 			float: none;
@@ -31,3 +31,4 @@
 		}
 	}
 }
+

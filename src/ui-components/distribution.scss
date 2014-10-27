@@ -59,6 +59,7 @@
  * NEW content slides IN from the RIGHT, OLD slides OUT to the LEFT
  * Reverse: NEW content slides IN from the LEFT, OLD slides OUT to the RIGHT
  */
+ .distribution-modal-container .modal-content { overflow-x: hidden; }
 .slide-left-right { min-width: 100%; min-height: 383px; }
 
 $transition-duration: 250ms;
