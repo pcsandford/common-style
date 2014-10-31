@@ -41,10 +41,7 @@ gulp.task('build', ['build-alignment'], function() {
     .pipe(gulp.dest(paths.distFonts));
 });
 
-
-gulp.task('dev', function() {
-  // Compile LESS on start once
-  gulp.run('build');
+gulp.task('dev', ['build'], function() {
   // Watch Less files for changes
   gulp.watch(paths.sass, ['build']);
   console.log('[SASS] Watching for changes in SASS files'.yellow.inverse);

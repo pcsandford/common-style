@@ -1,10 +1,20 @@
 .app-header {
   @include make-row;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #D6D6D6;
+
   .app-title {
     @include make-sm-column(6);
   }
+  .app-title-links,
+  .app-title-links:hover,
+  .app-title-links:active  {
+    display: block;
+    color: $brand-success;
+    i:before { color: $brand-success !important; }
+  }
   h1 {
-    line-height: 80px;
+    line-height: 40px;
     font-weight: 400;
     margin: 0 5px 0 0;
     display: inline-block;
@@ -31,7 +41,3 @@
     }
   }
 }
-
-
-
-
