@@ -631,6 +631,16 @@ input[type=number]::-webkit-outer-spin-button {
 
   /* Visual */
   background-color: #fff;
+
+  > button {
+    /* Display & Box Model */
+    margin-bottom: 10px;
+  }
+
+  > a[type="button"] {
+    /* Display & Box Model */
+    margin-bottom: 10px;
+  }
 }
 
 /* Toggle buttons (http://www.bootstrap-switch.org/)
