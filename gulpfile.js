@@ -33,7 +33,8 @@ gulp.task('build', ['build-alignment'], function() {
     }))
     .pipe(minifyCSS())
     .pipe(rename('rise.min.css'))
-    .pipe(gulp.dest(paths.distCss));
+    .pipe(gulp.dest(paths.distCss))
+    .pipe(gulp.dest('/Users/winkerVSbecks/Desktop/developer-hub/web/components/rv-common-style/dist/css'));
   console.log('[CSS] minifying'.yellow);
 
   console.log('[COPY] copying over fonts'.yellow);
