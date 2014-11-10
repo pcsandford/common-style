@@ -24,7 +24,7 @@
   }
   .btn-github, .btn-status {
     vertical-align: top;
-    margin-top: 28px;
+    margin-top: 10px;
   }
   .global-actions {
     @include make-sm-column(6);
@@ -32,6 +32,10 @@
     .btn {
       float: right;
       margin-left: 10px;
+    }
+
+    &.no-breadcrumb {
+      margin-top: 0;
     }
   }
   @media(max-width: $screen-sm){
