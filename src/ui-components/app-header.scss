@@ -1,46 +1,52 @@
 .app-header {
   @include make-row;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #D6D6D6;
-  margin-left: 0;
-  margin-right: 0;
-
-  .app-title {
+  margin-bottom: 20px;
+  .title-block,.app-title {
     @include make-sm-column(6);
     @extend .ellipsed;
+    padding-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
   }
-  .app-title-links,
-  .app-title-links:hover,
-  .app-title-links:active  {
+  .title-block-links,
+  .title-block-links:hover,
+  .title-block-links:active  {
     display: block;
-    color: $brand-success;
-    i:before { color: $brand-success !important; }
+    color: $rise-green;
+    i:before { color: $rise-green !important; }
+  }
+  .app-title {
+    border-bottom: 1px solid #D6D6D6;
   }
   h1 {
-    line-height: 40px;
     font-weight: 400;
+    line-height: 40px;
     margin: 0 5px 0 0;
     display: inline-block;
   }
-  .btn-github, .btn-status {
+  .btn-github {
     vertical-align: top;
-    margin-top: 10px;
+    margin-top: 8px;
   }
   .global-actions {
+    text-align: right;
     @include make-sm-column(6);
-    margin-top: 20px;
     .btn {
-      float: right;
-      margin-left: 10px;
     }
 
     &.no-breadcrumb {
       margin-top: 0;
     }
   }
+  .form-group {
+    @include make-sm-column(12);
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
   @media(max-width: $screen-sm){
     .global-actions {
       float:none;
+      margin-top: 20px;
       .btn {
         width: 100%;
         margin: 0 0 10px 0;

@@ -1,91 +1,20 @@
-.bar-wrapper {
-	position: relative;
-	.dropdown-toggle {
-		position: absolute;
-		z-index: 100;
-		height: 48px;
-		top: 1px;
-		left:1px;
-		border: none;
-  }
-}
-
 .bar {
-	background: #FFF;
-  border: 1px solid #d4d4d4;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 50px;
-  padding-left: 50px;
-  z-index: 90;
-  border-radius:4px;
-  
-  .btn-lg {
-		padding: 0 20px;
-		height: 40px;
-		margin-top: 5px;
-		line-height: 36px;
-		font-size: 16px;
-		background: none;
-		border-right: 1px solid #e6e6e6;
-		border-radius: 0;
-		&:last-child {
-			border-right: none;
-		}
-  	&:active,
-  	&:focus {
-    text-decoration: none;
-    box-shadow: none;
-    outline: none;
-  	}
-  	&:hover {
-  	 .fa::before {
-  	 		color: lighten( $rise-green, 20% );
-  	 }	
-  	}
-  	.fa::before {
-  		color: $rise-green;
-  	}
-	}
-  aside { 
-    float: left; width: 50%;
-    transition: all 0.5s;
-    
-    &:last-child { 
-      text-align: right; 
-    }
+  @include make-row;
+  h3 {
+    margin:0;
+    line-height: 32px;
+    font-weight: normal;
   }
-  
-  .folder-navigation {
-  	.fa::before {
-  		margin-right: 5px;
+  .form-group {
+    @include make-sm-column(12);
+    margin-top: 20px;
+    margin-bottom: 0; 
+  }
+  .btn-danger {
+  	background: #f2dede;
+  	border-color: #f2dede;
+  	.fa:before {
+  	  color: #d9534f;
   	}
-  	.current-folder {
-  		line-height: 50px;
-  		font-size: 18px;
-  		font-weight: bold;
-  	}
-	}
-	
-  @media(max-width:768px){	
-		.ellipsed {
-			width: 240px;
-			display: inline-block;
-		}
-	}
-}
-
-@media (max-width:768px) {
-  .bar {
-    aside { 
-      position: absolute;
-      left: 0; top: 0;
-      text-align: center !important;
-      width: 100%; 
-      
-      &:last-child { left: 100%; }
-    }
   }
 }
-
