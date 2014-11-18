@@ -64,6 +64,9 @@ a:hover {
   .fa::before , .glyphicons::before{
     line-height: 30px;
   }
+  >li>a.selected {
+    color: $rise-blue;
+  }
 }
 
 /* Hamburger icon */
