@@ -41,6 +41,10 @@
     float: right;
   }
 
+  .current-folder-icon .fa::before {
+    color: $rise-green;
+  }
+
   #store-modal {
     .overlay {
     z-index: $storage-store-overlay-zindex;
