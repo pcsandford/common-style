@@ -29,6 +29,10 @@
             transform: translate3d(0, 0, 0);
   }
 
+  &.is-action-sheet-closed {
+    display: none;
+  }
+
   li {
     list-style: none !important;
     display: list-item;
