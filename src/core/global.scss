@@ -777,7 +777,7 @@ ul.social {
   background: $rise-green;
   border-color: $rise-green;
   .fa::before, .glyphicons::before { color: $white; }
-  &:hover, &:active, &[disabled] {
+  &:hover, &:active, &:focus, &[disabled] {
     background: darken($rise-green, 10%);
     border-color: darken($rise-green, 10%); 
   }
