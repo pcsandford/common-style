@@ -160,6 +160,11 @@
   .form-group {
     margin-bottom: 10px;
   }
+
+  .non-clickable-file {
+    cursor: default;
+    text-decoration: none;
+  }
 }
 
 
