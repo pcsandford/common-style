@@ -684,6 +684,73 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+.table-2 {
+  width: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+  > thead > tr > th {
+    border-bottom: 1px solid #e6e6e6;
+    background: none;
+    overflow: hidden;
+    padding: 0 15px;
+    line-height: 40px;
+  }
+  > tbody > tr > td {
+    line-height: 40px;
+    padding: 0 15px;
+  }
+  > thead > tr > th, .title-row {
+    color: $gray;
+    a {
+      color: $gray;
+    }
+  }
+  .title-row {
+    @extend .row;
+    margin: 0;
+    background: none;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .tr-row {
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
+    @extend .row;
+    margin: 0;
+    line-height: 40px;
+
+    &:not(:last-child) { border-bottom: 1px solid #e6e6e6; }
+
+    * {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    &.stacked-row {
+      line-height: normal;
+      padding: 15px;
+    }
+  }
+}
+
+
 /* ==========================================================================
    Footer
    ========================================================================== */
