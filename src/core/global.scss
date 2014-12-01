@@ -727,6 +727,14 @@ input[type=number]::-webkit-outer-spin-button {
         -ms-user-select: none;
             user-select: none;
   }
+  a {
+    &.tr-row {
+      color: $gray;
+      &:hover {
+        color:$rise-blue;
+      }
+    }
+  }
   .tr-row {
     position: relative;
     display: block;
