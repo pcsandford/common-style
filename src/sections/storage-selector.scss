@@ -50,19 +50,19 @@ iframe.modal-dialog {
   color: #888;
 }
 
-.table.filetable .check-col {
+.table.filetable .check-col, .table-2 .check-col {
   width: 30px;
 }
 
-.table.filetable .type-col {
+.table.filetable .type-col, .table-2 .type-col {
   width: 130px;
 }
 
-.table.filetable .filesize-col {
+.table.filetable .filesize-col, .table-2 .filesize-col {
   width: 130px;
 }
 
-.table.filetable .datemod-col {
+.table.filetable .datemod-col, .table-2 .datemod-col {
   width: 180px;
 }
 
