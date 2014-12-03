@@ -13,28 +13,12 @@
     </head>
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     <body>
-        <div style="padding:40px">
-
-<h2>Unstyled Table</h2>
-
-        <table class="table-2">
-          <thead>
-            <tr>
-              <th><a href="#">Table Header</a></th>
-              <th class="text-right"><a href="#">Table Header</a></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Content</td>
-              <td class="text-right">Content</td>
-            </tr>
-          </tbody>
-        </table>
-
+<div class="container">
 
 <h2>Store Table</h2>
+<h3>Responsive Style: Scroll Overflow</h3>
 
+  <div class="content-box table-responsive">
     <table class="table-2 table-hover">
       
       <thead>
@@ -82,96 +66,78 @@
         </tr>
       </tbody>
     </table>
+  </div>
 
 <h2>App Table</h2>
-
+<h3>Responsive Style: Stacked Columns</h3>
+<div class="content-box hidden-xs">
+  <table class="table-2 table-hover">
+    <thead>
+      <tr>
+        <th><a href="#">Name</a></th>
+        <th><a href="#">Description</a></th>
+        <th><a href="#">Client ID</a></th>
+        <th><a href="#">URL</a></th>
+        <th class="text-right"><a href="#">Modified</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="#"><strong>App Name</strong></a></td>
+        <td><a href="#">Description</a></td>
+        <td><a class="ellipsed" href="#">1039315471777-oqrb8m2qfkrfp2hv2f9dta5jf72ob72p.apps.googleusercontent.com</a></td>
+        <td><a class="ellipsed" href="#">http://rise-vision.github.io/core-api/</a></td>
+        <td class="text-right"><a href="#">1 Dec 2014</a></td>
+      </tr>
+      <tr>
+        <td><a href="#"><strong>App Name</strong></a></td>
+        <td><a href="#">Description</a></td>
+        <td><a class="ellipsed" href="#">1039315471777-oqrb8m2qfkrfp2hv2f9dta5jf72ob72p.apps.googleusercontent.com</a></td>
+        <td><a class="ellipsed" href="#">http://rise-vision.github.io/core-api/</a></td>
+        <td class="text-right"><a href="#">1 Dec 2014</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</br>
+<div class="content-box visible-xs">
+  <table class="table-2 table-hover">
+    <tbody>
+      <tr>
+        <td>
+          <a href="#"><strong>App Name</strong>
+          <div class="column-content">
+            <p>Description</p>
+            <p><span class="ellipsed">1039315471777-oqrb8m2qfkrfp2hv2f9dta5jf72ob72p.apps.googleusercontent.com</span>
+            <p><span class="ellipsed">http://rise-vision.github.io/core-api</span></p>
+            <p><span>1 Dec 2014</span></p>
+          </div>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="#"><strong>App Name</strong>
+          <div class="column-content">
+            <p>Description</p>
+            <p><span class="ellipsed">1039315471777-oqrb8m2qfkrfp2hv2f9dta5jf72ob72p.apps.googleusercontent.com</span>
+            <p><span class="ellipsed">http://rise-vision.github.io/core-api</span></p>
+            <p><span>1 Dec 2014</span></p>
+          </div>
+          </a>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
     <!-- Title Row -->
-<div class="table-2">
 
-    <div class="title-row">
-        <div class="col-lg-2 col-xs-2">
-            <a href="#">Name
-            <i class="fa sort-up"></i>
-            </a>
-        </div>
-        <div class="col-lg-4 col-xs-4">
-            Description
-            <i class="fa fa-long-arrow-up"></i>
-        </div>
-        <div class="col-lg-2 col-xs-2 text-right">
-            Client ID
-            <i class="fa fa-long-arrow-down"></i>
-        </div>
-        <div class="col-lg-2 col-xs-2 text-right">
-            URL
-            <i class="fa fa-long-arrow-down"></i>
-        </div>
-        <div class="col-lg-2 col-xs-2 text-right">
-            Modified
-            <i class="fa fa-long-arrow-down"></i>
-        </div>
-    </div>
-
-    <!-- Apps -->
-    <a class="tr-row" href="#">
-        <div class="col-lg-2 col-xs-2">
-            App Name
-        </div>
-        <div class="col-lg-4 col-xs-4">
-            Description
-        </div>
-        <div class="col-lg-2 col-xs-2 text-right">
-            Client ID
-        </div>
-        <div class="col-lg-2 col-xs-2 text-right">
-            App URL
-        </div>
-        <div class="col-lg-2 col-xs-2 text-right">
-            1 Dec 2014
-        </div>
-    </a>
-
-      <!-- Apps -->
-    <a class="tr-row" href="#">
-        <div class="col-lg-2 col-xs-2">
-            App Name
-        </div>
-        <div class="col-lg-4 col-xs-4">
-            Description
-        </div>
-        <div class="col-lg-2 col-xs-2 text-right">
-            Client ID
-        </div>
-        <div class="col-lg-2 col-xs-2 text-right">
-            App URL
-        </div>
-        <div class="col-lg-2 col-xs-2 text-right">
-            1 Dec 2014
-        </div>
-    </a>
-
-      <!-- Apps -->
-    <a class="tr-row" href="#">
-        <div class="col-lg-2 col-xs-2">
-            App Name
-        </div>
-        <div class="col-lg-4 col-xs-4">
-            Description
-        </div>
-        <div class="col-lg-2 col-xs-2 text-right">
-            Client ID
-        </div>
-        <div class="col-lg-2 col-xs-2 text-right">
-            App URL
-        </div>
-        <div class="col-lg-2 col-xs-2 text-right">
-            1 Dec 2014
-        </div>
-    </a>
-
-</div><!--table-->
 
 <h2>Storage Table</h2>
+<h3>Responsive Style: Hide Columns</h3>
+
+<div class="content-box">
 
 <table class="table-2 table-hover">
 
@@ -209,14 +175,14 @@
         </a>
       </th>
     </tr>
-  </thead>fa-long-arrow-down
+  </thead>
   <tbody>
     <tr>
       <td class="check-col">
         <input type="checkbox">
       </td>
       <td class="file-name">
-        <a href="#"><i class="fa fa-file"></i> File Name</a>
+        <i class="fa fa-file"></i> <strong>File Name</strong>
       </td>
       <td class="type-col text-right hidden-xs">
         <span>Document</span>
@@ -234,7 +200,7 @@
         <input type="checkbox">
       </td>
       <td class="file-name">
-        <a href="#"><i class="fa fa-file"></i> File Name</a>
+        <i class="fa fa-file"></i> <strong>File Name</strong>
       </td>
       <td class="type-col text-right hidden-xs">
         <span>Document</span>
@@ -252,7 +218,7 @@
         <input type="checkbox">
       </td>
       <td class="file-name">
-        <a href="#"><i class="fa fa-file"></i> File Name</a>
+        <i class="fa fa-file"></i> <strong>File Name</strong>
       </td>
       <td class="type-col text-right hidden-xs">
         <span>Document</span>
@@ -266,113 +232,9 @@
     </tr>
   </tbody>
 </table>
+</div>
 
 
-<h2>Support Table</h2>
-
-<div class="support-app">
-  <div class="table-2">
-  <!-- Title Row -->
-
-    <div class="title-row">
-      <div class="col-lg-1 col-sm-2">ID
-          <i class="fa" ng-class="{false: 'fa-long-arrow-up', true: 'fa-long-arrow-down'}[search.reverse]"></i>
-        </div>
-        <div class="col-lg-1 col-sm-1" ng-click="sortBy('status')">
-        Status
-          <i class="fa fa-long-arrow-down"></i>
-        </div>
-        <div class="col-lg-6 col-sm-4" ng-click="sortBy('subject')">
-        Subject
-          <i class="fa fa-long-arrow-down"></i>
-        </div>
-        <div class="col-lg-2 col-sm-3 text-right">
-        Requested
-          <i class="fa fa-long-arrow-down"></i>
-        </div>
-        <div class="col-lg-2 col-sm-2 text-right">
-        Requester
-          <i class="fa fa-long-arrow-down"></i>
-        </div>
-      </div>
-      <!-- tickets , sorting done server side-->
-
-        <a class="tr-row" href="#">
-          <div class="col-lg-1 col-sm-2 text-muted">
-            #12345
-          </div>
-          <div class="col-lg-1 col-sm-1">
-            <span>Open</span>
-          </div>
-          <div class="col-lg-6 col-sm-4">
-            Ticket Description
-          </div>
-          <div class="col-lg-2 col-sm-3 text-right">
-            1 Dec 2014
-          </div>
-          <div class="col-lg-2 col-sm-2 text-right">
-            Ghislaine Guerin
-          </div>
-      </a>
-
-      <a class="tr-row" href="#">
-          <div class="col-lg-1 col-sm-2 text-muted">
-            #12345
-          </div>
-          <div class="col-lg-1 col-sm-1">
-            <span>Open</span>
-          </div>
-          <div class="col-lg-6 col-sm-4">
-            Ticket Description
-          </div>
-          <div class="col-lg-2 col-sm-3 text-right">
-            1 Dec 2014
-          </div>
-          <div class="col-lg-2 col-sm-2 text-right">
-            Ghislaine Guerin
-          </div>
-      </a>
-
-      <a class="tr-row" href="#">
-          <div class="col-lg-1 col-sm-2 text-muted">
-            #12345
-          </div>
-          <div class="col-lg-1 col-sm-1">
-            <span>Open</span>
-          </div>
-          <div class="col-lg-6 col-sm-4">
-            Ticket Description
-          </div>
-          <div class="col-lg-2 col-sm-3 text-right">
-            1 Dec 2014
-          </div>
-          <div class="col-lg-2 col-sm-2 text-right">
-            Ghislaine Guerin
-          </div>
-      </a>
-
-    </div>
-  </div>
-
-<h2>Alerts Table</h2>
-
-<div class="table-2">
-    <div class="alerts-list">
-        <div class="media-body tr-row stacked-row">
-          <button class="pull-right btn btn-primary btn-xs"><i class="fa fa-times fa-white"></i> Cancel</button>
-          <h4 class="media-heading">Alert Message</h4>
-          <p>To Campus for 10 Minutes</p>
-          <p class="text-muted">Alert sent 1 Dec 2014 12:00 PM by Ghislaine Guerin</p>
-        </div>
-
-        <div class="media-body tr-row stacked-row">
-          <button class="pull-right btn btn-primary btn-xs"><i class="fa fa-times fa-white"></i> Cancel</button>
-          <h4 class="media-heading">Alert Message</h4>
-          <p>To Campus for 10 Minutes</p>
-          <p class="text-muted">Alert sent 1 Dec 2014 12:00 PM by Ghislaine Guerin</p>
-        </div>
-    </div>
-</div>    
 
         </div>
     </body>
