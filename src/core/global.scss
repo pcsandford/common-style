@@ -845,7 +845,15 @@ ul.social {
   }
 }
 
+a.btn-primary:hover {
+  .fa::before {
+      color:$white;
+  }
+}
+
 .btn-primary {
+  font-weight: 400;
+  -webkit-font-smoothing: subpixel-antialiased;
   background: $rise-green;
   border-color: $rise-green;
   .fa::before, .glyphicons::before { color: $white; }
