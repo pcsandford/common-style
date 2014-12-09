@@ -859,7 +859,7 @@ a.btn-primary:hover {
   .fa::before, .glyphicons::before { color: $white; }
   &:hover, &:active, &:focus, &[disabled] {
     background: darken($rise-green, 10%);
-    border-color: darken($rise-green, 10%); 
+    border-color: darken($rise-green, 10%);
   }
 }
 
