@@ -1,6 +1,11 @@
 .file-picker {
   color: $text-muted;
   cursor: pointer;
+  &:hover {
+    .file-picker-icon {
+      background-color: #FFF;
+    }  
+  }
 
   input { @extend .sr-only; }
 
@@ -11,6 +16,7 @@
     border-radius: 16px;
     line-height: 32px;
     text-align: center;
+    margin-left: 5px;
   }
   
   :disabled {
