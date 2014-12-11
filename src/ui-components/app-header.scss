@@ -78,3 +78,16 @@
     margin-bottom: 0;
   }
 }
+
+.active-folder {
+  .fa:before {
+    color:$gray;
+  }
+  span {
+    margin-left: 5px;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 5px;
+    color: $gray;
+  }
+}
