@@ -10,6 +10,11 @@
       margin: 0 5px 0 0;
       display: inline-block;
     }
+    .store-status-2 {
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 10px;
+    }    
     .store-status {
       display: inline-block;
       vertical-align: top;
@@ -58,3 +63,18 @@
     margin-bottom: 0;
   }
 }
+
+.active-folder {
+  .fa:before {
+    color:$rise-green;
+  }
+  span {
+    margin-left: 5px;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 5px;
+    color: $gray;
+  }
+}
+
+
