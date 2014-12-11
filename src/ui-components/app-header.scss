@@ -3,9 +3,10 @@
   margin-top:10px;
   margin-bottom: 10px;
   .title-block,.app-title {
-    @include make-sm-column(6);
+    @include make-sm-column(7);
     h1 {
       font-weight: 400;
+      font-size: 34px;
       line-height: 38px;
       margin: 0 5px 0 0;
       display: inline-block;
@@ -13,20 +14,39 @@
     .store-status {
       display: inline-block;
       vertical-align: top;
+      border-radius: 3px;
+      margin-top: 10px;
+      background: #FFF;
+      padding:1px 8px;
       h3 {
         margin:0;
-        font-size: 14px;
+        font-size: 13px;
+        line-height: 23px;
         font-weight: normal;
-        line-height: 43px;
+        vertical-align: top;
+        display: inline-block;
+        color: $gray;
+        .fa:before {
+          color: $rise-green;
+        }
+        &.warning {
+          .fa:before {
+            color: #e6bf00;
+          }
+        }
+        &.expired {
+          .fa:before {
+            color: $light-gray;
+          }
+        }
         a {
+          color: $rise-green;
           font-weight: bold;
+          margin-left: 3px;
         }
       }
       @media (max-width: 768px) {
         display: block;
-        h3 {
-          line-height: normal;
-        }
       }
     }
   }
@@ -40,7 +60,7 @@
       float: right;
       margin-left: 10px;
     }
-    @include make-sm-column(6);
+    @include make-sm-column(5);
     @media (max-width: 768px) {
       margin-top: 10px;
       float:none;
