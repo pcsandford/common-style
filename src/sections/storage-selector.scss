@@ -89,7 +89,7 @@ iframe.modal-dialog {
     }
     &.folder-type {
       a {
-        .fa::before {
+        .fa-folder::before {
         color: $rise-green;
         }
       }
