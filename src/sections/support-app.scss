@@ -1,15 +1,13 @@
 .support-app {
-
   .support-time {
     @extend .alert;
-
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
     border-top-width: 0px;
-    color: #666;
     margin-top: -$navbar-margin-bottom;
     margin-bottom: 40px;
     text-align: center;
+    color: $gray;
 
     &.alert-warning { border-color: #FAEBCC; }
     &.alert-success { border-color: #D6E9C6; }
@@ -203,5 +201,45 @@
     background-color: #45B864;
     border-color: #3c9f57;
     border-radius: 0px;
+  }
+  
+  /* Tickets Table Stack View */
+  .table-stack {
+    @media (max-width: 768px) {
+      > tbody > tr {
+        display: block;
+        position: relative;
+      }
+      > tbody > tr > td {
+        padding: 5px 10px;
+        &.ticket-subject {
+          padding: 10px 80px 0 10px;
+          width: auto;
+        }
+        &.ticket-id {
+          display: none;
+        }
+        &.ticket-status {
+          text-align: right;
+          position: absolute;
+          width: 80px;
+          right: 0;
+          top: 5px;
+        }
+        &.ticket-requester {
+          margin-left: 0;
+          padding-left: 0;
+          &:before {
+            content: attr(data-th)" ";
+            float: left;
+            margin-right: 5px;
+          } 
+        }
+        &.ticket-date {
+          width: auto;
+          padding-right: 5px;
+        }
+      }
+    }
   }
 }
