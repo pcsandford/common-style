@@ -37,6 +37,9 @@
       &:last-child {
         border-bottom: none;
       }
+      &:hover {
+        background: #f5f5f5;
+      }
     } 
     > tbody > tr > td {
       display: inline-block;
