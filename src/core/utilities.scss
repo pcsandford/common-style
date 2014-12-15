@@ -54,6 +54,13 @@
     pointer-events: none;
 }
 
+.highlighted {
+  background: #FFFFE0;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+}
+
 %vertical-align {
   position: relative;
   top: 50%;
