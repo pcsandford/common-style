@@ -2,16 +2,16 @@
   max-height: 
     ($line-number * 20px);
   @if $line-width == small {
-    max-width: 120px
+    width: 120px
   }
   @if $line-width == medium {
-    max-width: 240px
+    width: 240px
   } 
   @if $line-width == large {
-    max-width: 480px
+    width: 480px
   }
   @if $line-width == full {
-    max-width: 100%
+    width: 100%
   }  
 }
 .ellipsis {
