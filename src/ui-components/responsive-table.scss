@@ -16,6 +16,7 @@
   }
   > tbody > tr > td > a {
     color: $gray;
+    display: block;
   }
   > tbody > tr:hover {
     &.clickable-row {
