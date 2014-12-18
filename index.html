@@ -13,193 +13,181 @@
     </head>
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     <body>
-      <div class="container support-app">
 
+<div class="support-app ng-scope" ng-view="" off-canvas-content=""><ticket-details class="ng-scope ng-isolate-scope"><div class="container">
+  
 
-<div class="col-md-9 blog-main">
-      <!-- ngInclude: undefined --><ng-include src="uiComponents[activeComponent].template" class="ng-scope"><h1 class="add-bottom ng-scope">Responsive Table</h1>
-
-<p class="lead ng-scope">The standard table component used to display data in a tabular format.</p>
-
-<p class="add-bottom ng-scope"><strong>Dependencies</strong> <span class="label label-info">bootstrap</span>
-<span class="label label-info">jQuery.dotdotdot</span>
-</p>
-
-<div class="add-bottom ng-scope">
-<h3>Table Styling</h3>
-<p class="add-bottom">Add all tables inside a div with <code>.content-box</code> class to show the white box container.</p>
-
-<h3>Table row as a link</h3>
-<p>Add class <code>.clickable-row</code> to display the pointer cursor when entire row is a link.</p>
-
-<h3>Drop Columns</h3>
-<p>Use bootstrap <code>.hidden-</code> and <code>.visible-</code> classes to hide and show columns according to viewport size.</p>
-
-<div class="content-box">
-  <table class="table-2 table-hover">
-    <thead>
-      <tr>
-        <th class="col-lg-3 col-xs-3" ng-click="sortBy(table1, 'name')">
-          Name
-          <!-- ngIf: table1.sortBy == 'name' --><i ng-if="table1.sortBy == 'name'" class="fa ng-scope fa-long-arrow-up" ng-class="{false: 'fa-long-arrow-up', true: 'fa-long-arrow-down'}[table1.reverse]"></i><!-- end ngIf: table1.sortBy == 'name' -->
-        </th>
-        <th class="col-lg-3 col-xs-3 hidden-sm hidden-xs" ng-click="sortBy(table1, 'description')">
-          Description
-          <!-- ngIf: table1.sortBy == 'description' -->
-        </th>
-        <th class="col-lg-2 col-xs-2 hidden-xs" ng-click="sortBy(table1, 'clientId')">
-          Client ID
-          <!-- ngIf: table1.sortBy == 'clientId' -->
-        </th>
-        <th class="col-lg-2 col-xs-2 hidden-xs" ng-click="sortBy(table1, 'url')">
-          URL
-          <!-- ngIf: table1.sortBy == 'url' -->
-        </th>
-        <th class="col-lg-2 col-xs-2 text-right visible-lg" ng-click="sortBy(table1, 'modified')">
-          Modified
-          <!-- ngIf: table1.sortBy == 'modified' -->
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- ngRepeat: row in table1.table | orderBy:table1.sortBy:table1.reverse --><tr class="clickable-row ng-scope" ng-repeat="row in table1.table | orderBy:table1.sortBy:table1.reverse">
-        <td class="col-lg-3 col-xs-3"><a href="#"><strong class="ng-binding">Api Explorer</strong></a></td>
-        <td class="col-lg-3 col-xs-3 hidden-sm hidden-xs"><a href="#" class="ellipsis ellipsis-md ng-binding" dotdotdot="" style="word-wrap: break-word;">Lorem ipsum dolor sit amet, consectetur... </a></td>
-        <td class="col-lg-2 col-xs-2 hidden-xs"><a class="ellipsis ellipsis-xs ng-binding" href="#" dotdotdot="" style="word-wrap: break-word;">10383154717... </a></td>
-        <td class="col-lg-2 col-xs-2 hidden-xs"><a class="ellipsis ellipsis-xs ng-binding" href="#" dotdotdot="" style="word-wrap: break-word;">http://rise-visi... </a></td>
-        <td class="col-lg-2 col-xs-2 text-right visible-lg"><a class="nowrap ng-binding" href="#">26-Nov-2014 1:46 PM</a></td>
-      </tr><!-- end ngRepeat: row in table1.table | orderBy:table1.sortBy:table1.reverse --><tr class="clickable-row ng-scope" ng-repeat="row in table1.table | orderBy:table1.sortBy:table1.reverse">
-        <td class="col-lg-3 col-xs-3"><a href="#"><strong class="ng-binding">Google Api Explorer</strong></a></td>
-        <td class="col-lg-3 col-xs-3 hidden-sm hidden-xs"><a href="#" class="ellipsis ellipsis-md ng-binding" dotdotdot="" style="word-wrap: break-word;">Lorem ipsum dolor sit amet, consectetur... </a></td>
-        <td class="col-lg-2 col-xs-2 hidden-xs"><a class="ellipsis ellipsis-xs ng-binding" href="#" dotdotdot="" style="word-wrap: break-word;">10393154717... </a></td>
-        <td class="col-lg-2 col-xs-2 hidden-xs"><a class="ellipsis ellipsis-xs ng-binding" href="#" dotdotdot="" style="word-wrap: break-word;">http://rise-visi... </a></td>
-        <td class="col-lg-2 col-xs-2 text-right visible-lg"><a class="nowrap ng-binding" href="#">26-Nov-2014 1:46 PM</a></td>
-      </tr><!-- end ngRepeat: row in table1.table | orderBy:table1.sortBy:table1.reverse -->
-    </tbody>
-  </table>
-</div>
-
-<h3>Stack Columns</h3>
-<p class="add-bottom add-top">Add the class <code>.table-stack</code> to get a stacked columns view on mobile resolution.</p>
-
-<div class="content-box">
-  <table class="table-2 table-hover table-stack">
-    <thead>
-      <tr>
-        <th class="col-lg-1 col-sm-1 col-xs-6" ng-click="sortBy(table2, 'id')">
-          ID
-          <!-- ngIf: table2.sortBy == 'id' --><i ng-if="table2.sortBy == 'id'" class="fa ng-scope fa-long-arrow-down" ng-class="{false: 'fa-long-arrow-up', true: 'fa-long-arrow-down'}[table2.reverse]"></i><!-- end ngIf: table2.sortBy == 'id' -->
-        </th>
-        <th class="col-lg-1 col-sm-1 col-xs-6" ng-click="sortBy(table2, 'status')">
-          Status
-          <!-- ngIf: table2.sortBy == 'status' -->
-        </th>
-        <th class="col-lg-6 col-sm-4 col-xs-12" ng-click="sortBy(table2, 'subject')">
-          Subject
-          <!-- ngIf: table2.sortBy == 'subject' -->
-        </th>
-        <th class="col-lg-2 col-sm-3 col-xs-6 text-right" ng-click="sortBy(table2, 'requested')">
-          Requested
-          <!-- ngIf: table2.sortBy == 'requested' -->
-        </th>
-        <th class="col-lg-2 col-sm-2 col-xs-6 text-right" ng-click="sortBy(table2, 'requester')">
-          Requester
-          <!-- ngIf: table2.sortBy == 'requester' -->
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- ngRepeat: row in table2.table | orderBy:table2.sortBy:table2.reverse --><tr class="clickable-row ng-scope" ng-repeat="row in table2.table | orderBy:table2.sortBy:table2.reverse">
-        <td class="col-lg-1 col-sm-1 col-xs-6 ticket-id"><a href="#" class="ng-binding">#2345</a></td>
-        <td class="col-lg-1 col-sm-1 col-xs-6 ticket-status"><a href="#" class="ng-binding">Resolved</a></td>
-        <td class="col-lg-6 col-sm-4 col-xs-12 ticket-subject"><a class="ellipsis ellipsis-md" href="#" dotdotdot="" style="word-wrap: break-word;"><strong class="ng-binding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et... </strong></a></td>
-        <td class="col-lg-2 col-sm-3 col-xs-6 text-right ticket-date"><a class="nowrap ng-binding" href="#">7-Dec-2014 1:46 PM</a></td>
-        <td data-th="by" class="col-lg-2 col-sm-2 col-xs-6 text-right ticket-requester"><a href="#" class="ng-binding">Jane Doe</a></td>
-      </tr><!-- end ngRepeat: row in table2.table | orderBy:table2.sortBy:table2.reverse --><tr class="clickable-row ng-scope" ng-repeat="row in table2.table | orderBy:table2.sortBy:table2.reverse">
-        <td class="col-lg-1 col-sm-1 col-xs-6 ticket-id"><a href="#" class="ng-binding">#1234</a></td>
-        <td class="col-lg-1 col-sm-1 col-xs-6 ticket-status"><a href="#" class="ng-binding">New</a></td>
-        <td class="col-lg-6 col-sm-4 col-xs-12 ticket-subject"><a class="ellipsis ellipsis-md" href="#" dotdotdot="" style="word-wrap: break-word;"><strong class="ng-binding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et... </strong></a></td>
-        <td class="col-lg-2 col-sm-3 col-xs-6 text-right ticket-date"><a class="nowrap ng-binding" href="#">26-Nov-2014 1:46 PM</a></td>
-        <td data-th="by" class="col-lg-2 col-sm-2 col-xs-6 text-right ticket-requester"><a href="#" class="ng-binding">John Doe</a></td>
-      </tr><!-- end ngRepeat: row in table2.table | orderBy:table2.sortBy:table2.reverse -->
-    </tbody>
-  </table>
-</div>
-
-</div>
-
-
-
-<div class="add-bottom ng-scope">
-<h3>Individual columns as hyperlinks</h3>
-<p>No class is needed on the <code>tr</code> element. Only the links should have a hover effect when mouse is over the row.</p>
-    <div class="content-box table-responsive">
-      <table class="table-2 table-hover">
-        <thead>
-          <tr>
-            <th ng-click="sortBy(table3, 'invoice')">
-              Invoice
-              <!-- ngIf: table3.sortBy == 'invoice' -->
-            </th>
-            <th class="text-right" ng-click="sortBy(table3, 'date')">
-              Date
-              <!-- ngIf: table3.sortBy == 'date' -->
-            </th>
-            <th class="text-right" ng-click="sortBy(table3, 'amount')">
-              Amount
-              <!-- ngIf: table3.sortBy == 'amount' -->
-            </th>
-            <th>CSV</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- ngRepeat: row in table3.table | orderBy:table3.sortBy:table3.reverse --><tr ng-repeat="row in table3.table | orderBy:table3.sortBy:table3.reverse" class="ng-scope">
-            <td>
-              <a href="" class="ng-binding">1312-21596829</a>
-            </td>
-            <td class="text-right ng-binding">
-              Nov 11, 2014
-            </td>
-            <td class="text-right ng-binding">
-              $10.00
-            </td>
-            <td>
-              <a href="#">Invoice Detail CSV File</a>
-            </td>
-          </tr><!-- end ngRepeat: row in table3.table | orderBy:table3.sortBy:table3.reverse --><tr ng-repeat="row in table3.table | orderBy:table3.sortBy:table3.reverse" class="ng-scope">
-            <td>
-              <a href="" class="ng-binding">1312-12323429</a>
-            </td>
-            <td class="text-right ng-binding">
-              Dec 3, 2014
-            </td>
-            <td class="text-right ng-binding">
-              $25.00
-            </td>
-            <td>
-              <a href="#">Invoice Detail CSV File</a>
-            </td>
-          </tr><!-- end ngRepeat: row in table3.table | orderBy:table3.sortBy:table3.reverse -->
-        </tbody>
-      </table>
+  <div ng-show="!error">
+   <div class="row">
+      <div class="col-md-12">
+        <div class="ticket clearfix">
+          <div class="pull-left status-tag  capitalize new">
+            new
+          </div>
+          <div class="ticket-heading">
+            <h4 class="ng-binding"><span class="text-muted ticket-id ng-binding">#3818</span> Sample Ticket</h4>
+          </div>
+        </div>
+      </div>
     </div>
 
-</div>
+    <div class="row">
+      <!-- Description -->
+      <div class="col-sm-8">
+        <p class="ticket-description ng-binding">Company: Rise Vision Inc.
+Display: 
+Schedule: 
+Contact Name: Ghislaine Guerin
+Contact Phone: 85
+Contact Email: me@ghislaineguerin.com
+Preferred Contact Method: email
 
-<div class="add-bottom ng-scope">
-<h3>Using ellipsis on table content</h3>
-<p>Use the scss mixin <code>ellipsis</code> to define line width and number of lines.</p>
-<p>Possible values for width are: small, medium, large and full. There's no limit on number of lines.</p>
-<p>Example:<code>@include ellipsis(2,full);</code> Ellipsis will happen when text grows more than 2 lines but will allow for full width according to container size.</p>
-</div>
-</ng-include>
-    </div>        
-
-
-
-
-
-
+Description: Description goes here</p>
+        
+        <attachment attachments="ticket.attachments" class="ng-isolate-scope"><!-- ngIf: attachments && attachments.length > 0 --><div class="ticket-attachments ng-scope" ng-if="attachments &amp;&amp; attachments.length > 0">
+  <strong translate="" class="ng-scope">Attachments</strong>
+  <div class="row">
+    <!-- ngRepeat: attachment in attachments --><div ng-repeat="attachment in attachments" class="col-sm-12 ng-scope">
+      <a ng-href="https://risevision.zendesk.com/attachments/token/XCkWMCIuBDCO0HQWtv2xm5q43/?name=Display_Setup.png" target="_blank" class="ng-binding" href="https://risevision.zendesk.com/attachments/token/XCkWMCIuBDCO0HQWtv2xm5q43/?name=Display_Setup.png">
+       Display_Setup.png
+      </a>
+    </div><!-- end ngRepeat: attachment in attachments -->
+  </div>
+</div><!-- end ngIf: attachments && attachments.length > 0 -->
+</attachment>
       </div>
+      <!-- Meta -->
+      <div class="col-sm-4">
+        <p class="well text-muted">
+          <span class="hidden-xs ng-binding"><strong class="ng-binding">Created By:</strong><br>
+          undefined undefined<br><br>
+          <strong class="ng-binding">Created On:</strong><br>
+          December 18, 2014<br><br>
+          <strong class="ng-binding">Last Updated:</strong><br>
+          December 18, 2014</span>
+
+          <span class="visible-xs ng-binding">Requested by <strong class="ng-binding">undefined undefined</strong> on <strong class="ng-binding">December 18, 2014</strong>. Last updated on <strong class="ng-binding">December 18, 2014</strong></span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- ngIf: error -->
+  <comment-list comments="ticket.comments" class="ng-isolate-scope"><div class="row">
+    <div class="col-md-12 comments-list">
+
+      <h4 class="ng-scope" translate="">Comments</h4>
+      <!-- Comments list -->
+      <!-- ngRepeat: comment in comments | offset:(page - 1) * pageSize | limitTo: pageSize --><div class="comment ng-scope" ng-repeat="comment in comments | offset:(page - 1) * pageSize | limitTo: pageSize">
+        <div class="media">
+          <div class="pull-left">
+            <img class="media-object img-circle chat-head" ng-src="https://risevision.zendesk.com/system/photos/8929/4174/profile_image_677942720_491421.jpg" src="https://risevision.zendesk.com/system/photos/8929/4174/profile_image_677942720_491421.jpg">
+          </div>
+          <div class="media-body">
+            <div class="user">
+              <strong class="ng-binding">undefined undefined</strong>
+              <small class="text-muted ng-binding">at Dec 18, 2014 1:19:39 PM</small>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-body rise-vision-support" ng-class="{'rise-vision-support': $even }">
+                <div ng-bind-html="trustHTML(comment.html_body)" class="ng-binding"><p>another comment</p></div>
+              </div>
+              <div class="panel-footer">
+                <attachment attachments="comment.attachments" class="ng-isolate-scope"><!-- ngIf: attachments && attachments.length > 0 -->
+</attachment>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end ngRepeat: comment in comments | offset:(page - 1) * pageSize | limitTo: pageSize --><div class="comment ng-scope" ng-repeat="comment in comments | offset:(page - 1) * pageSize | limitTo: pageSize">
+        <div class="media">
+          <div class="pull-left">
+            <img class="media-object img-circle chat-head" ng-src="https://risevision.zendesk.com/system/photos/8929/4174/profile_image_677942720_491421.jpg" src="https://risevision.zendesk.com/system/photos/8929/4174/profile_image_677942720_491421.jpg">
+          </div>
+          <div class="media-body">
+            <div class="user">
+              <strong class="ng-binding">undefined undefined</strong>
+              <small class="text-muted ng-binding">at Dec 18, 2014 1:19:22 PM</small>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-body" ng-class="{'rise-vision-support': $even }">
+                <div ng-bind-html="trustHTML(comment.html_body)" class="ng-binding"><p>Sample comment</p></div>
+              </div>
+              <div class="panel-footer">
+                <attachment attachments="comment.attachments" class="ng-isolate-scope"><!-- ngIf: attachments && attachments.length > 0 --><div class="ticket-attachments ng-scope" ng-if="attachments &amp;&amp; attachments.length > 0">
+  <strong translate="" class="ng-scope">Attachments</strong>
+  <div class="row">
+    <!-- ngRepeat: attachment in attachments --><div ng-repeat="attachment in attachments" class="col-sm-12 ng-scope">
+      <a ng-href="https://risevision.zendesk.com/attachments/token/jbUsX7JqKDAyvtPd6UwIiH32u/?name=Screen_Shot_2014-12-17_at_5_21_21_PM_and_Screen_Shot_2014-12-17_at_5_21_34_PM.png" target="_blank" class="ng-binding" href="https://risevision.zendesk.com/attachments/token/jbUsX7JqKDAyvtPd6UwIiH32u/?name=Screen_Shot_2014-12-17_at_5_21_21_PM_and_Screen_Shot_2014-12-17_at_5_21_34_PM.png">
+       Screen_Shot_2014-12-17_at_5_21_21_PM_and_Screen_Shot_2014-12-17_at_5_21_34_PM.png
+      </a>
+    </div><!-- end ngRepeat: attachment in attachments -->
+  </div>
+</div><!-- end ngIf: attachments && attachments.length > 0 -->
+</attachment>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end ngRepeat: comment in comments | offset:(page - 1) * pageSize | limitTo: pageSize -->
+      <ul class="pager ng-isolate-scope ng-valid" total-items="totalItems" max-size="pageSize" ng-model="page" ng-change="updatePage()">
+  <li ng-class="{disabled: noPrevious(), previous: align}" class="previous disabled"><a href="" ng-click="selectPage(page - 1)" class="ng-binding">« Previous</a></li>
+  <li ng-class="{disabled: noNext(), next: align}" class="disabled next"><a href="" ng-click="selectPage(page + 1)" class="ng-binding">Next »</a></li>
+</ul>
+
+      <!-- ngIf: error -->
+
+    </div>
+  </div>
+</comment-list>
+</div>
+
+
+  <!-- Comment Box -->
+  <div class="container comment-box">
+    <div ng-class="{'container': visible.onNot('xs') }" class="container">
+      <div class="row">
+        <div class="col-md-12 ">
+          <form role="form" name="ticketDetails" class="ticketDetails ng-pristine ng-invalid ng-invalid-required">
+            <div class="form-group">
+              <div class="checkbox">
+              <label class="ng-binding">
+                <input type="checkbox" ng-model="toggleStatus" class="ng-pristine ng-untouched ng-valid"> 
+                This issue is solved. Close this Ticket. 
+              </label>
+            </div>
+            </div>
+            <div class="form-group">
+              <textarea id="comment" name="comment" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Enter new comment" rows="3" ng-model="comment.body" ng-disabled="isTicketResolved() &amp;&amp; !toggleStatus"></textarea>
+            </div>
+
+
+ 
+            
+            <!-- Camera/File Picker -->
+            <file-picker file="fileObject" disabled="isTicketResolved() &amp;&amp; !toggleStatus" class="ng-isolate-scope"><!-- Camera/File Picker -->
+<label class="file-picker">
+  <span class="hidden-xs ng-scope" translate="">Attach an image or file</span>
+  <i class="fa fa-camera file-picker-icon"></i>
+  <input class="sr-only" type="file" accept="image/*;capture=camera" onchange="angular.element(this).scope().fileSelected(this)" ng-disabled="disabled">
+</label>
+</file-picker>
+            <div class="pull-right">
+              <button type="submit" class="btn btn-primary btn-fixed-width ng-binding" ng-click="save(selectedTicketId,comment,toggleStatus)" ng-disabled="(isTicketResolved() &amp;&amp; !toggleStatus) || (!isTicketResolved() &amp;&amp; !comment.body &amp;&amp; ticketDetails.upload.$error.required &amp;&amp; !toggleStatus) || creatingComment" disabled="disabled">
+                  Save 
+                <i class="fa fa-white fa-check icon-right"></i>
+              </button>
+              <a href="#/" class="btn btn-default btn-fixed-width ng-binding">
+                Cancel <i class="fa fa-white fa-times icon-right"></i>
+              </a>
+            </div>
+          </form></div>
+        
+      </div>
+    </div>
+  </div>
+
+</ticket-details>
+</div>
+
     </body>
 </html>
