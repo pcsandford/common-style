@@ -165,21 +165,34 @@
 
   /* Comments */
   .panel-footer {
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding: 0;
+    border-top: none;
+    .ticket-attachments {
+      margin: 0;
+      padding: 10px;
+      border-top: 1px solid #ddd;
+    }
   }
   .panel-body {
     background-color: #eee;
     border-radius: 4px;
+    p {
+      margin-bottom: 0;
+    }
   }
-  .panel-body.rise-vision-support { background-color: #fff; }
+  .panel-body.rise-vision-support { 
+    background-color: #FFF;
+  }
   .chat-head {
     width: 32px;
     height: 32px;
   }
 
   .comments-list {
-    margin-bottom: 170px;
+    margin-bottom: 200px;
+    h4 {
+      margin-bottom: 30px;
+    }
   }
 
   .comment { margin-bottom: 10px; }
