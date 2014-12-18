@@ -18,6 +18,18 @@
 
   h2 { margin-top: 0px !important; }
 
+  .ticket-description {
+    white-space: pre-line;
+    line-height: 20px;
+  }
+  .ticket-attachments {
+    margin: 20px 0;
+    line-height: 20px;
+    a {
+      display: block;
+    }
+  }
+
   /* Ticket List Table (desktop) */
   .ticket-list-table {
     background-color: #fff;
