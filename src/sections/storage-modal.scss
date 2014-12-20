@@ -10,24 +10,49 @@
     list-style: none;
   }
 
-  /* ==========================================================================
-     Search Bar & Toggle Buttons
-     ========================================================================== */
-  .filter {
-    padding: 10px 0;
+.table-2 {
+  > tbody > tr > td {
+    a {
+      color: $gray;
+      .fa-file:before {
+        color: #CCC;
+      }
+      .fa-folder:before {
+        color: $rise-green;
+      }
+    }
+  }
+  > tbody > tr > td:first-child {
+    input {
+      display: inline-block;
+    }
+    .fa {
+      margin-right: 5px;
+    }
+    input + span {
+      margin-left: 10px;
+    }
+    input.ng-hide + span {
+      margin-left: 25px;
+    }
+    span {
+      margin-left: 25px;
+    }
+    span a {
+      @include ellipsis(1,large);
+      display: inline-block;
+      vertical-align: middle;
+      overflow: hidden;
+    }
+
+    @media (max-width: 480px) {
+      span a {
+        @include ellipsis(1,medium);        
+      }
+    }
+   }
   }
 
-  .search {
-    padding: 0px 0px 0px 15px;
-  }
-
-  /* ==========================================================================
-     Rows
-     ========================================================================== */
-
-  div.row {
-    margin-right: 0px;
-  }
   /* ==========================================================================
      Buttons
      ========================================================================== */
