@@ -22,11 +22,11 @@
 .image-placeholder {
   width: 123px;
   height: 123px;
-  background: rgba(204, 204, 204, 0.3) url('//s3.amazonaws.com/Rise-Images/UI/transp_bg.png') repeat;
+  background: url('//s3.amazonaws.com/Rise-Images/UI/transp_bg.png') repeat;
   margin-right: 10px;
   border-radius: 4px;
   text-align: center;
-  line-height: 122px;
+  padding-top:45px;
   font-size: 32px;
   border: 1px solid #CCC;
 }
