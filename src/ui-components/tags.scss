@@ -43,6 +43,8 @@
 }
 
 .content-box-editable {
+  @extend .content-box;
+  background: aqua;
   min-height: 34px;
   padding-bottom: 3px;
   padding-right: 20px;
