@@ -19,6 +19,12 @@
     max-width: 80px;
     display: inline-block;
     padding: 0;
+    &::before {
+      content:':';
+      display: inline-block;
+      float: right;
+      font-weight: bold;
+    }
   }
   .tag-value {
     max-width: 120px;
