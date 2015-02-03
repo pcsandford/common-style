@@ -903,15 +903,15 @@ a.btn-primary:hover {
 /* Boxed content
    ========================================================================== */
 .content-box {
+  @extend .panel;
   /* Positioning */
   position: relative;
+  border: 1px solid #CCC;
+  background: #FFF;
+}
 
-  /* Display & Box Model */
-
-  /* Visual */
-  background: #fff;
-  border: 1px solid #d4d4d4;
-  border-radius: 4px;
+.content-box-body {
+  padding: 15px;
 }
 
 /* Horizontal rule
