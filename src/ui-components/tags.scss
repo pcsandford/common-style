@@ -21,9 +21,10 @@
     padding: 0;
     &::before {
       content:':';
-      display: inline-block;
       float: right;
       font-weight: bold;
+      font-size: 13px;
+      margin-left: 2px;
     }
   }
   .tag-value {
@@ -35,6 +36,9 @@
   }
   @media (max-width: 480px) {
     font-size: 13px;
+    .tag-name::before {
+      line-height: 18px;
+    }
   }
   &.invalid {
     background-color: #f2dede;
