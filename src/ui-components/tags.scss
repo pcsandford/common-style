@@ -10,6 +10,9 @@
   cursor: pointer;
   font-weight: normal;
   color: #888;
+  .tag-name {
+    
+  }
   .tag-value {
     display: inline-block;
     padding: 0 3px 0 2px;
@@ -37,14 +40,10 @@
 .btn-remove {
   color: $gray;
   padding: 0;
-  .fa:before {
-    color: #666
-  }
 }
 
 .content-box-editable {
   @extend .content-box;
-  background: aqua;
   min-height: 34px;
   padding-bottom: 3px;
   padding-right: 20px;
