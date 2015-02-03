@@ -1,7 +1,8 @@
 .navbar-brand {
-
   width: 100px;
   margin-top: 5px;
+  line-height: 33px;
+  font-size: 22px;
 
   @media (min-width: $grid-float-breakpoint) {
     .navbar > .container &,
@@ -36,15 +37,17 @@
   border-radius: $border-radius-base2;
 }
 
-
 .navbar-default {
-
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-
   .navbar-nav {
+    margin-top: 8px;
     > li > a {
       color: $navbar-default-link-color;
+      border-radius: 3px;
+      padding: 0;
+      height: 33px;
+
 
       &:hover,
       &:focus {

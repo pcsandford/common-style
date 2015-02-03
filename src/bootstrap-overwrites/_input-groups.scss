@@ -1,3 +1,16 @@
+
+.custom-addon,.checkbox-addon,.storage-group {
+  .input-group-addon {
+    background: none;
+    padding: 0 0 0 10px;
+    border: 0;
+  }
+  .form-control {
+    border-bottom-right-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+  }
+}
+
 .input-group-addon {
   border-radius: $border-radius-base2;
 }
