@@ -316,17 +316,32 @@ a:hover {
 
 /* App menu items
    ========================================================================== */
+
+
+[class^="rvicon-"], [class*=" rvicon-"] {
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+}
+
+
+.dropdown-menu.app-navigation {
+  padding: 0 0 0 0;
+  .menu-box {
+    width: 50%;
+    float: left;
+  }
+}
+
 .menu-box {
   /* Display & Box Model */
-  width: 50%;
-
   /* Visual */
   text-align: center;
 
   a {
     /* Display & Box Model */
     display: block;
-    padding: 20px 10px;
+    padding: 10px 15px;
 
     /* Visual */
     color: $gray;
@@ -344,13 +359,13 @@ a:hover {
     /* Visual */
   }
 
-  .fa, .glyphicons {
+  .fa {
     @extend .fa-box;
     @extend .glyphicon-box;
     margin: 0 auto;
   }
 
-  .fa::before , .glyphicons::before{ font-size: 40px; }
+  .fa::before { font-size: 40px; }
 }
 
 /* Company Selector
@@ -501,7 +516,7 @@ a:hover {
 
 @media (max-width: $screen-xs) {
   .navbar-default .actions-nav>li>a {
-    min-width: 50px !important;
+    min-width: 40px !important;
   }
 }
 
