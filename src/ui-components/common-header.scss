@@ -42,54 +42,56 @@
 	.btn { margin-top: 40px; }
 }
 
-.navbar-header {
-	.dropdown-menu {
-		.fa { font-size: 20px !important; }
-	}
-
-	.dropdown-header .fa {
-		width: 30px;
-		&:before { font-size: 20px !important; }
-	}
-}
-
- .app-nav-icon img {
-    height: 100%;
-  }
-  .app-nav-icon {
-    width: 48px;
-    height: 48px;
-    margin: 0 auto;
-  }
-  .dropdown-header .app-nav-icon {
-    display: inline-block;
-    vertical-align: top;
-  }
-  .dropdown-header span {
-    display: inline-block;
-    line-height: 30px;
+.user-profile-dropdown {
+  .dropdown-toggle {
+    .user-id {
+      float: left;
+      span {
+        margin-right: 10px;
+        white-space: nowrap;
+        display: block;
+        color: #777;
+        text-align: right;
+        font-size: 12px;
+        line-height: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
   }
   .dropdown-header {
-    padding-bottom: 10px;
-  }
-  .menu-box a {
-    padding:15px 10px;
-  }
-
-.user-profile-dropdown a {
-  .user-id {
-    float: left;
-    span {
-      margin-right: 10px;
-      white-space: nowrap;
-      display: block;
-      color: #777;
-      text-align: right;
-      font-size: 12px;
-      line-height: 14px;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    color: #555;
+    padding: 15px;
+    &.sub-company-header {
+      background: #f8e4e2;
     }
+    p {
+      line-height: 18px;
+      margin: 0;
+      font-size: 13px;
+      overflow: hidden;
+      @media (max-width: 480px) {
+        strong {
+          text-overflow:ellipsis;
+          display: block;
+          overflow: hidden;
+          max-width: 260px;
+        }
+        a {
+          display: block;
+          margin-top:5px;
+        }
+        .text-muted {
+          display: none;
+        }
+      }
+    }
+  }
+  .dropdown-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid #e6e6e6;
+
   }
   @media (max-width: 480px) {
     .user-id {
@@ -102,5 +104,9 @@
       display: none;
     }
   }
+}
+
+.app-navigation li {
+  padding: 0;
 }
 

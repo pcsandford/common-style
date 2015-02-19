@@ -73,14 +73,14 @@
     @media (max-width: $grid-float-breakpoint-max) {
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
-        > li > a {
+        li > a {
           color: $navbar-default-dropdown-link-color;
           &:hover,
           &:focus {
             color: $navbar-default-dropdown-link-color;
           }
         }
-        > .active > a {
+        .active > a {
           &,
           &:hover,
           &:focus {

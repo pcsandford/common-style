@@ -205,20 +205,27 @@ a:hover {
   /* CSS arrows at top of dropdowns. */
   .dropdown {
     .dropdown-menu {
+      ul {
+        list-style: none;
+        margin:0;
+        padding: 0;
+      }
       /* Positioning */
       top: 120%;
       left: auto;
       right: 0;
+      padding: 0;
 
       /* Display & Box Model */
-      min-width: 250px;
+      min-width: 280px;
 
       .item-name {
-        font-weight: bold;
+        font-weight: 500;
       }
-
-      .fa, .glyphicons {
-        min-width: 40px;
+      .fa {
+        display: inline-block;
+        width: 24px;
+        text-align: center;
       }
     }
 
@@ -246,13 +253,13 @@ a:hover {
     > .dropdown-menu::before,
     > .dropdown-menu::after {
       top: -7px;
-      right: 23px;
+      right: 19px;
     }
 
     > .dropdown-menu::after {
       /* Positioning */
       top: -6px;
-      right: 24px;
+      right: 20px;
 
       /* Display & Box Model */
       border-left-width: 6px;
@@ -281,20 +288,19 @@ a:hover {
     background-clip: padding-box;
 
     .dropdown-header {
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
 
       .fa , .glyphicons{
         min-width: 20px;
       }
-
       .fa::before, .glyphicons::before {
         font-size: 14px;
       }
     }
-
-    > li > a {
-      padding: 10px 20px;
+    li > a {
+      display: block;
+      padding: 10px 15px;
     }
   }
 
@@ -317,22 +323,12 @@ a:hover {
 /* App menu items
    ========================================================================== */
 
-
-[class^="rvicon-"], [class*=" rvicon-"] {
-  height: 32px;
-  width: 32px;
-  display: inline-block;
-}
-
-
 .dropdown-menu.app-navigation {
   padding: 0 0 0 0;
   .menu-box {
     width: 50%;
-    float: left;
   }
 }
-
 .menu-box {
   /* Display & Box Model */
   /* Visual */

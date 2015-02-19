@@ -7,7 +7,7 @@
   left: 0px;
   bottom: 0px;
   z-index: $zindex-off-canvas;
-  padding: 24px 0;
+  padding: 0;
 
   @include box-shadow(0 0 8px rgba(0, 0, 0, 0.2));
 
@@ -30,15 +30,23 @@
             transform: translate3d(0, 0, 0);
   }
 
+  ul {
+    padding: 0;
+  }
+
   &.is-action-sheet-closed {
     display: none;
   }
 
+  .menu-box {
+    width: 50%;
+  }
+
   li {
-    list-style: none !important;
+    list-style: none;
     display: list-item;
-    margin: 0 !important;
-    padding: 0 24px !important;
+    margin: 0;
+    padding: 0 15px;
 
     &.system-message {
       padding-bottom: 10px !important;
