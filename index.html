@@ -69,13 +69,54 @@
 
 <li class="dropdown user-profile-dropdown desktop-menu-item">
 
-  <a href="" class="dropdown-toggle hidden-xs">
+  <a href="" class="dropdown-toggle hidden-xs" data-toggle="dropdown">
     <div class="user-id">
       <span>ghislaine.guerin@risevision.com</span>
       <span><strong>Rise Vision Inc.</strong></span>
     </div>
     <img src="https://lh3.googleusercontent.com/-q9MKVxrwf6Y/VFulraKuFNI/AAAAAAAAAC4/r0Xl2q5YDmI/w280-h280-p/10734133_10154773862775246_6527835082350492155_n.jpg" class="profile-pic" width="30" height="30" alt="User" />
   </a>
+
+  <div class="dropdown-menu red-arrow">
+  <ul>
+    <li class="dropdown-header sub-company-header">
+      <p>You are in Sub-Company <strong>Abc</strong>
+      <span class="text-muted">|</span>
+       <a href="#">Change</a></p>
+      <p><a href="#">Switch to My Company</a></p>
+    </li>
+
+    <li class="dropdown-header">
+      <p>ghislaine.guerin@risevision.com</p>
+      <p><strong>Rise Vision Inc.</strong>
+        <span class="text-muted">|</span>
+        <a href="#">Select Sub-Company</a>
+      </p>
+    </li>
+
+
+
+    <li class="divider"></li>
+
+    <li>
+      <a href="" ng-click="userSettings()" class="user-settings-button action">
+        <i class="fa fa-cogs icon-left"></i>
+        <span class="item-name">User Settings</span>
+      </a>
+    </li>
+    <li>
+      <a href="" class="action" ng-click="paymentMethods()">
+        <i class="fa fa-usd icon-left"></i>
+        <span class="item-name">Payment Methods</span>
+      </a>
+    </li>
+
+    <li class="dropdown-footer">
+      <button class="btn btn-sm btn-default">Sign Out <i class="fa fa-sign-out"></i>
+      </button>
+    </li>
+  </ul>
+  </div>
 
   <a href="" class="dropdown-toggle visible-xs">
     <div class="user-id">
@@ -121,6 +162,59 @@
 <div class="container">
   <p class="text-center add-top"><strong>Wrong User Account or Company?</strong> <a href="#">Sign Out</a> and Sign back in with the correct User or <a href="#">Select a Sub-Company</a>.</p>
 </div><!--container-->
+
+<div class="action-sheet user-profile-dropdown is-action-sheet-opened">
+
+</div>
+
+
+<div class="action-sheet user-profile-dropdown is-action-sheet-opened"><!-- ngInclude: undefined --><ng-include src="templateUrl" class="ng-scope"><!-- ngIf: isRiseVisionUser --><!-- ngInclude: undefined --><li class="dropdown-header ng-scope" ng-show="!isSubcompanySelected">
+  <p class="ng-binding">ghislaine.guerin@risevision.com</p>
+  <p><strong class="ng-binding">ghislaine.guerin@risevision.com's Company</strong>
+    <span class="text-muted" ng-show="isRiseVisionUser &amp;&amp; !isSubcompanySelected">|</span>
+    <a href="" ng-click="switchCompany()" ng-show="isRiseVisionUser &amp;&amp; !isSubcompanySelected">Select Sub-Company</a>
+  </p>
+</li><li class="dropdown-header sub-company-header ng-scope ng-hide" ng-show="isSubcompanySelected">
+  <p>You are in Sub-Company <strong class="ng-binding">ghislaine.guerin@risevision.com's Company</strong>
+  <span class="text-muted">|</span>
+   <a href="" ng-click="switchCompany()" ng-show="isRiseVisionUser">Change</a></p>
+  <p><a href="" ng-click="resetCompany()">Switch to My Company</a></p>
+</li><li ng-show="isUserAdmin || isRiseAdmin" class="divider ng-scope"></li><li ng-show="isUserAdmin || isRiseAdmin" class="ng-scope">
+  <a href="" ng-click="addSubCompany()" class="action add-subcompany-menu-button">
+    <i class="fa fa-plus"></i>
+    <span class="item-name">Add Sub-Company</span>
+  </a>
+</li><li ng-show="isUserAdmin || isRiseAdmin" class="divider ng-scope"></li><li ng-show="isUserAdmin || isRiseAdmin" class="ng-scope">
+  <a href="" ng-click="companySettings()" class="action company-settings-menu-button">
+    <i class="fa fa-building"></i>
+    <span class="item-name">Company Settings</span>
+  </a>
+</li><li ng-show="isUserAdmin || isRiseAdmin" class="divider ng-scope"></li><li ng-show="isUserAdmin || isRiseAdmin" class="ng-scope">
+  <a href="" data-toggle="modal" ng-click="companyUsers()" class="action company-users-menu-button">
+    <i class="fa fa-users"></i>
+    <span class="item-name">Company Users</span>
+  </a>
+</li><!-- end ngIf: isRiseVisionUser -->
+
+<li class="divider ng-scope" ng-show="isRiseVisionUser"></li>
+<li ng-show="isRiseVisionUser" class="ng-scope">
+  <a href="" ng-click="userSettings()" class="user-settings-button action">
+    <i class="fa fa-user"></i>
+    <span class="item-name">User Settings</span>
+  </a>
+</li>
+<li class="divider ng-scope ng-hide" ng-show="false"></li>
+<li ng-show="false" class="ng-scope ng-hide">
+  <a href="" class="action" ng-click="paymentMethods()">
+    <i class="fa fa-usd"></i>
+    <span class="item-name">Payment Methods</span>
+  </a>
+</li>
+
+<li class="dropdown-footer text-right ng-scope" ng-show="isLoggedIn">
+  <button class="sign-out-button btn btn-sm btn-default" ng-click="logout()">Sign Out <i class="fa fa-sign-out"></i>
+</button></li>
+</ng-include></div>
 
 </body>
 </html>
