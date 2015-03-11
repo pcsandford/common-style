@@ -226,6 +226,7 @@ tr.blocked-file {
   -webkit-box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.75);
   -moz-box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.75);
   box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.75);
+  a {color: $rise-blue !important;}
   &.callout-green {
     background: #e3f7e8;
     border:1px solid #47b767;
