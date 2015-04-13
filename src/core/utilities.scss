@@ -95,3 +95,18 @@ svg:hover path {
 path {
   fill: rgba(0,0,0,.4);
 }
+
+/* Icon Colors */
+.fa.icon-gray:before {
+  color: #BBB;
+}
+.fa.icon-red:before {
+  color: #cf371f;
+}
+.fa.icon-green:before {
+  color: $rise-green;
+}
+.fa.icon-white:before {
+  color: $white;
+}
+
