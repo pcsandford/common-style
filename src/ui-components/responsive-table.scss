@@ -83,6 +83,27 @@ $table-padding: 10px 15px;
 
 
 .table-selector {
+
+  > thead > tr {
+    th.select-all {
+      &:before {
+        font-family: FontAwesome;
+        font-style: normal;
+        margin-right: 0;
+        display: inline-block;
+        vertical-align: middle;
+        color: #d4d4d4;
+        font-size: 16px;
+        width: 16px;
+        text-align: center;
+        content:'\f096';
+      }
+      &.active:before {
+        content: '\f14a';
+      }
+    }
+  }
+
   > tbody > tr {
     td {
       -webkit-touch-callout: none;
