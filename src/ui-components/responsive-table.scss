@@ -1,7 +1,6 @@
 $table-padding: 10px 15px;
 
 .table-2 {
-
   width: 100%;
   > thead > tr > th {
     border-bottom: 1px solid $light-gray;
@@ -85,11 +84,11 @@ $table-padding: 10px 15px;
 .table-selector {
 
   > thead > tr {
-    th.select-all {
-      &:before {
+    th {
+        input[type=checkbox] { display:none; }
+        input[type=checkbox] + label:before {
         font-family: FontAwesome;
-        font-style: normal;
-        margin-right: 0;
+        margin-right: 10px;
         display: inline-block;
         vertical-align: middle;
         color: #d4d4d4;
@@ -98,7 +97,7 @@ $table-padding: 10px 15px;
         text-align: center;
         content:'\f096';
       }
-      &.active:before {
+      input[type=checkbox]:checked + label:before {
         content: '\f14a';
       }
     }
