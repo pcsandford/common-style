@@ -4,6 +4,10 @@
   border-radius: 3px;
   background: #FFF;
   padding:0;
+  .btn {
+    margin: 0;
+    vertical-align: top;
+  }
   h3 {
     margin:0;
     padding: 0 8px;
@@ -31,8 +35,5 @@
       font-weight: bold;
       margin-left: 3px;
     }
-  }
-  @media (max-width: 768px) {
-  display: block;
   }
 }
