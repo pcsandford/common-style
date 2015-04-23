@@ -3,10 +3,10 @@
   margin-bottom: 10px;
   position: relative;
   .title-block,.app-title {
-    @include make-sm-column(4);
+    @include make-sm-column(6);
     h1 {
       font-weight: 400;
-      line-height: 43px;
+      line-height: 42px;
       margin: 0 5px 0 0;
       display: inline-block;
     }
@@ -34,12 +34,12 @@
   }
 
   .global-actions {
+    @include make-sm-column(6);
     text-align: right;
     .btn {
       float: right;
       margin-left: 10px;
     }
-    @include make-sm-column(8);
     @media (max-width: 768px) {
       margin-top: 10px;
       float:none;
@@ -47,6 +47,8 @@
         float: none;
         width: 100%;
         margin: 0 0 5px;
+        padding: 8px;
+        font-size: 14px;
       }
     }
   }
@@ -95,25 +97,20 @@
   }
   @media (max-width: 768px) {
     .description {
-      font-size: 13px;
+      margin: 0;
     }
     .icon-nav {
-      text-align: right;
       .btn {
+        margin-left: -4px;
       }
     }
     .store-status-2 {
-      margin-top: 10px;
-      a {
+      vertical-align: top;
+      display: block;
+      margin: 10px 0 0 0;
+      .btn {
         float: right;
       }
     }
   }
 }
-
-
-#content-storage {
-  overflow-y: scroll;
-  
-}
-

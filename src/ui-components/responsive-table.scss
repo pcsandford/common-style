@@ -11,7 +11,6 @@ $table-padding: 10px 15px;
       color: $gray;
     }
   }
-
   > tbody > tr > td {
     border-bottom: 1px solid $lighter-gray;
     color: $gray;
@@ -44,7 +43,6 @@ $table-padding: 10px 15px;
   .folder,.file {
     &:before {
       font-family: FontAwesome;
-      
     }
   }
   .back-btn .folder {
@@ -82,26 +80,30 @@ $table-padding: 10px 15px;
 
 
 .table-selector {
-
   > thead > tr {
     th {
-        input[type=checkbox] { display:none; }
+        label {
+          margin: 0;
+        }
+        input[type=checkbox] {
+          display:none; 
+        }
         input[type=checkbox] + label:before {
-        font-family: FontAwesome;
-        margin-right: 10px;
-        display: inline-block;
-        vertical-align: middle;
-        color: #d4d4d4;
-        font-size: 16px;
-        width: 16px;
-        text-align: center;
-        content:'\f096';
-      }
-      input[type=checkbox]:checked + label:before {
-        content: '\f14a';
+          font-family: FontAwesome;
+          margin-right: 10px;
+          display: inline-block;
+          vertical-align: middle;
+          color: #d4d4d4;
+          font-size: 16px;
+          width: 16px;
+          text-align: center;
+          content:'\f096';
+        }
+        input[type=checkbox]:checked + label:before {
+          content: '\f14a';
+        }
       }
     }
-  }
 
   > tbody > tr {
     td {
