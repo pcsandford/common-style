@@ -1,36 +1,20 @@
 .app-header {
   @include make-row;
-  margin-bottom: 10px;
   position: relative;
-  .title-block,.app-title {
-    @include make-sm-column(6);
+  margin-bottom: 10px;
+  .title-block {
+  @include make-sm-column(6);
     h1 {
+      display: inline-block;
       font-weight: 400;
       line-height: 42px;
       margin: 0 5px 0 0;
-      display: inline-block;
     }
     .store-status-2 {
       display: inline-block;
-      vertical-align: top;
       margin-top: 12px;
-    }    
-    .store-status {
-      display: inline-block;
       vertical-align: top;
-      h3 {
-        margin:0;
-        font-size: 14px;
-        font-weight: normal;
-        line-height: 43px;
-        a {
-          font-weight: bold;
-        }
-      }
     }
-  }
-  .app-title {
-    border-bottom: 1px solid #D6D6D6;
   }
 
   .global-actions {
@@ -38,38 +22,19 @@
     text-align: right;
     .btn {
       float: right;
-      margin-left: 10px;
+      margin-left: 8px;
     }
     @media (max-width: 768px) {
-      margin-top: 10px;
       float:none;
+      margin-top: 10px;
       .btn {
         float: none;
-        width: 100%;
-        margin: 0 0 5px;
-        padding: 8px;
         font-size: 14px;
+        margin: 0 0 4px;
+        padding: 8px;
+        width: 100%;
       }
     }
-  }
-
-  .form-group {
-    @include make-sm-column(12);
-    margin-top: 20px;
-    margin-bottom: 0;
-  }
-}
-
-.active-folder {
-  .fa:before {
-    color:$rise-green;
-  }
-  span {
-    margin-left: 5px;
-    vertical-align: top;
-    display: inline-block;
-    margin-top: 5px;
-    color: $gray;
   }
 }
 
@@ -87,18 +52,7 @@
       display:block;
     }
   }
-  .app-icon {
-    background: #CCC;
-    border-radius: 4px;
-    height: 40px;
-    width: 40px;
-    float: left;
-    margin-right: 10px;
-  }
   @media (max-width: 768px) {
-    .description {
-      margin: 0;
-    }
     .icon-nav {
       .btn {
         margin-left: -4px;
@@ -112,5 +66,22 @@
         float: right;
       }
     }
+  }
+}
+
+/* ==========================================================================
+   DEPRECATE
+   ========================================================================== */
+
+.active-folder {
+  .fa:before {
+    color:$rise-green;
+  }
+  span {
+    margin-left: 5px;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 5px;
+    color: $gray;
   }
 }
