@@ -40,8 +40,7 @@ a:hover {
    ========================================================================== */
 
 .navbar-header {
-  padding-top: 0;
-  padding-bottom: 0;
+  width: 100%;
 }
 
 .navbar-nav {
@@ -60,19 +59,15 @@ a:hover {
 .navbar-brand {
   height: auto;
   padding: 0;
-  margin-left: 15px;
 }
 
 /* Primary Menu (left-hand side)
    ========================================================================== */
 /* Expanded primary menu. */
 .navbar-left {
-  border-top: none;
   .navbar-nav {
     > a {
-      border: #fff solid 1px;
-
-      /* Visual */
+      border: rgba(255,255,255,0) solid 1px;
       font-weight: bold;
     }
 
@@ -82,13 +77,11 @@ a:hover {
     .active > a:focus {
       /* Display & Box Model */
       border: 1px solid $light-gray;
-
       /* Visual */
       color: $rise-blue;
       background-color: $lighter-gray;
     }
   }
-
   /* First-level menu items. */
   > a {
     border-radius: 0;
@@ -101,7 +94,6 @@ a:hover {
 /* First-level menu items. */
 .navbar-default .actions-nav {
   /* Display & Box Model */
-
   /* Visual */
   text-align: center;
 
@@ -114,20 +106,16 @@ a:hover {
 
     /* Visual */
     vertical-align: top;
-
     ul {
       text-align: left;
     }
-
     > a {
       @extend .fa-box;
     }
-
     > a:hover {
       border-color: $light-gray;
       background-color: $lighter-gray;
     }
-
     > a:focus {
       background-color: transparent;
     }
@@ -180,11 +168,18 @@ a:hover {
 
 /* All Navbars
    ========================================================================== */
-.navbar-default .navbar-nav {
+.navbar-nav {
   > li > a {
-    border: 1px solid #fff;
+    border: 1px solid transparent;
+    color: $navbar-default-link-color;
+    border-radius: 3px;
+    padding: 0 10px;
+    &:hover,
+    &:focus {
+      color: $navbar-default-li-link-hover-color;
+      border: 1px solid #e5e5e5;
+    }
   }
-
   /* CSS arrows at top of dropdowns. */
   .dropdown {
     .dropdown-menu {
@@ -471,11 +466,11 @@ a:hover {
    ========================================================================== */
 .profile-pic {
   /* Display & Box Model */
-  width: 30px;
-  height: 30px;
+  width: 33px;
+  height: 33px;
 
   /* Visual */
-  border-radius: 50%;
+  border-radius: 3px;
   vertical-align: top;
 }
 

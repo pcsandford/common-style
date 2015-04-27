@@ -15,10 +15,22 @@
   }  
 }
 
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .auto-height {
   margin:0 auto;
   min-height: 200px;
   overflow-y:auto;
+  position: relative;
 }
 
 .ellipsis {
@@ -102,17 +114,4 @@ path {
   fill: rgba(0,0,0,.4);
 }
 
-/* Icon Colors */
-.fa.icon-gray:before {
-  color: #BBB;
-}
-.fa.icon-red:before {
-  color: #cf371f;
-}
-.fa.icon-green:before {
-  color: $rise-green;
-}
-.fa.icon-white:before {
-  color: $white;
-}
 

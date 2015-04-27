@@ -1,3 +1,79 @@
+.artboard-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1280px;
+  width: 1920px;
+  background-image: url('http://subtlepatterns.com/images/transp_bg.png');
+  .placeholder {
+    background: rgba(255,255,255,0.5);
+    border: 1px solid #bcbcbc;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    p {
+      padding: 8px;
+      color: #777;
+    }
+  }
+}
+
+.editor-toolbar {
+  h3 {
+    font-weight: 400;
+    line-height: 32px;
+    margin: 0;
+    @media (max-width: 768px) {
+      padding-top:8px;
+      margin-bottom: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow:ellipsis;
+    }
+  }
+  a {
+    line-height: 16px;
+    display: inline-block;
+    &:after {
+      content:'|';
+      display: inline-block;
+      margin: 0 3px 0 6px;
+      color: #CCC;
+    }
+    &:last-child:after {
+      display: none;
+    }
+    @media (max-width: 768px) {display:block;}
+  }
+  .btn {
+    margin-top: 8px;
+  }
+
+}
+
+.sidebar {
+  margin-right: 4px;
+  padding: 0 10px;
+  @media (max-width: 768px) {margin-right:0; margin-bottom: 4px;}
+}
+
+.placeholder-list {
+  padding: 0px;
+  list-style: none;
+  li {
+    border: 1px solid $light-gray;
+    padding:5px 10px;
+    border-radius: 3px;
+    background: #f4f4f4;
+    margin: 4px 0;
+  }
+  h4 {
+    line-height: 30px;
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
 .playlist-block .playlist-item .collapse-control {
   line-height: 34px;
 }
@@ -15,112 +91,13 @@
 }
 
 .content-box-shadow {
-  @extend .sidebar;
+  border-radius: $border-radius-base2;
+  box-shadow:0px 1px 1.5px 0px rgba(0,0,0,0.12),0px 1px 1px 0px rgba(0,0,0,0.24);
+  background: #FFFFFF;
 }
 
 .header-collapse {
   cursor: pointer;
-}
-
-
-.sidebar {
-  border-radius: $border-radius-base2;
-  box-shadow:0px 1px 1.5px 0px rgba(0,0,0,0.12),0px 1px 1px 0px rgba(0,0,0,0.24);
-  background: #FFFFFF;
-  margin-bottom: 10px;
-  overflow: hidden;
-  hr {
-    margin: 15px 0;
-  }
-  .header{
-    background: $lighter-gray;
-    padding: 0;
-    h3{
-      line-height: 34px;
-      margin:0 15px;
-      font-size: 16px;
-      font-weight: 500;
-    }
-    h3 + .header-nav {
-      margin-top: -10px;
-    }
-    .collapse-control {
-      float: right;
-      line-height: 34px;
-      margin-right: 15px;
-      -webkit-transition: all 150ms linear;
-        -moz-transition: all 150ms linear;
-        -o-transition: all 150ms linear;
-        -ms-transition: all 150ms linear;
-        transition: all 150ms linear;
-    }
-  }
-  &.open {
-    .header {
-      padding: 10px 0 0 0;
-      h3 {
-        margin:0 15px;
-      }
-      .collapse-control {
-        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-        -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        transform: rotate(180deg);
-      }
-    }
-  }
-  .header-collapse {
-  cursor: pointer;
-  overflow: hidden;
-  .btn-link {
-    vertical-align: top;
-    padding: 0 15px;
-    height: 34px;
-    color: #777;
-    &:hover {
-      text-decoration: none;
-    }
-    .fa:before {
-      font-size:16px;
-      }
-    }
-    .btn + h3 {
-      margin: 0;
-    }
-    h3 {
-    display: block;
-    }
-  }
-  .content {
-    padding: 15px;
-  }
-  .sidebar-collapsible {
-    label {
-      line-height: 34px;
-      display: block;
-      cursor: pointer;
-      .fa {
-        float: right;
-        line-height: 34px;
-        margin-right: 15px;
-      }
-      i {
-        -webkit-transition: all 150ms linear;
-        -moz-transition: all 150ms linear;
-        -o-transition: all 150ms linear;
-        -ms-transition: all 150ms linear;
-        transition: all 150ms linear;
-      }
-      &.open {
-        i {
-          filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-          -webkit-transform: rotate(180deg);
-          -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-        }
-      }
-    }
-  }
 }
 
 .presentation-block {
@@ -397,13 +374,6 @@
     border-bottom-right-radius: 4px !important;
     border-top-right-radius: 4px !important;
   }
-}
-
-.placeholder {
-  background: rgba(255,255,255,0.6);
-  position: absolute;
-  cursor: pointer;
-  border: 1px solid #bcbcbc;
 }
 
 .editor-toggle {
