@@ -36,6 +36,7 @@
 }
 
 .home-banner {
+	perspective: 1000px;
 	background: url('http://www.risevision.com/wp-content/themes/wprisevision/assets/img/_home/_banner-bg/1.jpg');
 	background-size: cover;
 	margin-top: -20px;
@@ -47,11 +48,24 @@
 		z-index: 100;
 	}
 	.content-box {
+		transform: rotateY(-50deg);
 		box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
-		margin-left: 48px;
 		height: auto;
+		background: rgb(149,149,149); /* Old browsers */
+background: -moz-linear-gradient(-45deg,  rgba(149,149,149,1) 0%, rgba(13,13,13,1) 46%, rgba(1,1,1,1) 50%, rgba(10,10,10,1) 53%, rgba(78,78,78,1) 76%, rgba(56,56,56,1) 87%, rgba(27,27,27,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(149,149,149,1)), color-stop(46%,rgba(13,13,13,1)), color-stop(50%,rgba(1,1,1,1)), color-stop(53%,rgba(10,10,10,1)), color-stop(76%,rgba(78,78,78,1)), color-stop(87%,rgba(56,56,56,1)), color-stop(100%,rgba(27,27,27,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  rgba(149,149,149,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(78,78,78,1) 76%,rgba(56,56,56,1) 87%,rgba(27,27,27,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  rgba(149,149,149,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(78,78,78,1) 76%,rgba(56,56,56,1) 87%,rgba(27,27,27,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  rgba(149,149,149,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(78,78,78,1) 76%,rgba(56,56,56,1) 87%,rgba(27,27,27,1) 100%); /* IE10+ */
+background: linear-gradient(135deg,  rgba(149,149,149,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(78,78,78,1) 76%,rgba(56,56,56,1) 87%,rgba(27,27,27,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		border: 1px solid #555;
+		padding: 16px;
+		border-radius: 2px;
 		float: right;
-		width: 460px;
+		width: 552px;
+		margin-top: -50px;
+		margin-left: -40px;
 		position: relative;
 		z-index: 100;
 		.web-logos {
@@ -60,10 +74,13 @@
 			right: 0;
 			width: 196px;
 			z-index: 100;
+			img {
+				border: none;
+			}
 		}
 		img {
+			border: 2px solid #444;
 			width: 100%;
-			border-radius: 3px;
 		}
 		&:after {
 		content: '';
@@ -217,15 +234,15 @@
 	ul {
 		li {
 			display: inline-block;
-			padding-right: 32px;
-			margin-right: 32px;
+			padding-right: 16px;
+			margin-right: 16px;
 			border-right: 1px solid $gray;
 			&:last-child {
 				margin-right:0;
 				border-right: none;
 			}
 			h3 {
-				font-size: 48px;
+				font-size: 32px;
 				font-weight: 400;
 				line-height: 32px;
 				margin-top: 0;
@@ -237,6 +254,7 @@
 				line-height: normal;
 				font-weight: 500;
 				margin: 0;
+				font-size: 14px;
 			}
 		}
 	}
