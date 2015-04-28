@@ -11,7 +11,7 @@
   	font-weight: 500;
   	margin:0;
   	@media (max-width: 768px) {
-  		font-size:48px;
+  		font-size:42px;
   	}
 	}
 	h2 {
@@ -75,7 +75,9 @@
 		height: 100%;
 		}
 		@media (max-width: 768px) {
-			display:none;
+			width:100%;
+			float:none;
+			margin:32px 0 0 0;
 		}
 	}
 	&:after {
@@ -149,8 +151,14 @@
 	padding: 128px 0;
 	ul {
 		margin-top: 64px;
+		li {
+			width: 196px;
+			margin-bottom: 32px;
+			display: inline-block;
+			img {
+			}
+		}
 	}
-
 }
 
 .get-started {
@@ -176,6 +184,15 @@
 	p {
 		margin: 0;
 	}
+	.bottom-links {
+		margin-top: 64px;
+	}
+	@media (max-width: 768px) {
+		.bottom-links {
+			text-align: center;
+			p {float: none; width: 100%;}
+		}
+  }
 }
 
 .footer-icons {
@@ -185,6 +202,8 @@
 	line-height: 32px;
 	@media (max-width: 768px) {
 		float: none;
+		clear: both;
+		width: 100%;
   }
 	.fa {
 		margin-right: 10px;
@@ -222,6 +241,7 @@
 		}
 	}
 	@media (max-width: 768px) {
+		margin-top:64px;
 		ul li {
 			border: none;
 			h3 {
