@@ -10,11 +10,11 @@
   	letter-spacing: -1px;
   	font-weight: 500;
   	margin:0;
-  	@media (max-width: @screen-xs-max) {
-  		font-size:42px;
+  	@media (max-width: 996px) {
+  		font-size:48px;
   	}
-  	@media (max-width: @screen-sm-max) {
-  		font-size:82px;
+  	@media (max-width: 768px) {
+  		font-size:42px;
   	}
 	}
 	h2 {
