@@ -1,7 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,700);
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: "ff-tisa-sans-web-pro",sans-serif;
 }
 
 .website {
@@ -194,7 +193,7 @@ body {
 		margin-top: 96px;
 		text-align: center;
 		li {
-			background: #FFF;
+			background: rgba(255,255,255,0.6);
 			width: 19%;
 			vertical-align: top;
 			height: 114px;
@@ -203,8 +202,13 @@ body {
 			margin-right: 4px;
 			text-align: center;
 			line-height: 114px;
+
 			img {
-				max-width: 100%;
+
+				max-width: 80%;
+				max-height: 80%;
+				padding: 10px;
+
 			}
 		}
 	}
