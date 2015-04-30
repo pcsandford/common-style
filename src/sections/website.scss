@@ -1,5 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,700);
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
 .website {
-	font-family: "ff-tisa-sans-web-pro",sans-serif;
 	color: $gray;
 	font-size: 16px;
 	h1, h2, h3, h4 {
@@ -9,7 +14,7 @@
 	h1 {
   	font-size: 64px;
   	letter-spacing: -1px;
-  	font-weight: 500;
+  	font-weight: 600;
   	margin:0;
   	@media (max-width: 996px) {
   		font-size:48px;
@@ -29,7 +34,7 @@
 	}
 	h3 {
 		font-size: 24px;
-		font-weight: 600;
+		font-weight: 500;
 	}
 	h4 {
 		font-size: 16px;
@@ -45,8 +50,12 @@
 	margin-top: -20px;
 	padding: 128px 0;
 	position: relative;
+	.container {
+		position: relative;
+		z-index: 100;
+	}
 	.headline {
-		margin-top: 48px;
+		margin-top: 0;
 		position: relative;
 		z-index: 100;
 	}
@@ -67,6 +76,24 @@
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 	}
 }
+
+
+    .display-content {
+      transition: all 0.3s ease-out;
+      height: 240px;
+      background-image: url("http://192.254.220.36/~rvi/mockups/images/slide1.png");
+      background-size: cover;
+      background-position: center;
+    }
+    .red {
+      background-image: url("http://192.254.220.36/~rvi/mockups/images/slide2.gif");
+    }
+    .yellow {
+      background-image: url("http://192.254.220.36/~rvi/mockups/images/slide3.gif");
+    }
+    .blue {
+      background-image: url("http://192.254.220.36/~rvi/mockups/images/slide4.gif");
+    }
 
 
 .display-box {
@@ -120,8 +147,8 @@
 	padding: 32px 0 64px;
 	img {
 		float: left;
-		width: 128px;
-		margin: 16px 16px 16px -16px;
+		width: 96px;
+		margin: 0 16px 16px -16px;
 	}
 	h2 {
 		margin-bottom: 64px;
@@ -144,7 +171,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 	img {
 		float: left;
-		width: 196px;
+		width: 144px;
 		margin-right: 32px;
 	}
 	.content-box {
@@ -154,9 +181,6 @@
 		border: none;
 		color: #FFF;
 	}
-	p {
-		margin-top: 48px;
-	}
 	.btn {
 		margin-top: 16px;
 	}
@@ -165,21 +189,29 @@
 .home-logos {
 	background: url('http://192.254.220.36/~rvi/mockups/images/map.png') no-repeat center;
 	background-size: cover;
-	padding: 128px 0;
+	padding: 128px 0 64px;
 	ul {
-		margin-top: 64px;
+		margin-top: 96px;
+		text-align: center;
 		li {
-			width: 196px;
-			margin-bottom: 32px;
+			background: #FFF;
+			width: 19%;
+			vertical-align: top;
+			height: 114px;
+			margin-bottom: 8px;
 			display: inline-block;
+			margin-right: 4px;
+			text-align: center;
+			line-height: 114px;
 			img {
+				max-width: 100%;
 			}
 		}
 	}
 }
 
 .get-started {
-	padding:32px 0;
+	padding:0;
 	p {
 		margin-bottom: 32px;
 	}
@@ -237,8 +269,8 @@
 	ul {
 		li {
 			display: inline-block;
-			padding-right: 16px;
-			margin-right: 16px;
+			padding-right: 8px;
+			margin-right: 8px;
 			border-right: 1px solid $gray;
 			&:last-child {
 				margin-right:0;
