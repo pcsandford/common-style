@@ -1,6 +1,8 @@
 .website {
 	color: $gray;
 	font-size: 16px;
+	@media (max-width: 992px) {
+  }
 	h1, h2, h3, h4 {
 		color: #222;
 		line-height: 1.2em;
@@ -10,7 +12,7 @@
   	letter-spacing: -1px;
   	font-weight: 600;
   	margin:0;
-  	@media (max-width: 996px) {
+  	@media (max-width: 992px) {
   		font-size:48px;
   	}
   	@media (max-width: 768px) {
@@ -74,21 +76,26 @@
 
     .display-content {
       transition: all 0.3s ease-out;
-      height: 240px;
-      background-image: url("http://192.254.220.36/~rvi/mockups/images/slide1.png");
       background-size: cover;
       background-position: center;
+      .rvlogo {
+      }
+      .templateOne, .templateTwo, .templateThree {
+      	display: none;
+      }
+      &.red {
+      	.rvlogo {display: none;}
+      	.templateOne {display: block;}
+      }
+      &.yellow {
+      	.rvlogo {display: none;}
+      	.templateTwo {display: block;}
+      }
+      &.blue {
+      	.rvlogo {display: none;}
+      	.templateThree {display: block;}
+      }
     }
-    .red {
-      background-image: url("http://192.254.220.36/~rvi/mockups/images/slide2.gif");
-    }
-    .yellow {
-      background-image: url("http://192.254.220.36/~rvi/mockups/images/slide3.gif");
-    }
-    .blue {
-      background-image: url("http://192.254.220.36/~rvi/mockups/images/slide4.gif");
-    }
-
 
 .display-box {
 	transform: perspective(1000px) rotateY(-30deg);
@@ -104,7 +111,7 @@
 	background: linear-gradient(135deg,  rgba(149,149,149,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(78,78,78,1) 76%,rgba(56,56,56,1) 87%,rgba(27,27,27,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	border: 1px solid #555;
-	padding: 16px;
+	padding: 10px;
 	border-radius: 2px;
 	z-index: 100;
 	.web-logos {
@@ -293,6 +300,17 @@
 			}
 		}
 	}
+	@media (max-width: 992px) {
+  	ul li {
+  		p {
+  			font-size: 13px;
+  		}
+  		h3 {
+  			font-size: 32px;
+  			width: 120px;
+  		}
+  	}
+  }
 	@media (max-width: 768px) {
 		margin-top: 32px;
 		ul li {
