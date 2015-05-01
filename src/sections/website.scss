@@ -41,7 +41,6 @@
 }
 
 .home-banner {
-	background-color: $rise-green;
 	background-image: url("https://dl.dropboxusercontent.com/u/26273249/bg.jpg");
 	background-size: cover;
 	background-attachment: fixed;
@@ -57,6 +56,10 @@
 		position: relative;
 		z-index: 100;
 	}
+  h2 {
+    color: $gray;
+    margin-top: 16px;
+  }
 	&:after {
 		content: '';
 		display: block;
@@ -81,7 +84,7 @@
   background-color: #FFF;
   background-position: center;
   .rvlogo {}
-  .templateOne, .templateTwo, .templateThree {
+  .templateTwo, .templateThree {
     display: none;
   }
   &.red {
@@ -280,7 +283,7 @@
 			display: inline-block;
 			padding-right: 8px;
 			margin-right: 8px;
-			border-right: 1px solid $gray;
+			border-right: 1px solid #CCC;
 			&:last-child {
 				margin-right:0;
 				border-right: none;
@@ -294,7 +297,7 @@
 				width: 150px;
 			}
 			p {
-				color: #333;
+				color: $gray;
 				line-height: normal;
 				font-weight: 500;
 				margin: 0;
