@@ -77,27 +77,25 @@
 }
 
 .display-content {
-  transition: all 0.3s ease-out;
   background-size: cover;
   background-color: #FFF;
   background-position: center;
-  .rvlogo {}
-  .templateTwo, .templateThree {
+  span {
+    display: block;
+    overflow: hidden;
+    border: 3px solid #333;
+  }
+  video {
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: -10px;
+  }
+  #template2, #template3 {
     display: none;
   }
-  &.red {
-    .rvlogo {display: none;}
-    .templateOne {display: block;}
-  }
-  &.yellow {
-    .rvlogo {display: none;}
-    .templateTwo {display: block;}
-  }
-  &.blue {
-    .rvlogo {display: none;}
-    .templateThree {display: block;}
-  }
 }
+
+
 
 .display-box {
 	transform: perspective(1000px) rotateY(-30deg);
