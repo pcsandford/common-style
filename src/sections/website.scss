@@ -42,9 +42,11 @@
 
 .home-banner {
 	background-color: $rise-green;
+	background-image: url("../../logos/bg.jpg");
 	background-size: cover;
+	background-attachment: fixed;
 	margin-top: -20px;
-	padding: 128px 0;
+	padding: 144px 0;
 	position: relative;
 	.container {
 		position: relative;
