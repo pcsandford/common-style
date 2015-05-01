@@ -1,7 +1,7 @@
 .website {
 	color: $gray;
 	font-size: 16px;
-	@media (max-width: 992px) {
+	@media (max-width: 768px) {
   }
 	h1, h2, h3, h4 {
 		color: #222;
@@ -75,29 +75,27 @@
 	}
 }
 
-
-    .display-content {
-      transition: all 0.3s ease-out;
-      background-size: cover;
-      background-position: center;
-      .rvlogo {
-      }
-      .templateOne, .templateTwo, .templateThree {
-      	display: none;
-      }
-      &.red {
-      	.rvlogo {display: none;}
-      	.templateOne {display: block;}
-      }
-      &.yellow {
-      	.rvlogo {display: none;}
-      	.templateTwo {display: block;}
-      }
-      &.blue {
-      	.rvlogo {display: none;}
-      	.templateThree {display: block;}
-      }
-    }
+.display-content {
+  transition: all 0.3s ease-out;
+  background-size: cover;
+  background-position: center;
+  .rvlogo {}
+  .templateOne, .templateTwo, .templateThree {
+    display: none;
+  }
+  &.red {
+    .rvlogo {display: none;}
+    .templateOne {display: block;}
+  }
+  &.yellow {
+    .rvlogo {display: none;}
+    .templateTwo {display: block;}
+  }
+  &.blue {
+    .rvlogo {display: none;}
+    .templateThree {display: block;}
+  }
+}
 
 .display-box {
 	transform: perspective(1000px) rotateY(-30deg);
@@ -151,8 +149,8 @@
 	padding: 32px 0 64px;
 	img {
 		float: left;
-		width: 96px;
-		margin: 0 32px 16px 0;
+		width: 64px;
+		margin: 8px 32px 0 0;
 	}
 	h2 {
 		margin-bottom: 64px;
@@ -162,6 +160,7 @@
 	}
 	p {
 		margin-bottom: 64px;
+		margin-left: 96px;
 	}
 }
 
@@ -207,13 +206,13 @@
 			margin-right: 4px;
 			text-align: center;
 			line-height: 114px;
-
+      @media (max-width: 768px) {
+        width:40%;
+      }
 			img {
-
 				max-width: 80%;
 				max-height: 80%;
 				padding: 10px;
-
 			}
 		}
 	}
@@ -317,6 +316,7 @@
 		margin-top: 32px;
 		ul li {
 			border: none;
+      display: block;
 			h3 {
 				font-size: 32px;
 			}
