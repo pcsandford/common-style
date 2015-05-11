@@ -1,6 +1,8 @@
 .storage-modal {
-  padding-bottom: 50px !important;
-
+  padding-bottom: 50px;
+  &.modal-content {
+    padding-bottom: 0;
+  }
   /* ==========================================================================
      General Styles
      ========================================================================== */
@@ -11,48 +13,52 @@
     list-style: none;
   }
 
+
 .table-2 {
   > tbody > tr > td {
-    a {
-      color: $gray;
-      .fa-file:before {
-        color: #CCC;
-      }
-      .fa-folder:before {
-        color: $rise-green;
-      }
-    }
+    strong {font-weight: 500}
+    .fa {font-size: 20px; line-height: 20px; vertical-align: top;}
+    span {display: inline-block;}
   }
   > tbody > tr > td:first-child {
-    input {
-      display: inline-block;
-    }
-    .fa {
-      margin-right: 5px;
-    }
-    input + span {
-      margin-left: 10px;
-    }
-    input.ng-hide + span {
-      margin-left: 25px;
-    }
-    span {
-      margin-left: 25px;
-    }
-    span a {
-      @include ellipsis(1,large);
-      display: inline-block;
-      vertical-align: middle;
-      overflow: hidden;
-    }
-
-    @media (max-width: 480px) {
+      input {display: inline-block;}
+      .fa {margin-right: 3px;}
       span a {
-        @include ellipsis(1,medium);        
+        @include ellipsis(1,large);
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+      }
+      @media (max-width: 480px) {
+        span a {
+          @include ellipsis(1,medium);        
+        }
       }
     }
-   }
   }
+
+.folder {
+  td {}
+}
+
+tr.blocked-file {
+  >td {
+  background: #f7f7f7;
+  cursor: pointer;
+  position: relative;
+    .callout {
+      top:45px;
+      left: 0;
+    }
+  }
+}
+
+  tr {
+    td {
+      a {color: $gray}
+    }
+  }
+
 
   /* ==========================================================================
      Buttons
@@ -180,13 +186,13 @@
       padding-left: 0;
     }
   }
+  
   .current-folder {
     line-height: 43px;
   }
   .form-group {
     margin-bottom: 10px;
   }
-
   .non-clickable-file {
     cursor: default;
     text-decoration: none;
@@ -266,6 +272,3 @@ tr.blocked-file {
     z-index:1;
   }
 }
-
-
-
