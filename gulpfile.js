@@ -11,7 +11,7 @@ var paths = {
   appSass: './src/app.scss',
   alignmentSass: './src/ui-components/alignment.scss',
   distFonts: './dist/fonts',
-  distCss: '/Users/ghislaineguerin/Documents/displays-app/disto/css',
+  distCss: './dist/css',
   fonts: ['./bower_components/font-awesome/fonts/*.*','./bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*.*']
 };
 
