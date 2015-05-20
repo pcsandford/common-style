@@ -14,3 +14,19 @@
   }
 }
 
+.offline {
+  &:before {
+    color:#e74c3c;
+  }
+}
+.noninstalled {
+  &:before {
+    color:#444;
+  }
+}
+.online {
+  &:before {
+    color:$rise-green;
+  }
+}
+
