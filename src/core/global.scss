@@ -13,15 +13,16 @@ html,
 body {
   /* Display & Box Model */
   height: 100%;
+
+  /* Fir off Canvas Menu */
+  overflow-x: hidden;
+
   /* Visual */
   background: $brand-bg;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   /*background: transparent;*/
 }
-
-body { overflow: auto; }
-/* End of workaround */
 
 h1, h2, h3, h4, h5, h6 { font-weight: bold;}
 
@@ -40,7 +41,8 @@ a:hover {
    ========================================================================== */
 
 .navbar-header {
-  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .navbar-nav {
@@ -59,15 +61,19 @@ a:hover {
 .navbar-brand {
   height: auto;
   padding: 0;
+  margin-left: 15px;
 }
 
 /* Primary Menu (left-hand side)
    ========================================================================== */
 /* Expanded primary menu. */
 .navbar-left {
+  border-top: none;
   .navbar-nav {
     > a {
-      border: rgba(255,255,255,0) solid 1px;
+      border: #fff solid 1px;
+
+      /* Visual */
       font-weight: bold;
     }
 
@@ -77,11 +83,13 @@ a:hover {
     .active > a:focus {
       /* Display & Box Model */
       border: 1px solid $light-gray;
+
       /* Visual */
       color: $rise-blue;
       background-color: $lighter-gray;
     }
   }
+
   /* First-level menu items. */
   > a {
     border-radius: 0;
@@ -94,6 +102,7 @@ a:hover {
 /* First-level menu items. */
 .navbar-default .actions-nav {
   /* Display & Box Model */
+
   /* Visual */
   text-align: center;
 
@@ -106,16 +115,20 @@ a:hover {
 
     /* Visual */
     vertical-align: top;
+
     ul {
       text-align: left;
     }
+
     > a {
       @extend .fa-box;
     }
+
     > a:hover {
       border-color: $light-gray;
       background-color: $lighter-gray;
     }
+
     > a:focus {
       background-color: transparent;
     }
@@ -168,18 +181,11 @@ a:hover {
 
 /* All Navbars
    ========================================================================== */
-.navbar-nav {
+.navbar-default .navbar-nav {
   > li > a {
-    border: 1px solid transparent;
-    color: $navbar-default-link-color;
-    border-radius: 3px;
-    padding: 0 10px;
-    &:hover,
-    &:focus {
-      color: $navbar-default-li-link-hover-color;
-      border: 1px solid #e5e5e5;
-    }
+    border: 1px solid #fff;
   }
+
   /* CSS arrows at top of dropdowns. */
   .dropdown {
     .dropdown-menu {
@@ -466,11 +472,11 @@ a:hover {
    ========================================================================== */
 .profile-pic {
   /* Display & Box Model */
-  width: 33px;
-  height: 33px;
+  width: 30px;
+  height: 30px;
 
   /* Visual */
-  border-radius: 3px;
+  border-radius: 50%;
   vertical-align: top;
 }
 
@@ -924,6 +930,67 @@ a.btn-primary:hover {
   margin-bottom: 5px;
   border-top: 2px dashed #cbcbcb;
 }
+
+/* ==========================================================================
+   Upload Panel
+   ========================================================================== */
+
+  .upload-panel {
+    overflow: hidden;
+    .content-box-body {
+      border-left: 3px solid #d4d4d4;
+    }
+    .content-box-header {
+      background: #f7f7f7;
+      border-left: 3px solid #d4d4d4;
+      padding: 10px 15px;
+      color: $gray;
+      cursor: pointer;
+      overflow: hidden;
+      p {
+        float: left;
+      }
+      @media (max-width: 768px) {
+        p {
+          float: none;
+        }
+        .actions-block {
+          text-align: left;
+        }
+      }
+    }
+    p {
+      overflow: hidden;
+      margin: 5px 0 5px 0;
+      a {
+        text-transform:capitalize;
+        float: right;
+      }
+    }
+    .ellipsed {  
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: top;
+      @media (max-width: 480px) {
+        width: 120px;
+      }
+      @media (max-width: 768px) {
+        width: 180px;
+      }
+    }
+
+    .actions-block {
+      text-align: right; 
+    }
+    .collapse-control {
+      line-height: 28px;
+      padding: 0 15px;
+      margin-right: -15px;
+      float: right;
+    }
+  }
+
 
 /* Other
    ========================================================================== */
