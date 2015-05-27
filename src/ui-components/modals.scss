@@ -114,6 +114,7 @@
   overflow: auto;
   overflow-y: scrollable;
   cursor: pointer;
+  max-width: 400px;
 }
 
 .scrollable-list::-webkit-scrollbar {
