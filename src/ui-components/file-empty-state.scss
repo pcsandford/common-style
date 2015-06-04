@@ -13,6 +13,8 @@
         width: 64px;
         height: 64px;
         margin-top: 163px;
+        width: 64px;   
+        height: 64px;
 
         text-align: center;
 
@@ -23,8 +25,9 @@
         svg-icon
         {
             margin-left: 0;
-            svg
-            {
+
+
+            svg {
                 width: 32px;
                 height: 32px;
             }
@@ -40,8 +43,8 @@
         }
     }
 
-    .fa::before
-    {
+
+    .fa::before {
         color: #969595;
     }
 
