@@ -11,11 +11,18 @@
     .product-graphic
     {
         margin-top: 163px;
+        width: 64px;   
+        height: 64px;
 
         text-align: center;
         svg-icon
         {
-            margin-left: 41px;
+            margin-left: 0;
+
+            svg {
+                width: 32px;
+                height: 32px;
+            }
         }
     }
     
@@ -26,5 +33,9 @@
         {
             font-size: 22px;
         }
+    }
+
+    .fa::before {
+        color: #969595;
     }
 }
