@@ -319,6 +319,13 @@
 }
 
   .product-graphic {
+
+     @media screen and (max-width: $screen-sm) {
+                margin: -14px auto 0;
+                width: 96px;
+                height: 48px;
+          }
+
     width: 128px;
     height: 128px;
     position: relative;
