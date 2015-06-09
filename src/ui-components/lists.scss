@@ -4,7 +4,10 @@
   overflow: auto;
   overflow-y: scrollable;
   cursor: pointer;
-  max-height: calc(100vh - 240px)
+  max-height: calc(100vh - 240px);
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  min-height: 240px;
 }
 
 .scrollable-list::-webkit-scrollbar {
@@ -28,20 +31,12 @@
 .scrollable-list::-webkit-scrollbar-track { 
     background-color: $lighter-gray; 
     border-radius: 2px; 
-}
-
-.scrollable-list {
-  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(50,50,50,0.15);
-  -moz-box-shadow: inset 0px 0px 5px 0px rgba(50,50,50,0.15);
-  box-shadow: inset 0px 0px 5px 0px rgba(50,50,50,0.15);
-  .table-2 {
-    thead > tr {
-    }
-  }
 } 
 
-.list-container {
-  position: relative;
+.content-box {
+  .scrollable-list {
+    border: none;
+  }
 }
 
 /* List-Group
