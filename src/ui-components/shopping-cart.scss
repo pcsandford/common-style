@@ -2,35 +2,35 @@
 // SPACING FOR SHOPPING CART
 .shopping-cart
 {
-    .inner-box
-    {
-        margin-top: 4px;
-        padding: 8px 12px;
+  .inner-box
+  {
+    margin-top: 4px;
+    padding: 8px 12px;
 
-        @extend .content-box;
-    }
-    .table
-    {
-        margin-bottom: 0;
-    }
-    .wrapper
-    {
-        padding: 0;
-    }
-    .subtotals tbody tr td
-    {
-        padding: 2px 8px;
-    }
-    .alert-danger
-    {
-        margin-bottom: 0;
-    }
-    // THIS IS TO HAVE THE DROPDOWN REMAIN STATIC AS THE RESOLUTION LOWERS
-    select.form-control
-    {
-        position: relative;
-        top: -9px;
+    @extend .content-box;
+  }
+  .table
+  {
+    margin-bottom: 0;
+  }
+  .wrapper
+  {
+    padding: 0;
+  }
+  .subtotals tbody tr td
+  {
+    padding: 2px 8px;
+  }
+  .alert-danger
+  {
+    margin-bottom: 0;
+  }
+  // THIS IS TO HAVE THE DROPDOWN REMAIN STATIC AS THE RESOLUTION LOWERS
+  select.form-control
+  {
+    position: relative;
+    top: -9px;
 
-        width: inherit;
-    }
+    width: inherit;
+  }
 }
