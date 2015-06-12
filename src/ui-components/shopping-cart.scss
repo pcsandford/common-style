@@ -1,5 +1,81 @@
 
+//EQUAL HEIGHTS DIV 
+.shopping-cart .inner-box-wrap
+{
+  display: table;
+
+  width: 100%;
+  .inner-box
+  {
+    display: table-cell;
+
+    padding: 5px 11px;
+
+    border-spacing: 0;
+  }
+  @media (max-width: 768px)
+  {
+    display: block;
+    .inner-box
+    {
+      display: block;
+
+      width: auto;
+    }
+  }
+}
+
+
+// CUSTOM LAYOUT FOR SHOPPING CART MODAL
+.cart-modal
+{
+  .modal-header
+  {
+    padding: 3px 15px;
+  }
+  .modal-footer
+  {
+    padding-top: 0;
+  }
+  .modal-body
+  {
+    padding: 5px 15px;
+  }
+  .alert-danger
+  {
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 5px 11px;
+  }
+  .alert-info
+  {
+    margin-bottom: 5px;
+  }
+}
+
+.form-group
+{
+  margin-bottom: 2px;
+}
+
+.help-block
+{
+  &.with-errors
+  {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  ul,
+  ol
+  {
+    margin-bottom: 0;
+  }
+}
+
+
+
 // SPACING FOR SHOPPING CART
+
 .shopping-cart
 {
   .inner-box
