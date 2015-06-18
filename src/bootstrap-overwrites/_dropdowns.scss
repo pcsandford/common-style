@@ -1,10 +1,10 @@
 .dropdown-menu {
   border-radius: $border-radius-base2;
-
   // Dividers (basically an hr) within the dropdown
   .divider {
     @include nav-divider($dropdown-divider-bg, 0);
   }
+  top: 32px;
 }
 
 .dropdown-menu > ul > li > a, .action-sheet > ul > li > a {

@@ -15,7 +15,6 @@ body {
   height: 100%;
 
   /* Fir off Canvas Menu */
-  overflow-x: hidden;
 
   /* Visual */
   background: $brand-bg;
@@ -31,7 +30,6 @@ body {
 * https://github.com/twbs/bootstrap/issues/9855   
 */    
 html {   
-  overflow: hidden;    
   -ms-overflow-style: scrollbar;   
 }    
    
@@ -39,6 +37,15 @@ body { overflow: auto;}
 /* End of workaround */
 
 h1, h2, h3, h4, h5, h6 { font-weight: bold;}
+
+h3 {
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 500;
+}
 
 a:hover {
   text-decoration: none;

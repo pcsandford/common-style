@@ -113,6 +113,7 @@ $table-padding: 10px 15px;
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+      cursor: pointer;
       &:first-child:before {
         font-family: FontAwesome;
         font-style: normal;
