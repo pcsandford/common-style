@@ -417,3 +417,30 @@
     width: 100px;
   }
 }
+
+
+.couponEntry {
+  margin: 0 10px;
+  display: none;
+
+    .alert {
+      padding: 5px 15px;
+      text-align: center;
+
+        span {
+          display: inline
+          }
+    }
+
+    input {
+      width: 150px;
+      display: inline-block;
+    }
+}
+
+.couponStart .col-md-12 {
+  text-align: right;
+}
+
+
+
