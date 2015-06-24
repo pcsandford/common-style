@@ -1,20 +1,7 @@
 .storage-modal {
-  padding-bottom: 50px;
-  &.modal-content {
-    padding-bottom: 0;
-  }
-  /* ==========================================================================
-     General Styles
-     ========================================================================== */
-  ul {
-    /* Display & Box Model */
-    padding: 0;
-    /* Visual */
-    list-style: none;
-  }
-
-
-.table-2 {
+  padding:  15px;
+  
+  .table-2 {
   > tbody > tr > td {
     strong {font-weight: 500}
     .fa {font-size: 20px; line-height: 20px; vertical-align: top;}
@@ -59,6 +46,28 @@ tr.blocked-file {
     }
   }
 
+.icon-nav {
+  padding-bottom: 1px;
+}
+
+.selector-header {
+  margin-bottom: 10px;
+  p {
+    line-height: 16px;
+    margin: 0;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    &:first-child {display:block;}
+  }
+  @media (max-width: 768px) {
+    .icon-nav {
+      .btn {margin-left: -4px;}
+    }
+  }
+}
 
   /* ==========================================================================
      Buttons
