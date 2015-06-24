@@ -114,6 +114,7 @@ $table-padding: 10px 15px;
       -ms-user-select: none;
       user-select: none;
       cursor: pointer;
+      vertical-align: middle;
       &:first-child:before {
         font-family: FontAwesome;
         font-style: normal;

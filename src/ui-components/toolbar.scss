@@ -5,14 +5,21 @@
 }
 
 .icon-nav {
-  line-height: 40px;
   color: #555;
-  display: inline-block;
+  line-height: 32px;
   .btn-link {
+    padding: 0;
+    min-width: 32px;
     height: 32px;
-    padding: 0 4px;
+    vertical-align: top;
+    &:hover {
+      background:$light-gray;
+    }
+    &:focus {
+      outline:0;
+    }
     .fa {
-      font-size: 24px;
+      font-size: 18px;
     }
     .fa+.fa {
       margin-left: -4px;
@@ -21,4 +28,12 @@
       vertical-align: top;
     }
   }
+}
+
+.custom-icon {
+  display: inline-block;
+  background-size: 100%;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
 }
