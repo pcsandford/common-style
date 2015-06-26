@@ -199,13 +199,11 @@ tr.blocked-file {
   }
 }
 
-/* Icon Colors */
-.fa.icon-gray:before {
-  color: #BBB;
+.modal + .modal {
+  background-color: rgba(255,255,255,0.4);
 }
-.fa.icon-red:before {
-  color: #cf371f;
-}
+
+
 
 tr.blocked-file {
   position: relative;

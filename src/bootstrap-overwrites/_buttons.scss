@@ -1,9 +1,15 @@
+$transition: cubic-bezier(.36,.37,.32,.91);
+
 .btn {
   outline:0;
   border-radius: 2px;
+  transition: $transition 0.1s all;
   .badge {
     background: $btn-default-bg;
     color: $btn-default-color;
+  }
+  &:hover {
+    
   }
 }
 

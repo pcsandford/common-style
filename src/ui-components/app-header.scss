@@ -1,18 +1,15 @@
 .app-header {
   @include make-row;
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   .title-block {
     @include make-sm-column(6);
     h1 {
       display: inline-block;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 40px;
       margin: 0 5px 0 0;
-    }
-    .store-status-2 {
-      display: inline-block;
-      vertical-align: text-bottom;
+      font-size: 28px;
     }
   }
   .global-actions {
