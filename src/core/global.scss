@@ -38,9 +38,7 @@ body { overflow: auto;}
 
 h1, h2, h3, h4, h5, h6 { font-weight: bold;}
 
-h3 {
-  font-weight: 500;
-}
+h3 {font-weight: 500;}
 
 h4 {
   font-size: 16px;
@@ -82,35 +80,23 @@ a:hover {
 .navbar-brand {
   height: auto;
   padding: 0;
-  margin-left: 15px;
 }
 
 /* Primary Menu (left-hand side)
    ========================================================================== */
 /* Expanded primary menu. */
 .navbar-left {
-  border-top: none;
-  .navbar-nav {
+  .navbar-nav > li {
     > a {
-      border: #fff solid 1px;
-
-      /* Visual */
+      border: 1px solid #FFF;
       font-weight: bold;
     }
-
-    > a:hover,
-    > .active > a,
-    > .active > a:hover,
-    .active > a:focus {
-      /* Display & Box Model */
+    > a:hover {
       border: 1px solid $light-gray;
-
-      /* Visual */
       color: $rise-blue;
       background-color: $lighter-gray;
     }
   }
-
   /* First-level menu items. */
   > a {
     border-radius: 0;
@@ -122,15 +108,10 @@ a:hover {
 
 /* First-level menu items. */
 .navbar-default .actions-nav {
-  /* Display & Box Model */
-
   /* Visual */
-  text-align: center;
-
   > li {
     /* Positioning */
     float: none;
-
     /* Display & Box Model */
     display: inline-block;
 
@@ -203,8 +184,6 @@ a:hover {
 /* All Navbars
    ========================================================================== */
 .navbar-default .navbar-nav {
-
-
   /* CSS arrows at top of dropdowns. */
   .dropdown {
     .dropdown-menu {
@@ -440,11 +419,11 @@ a:hover {
    ========================================================================== */
 .profile-pic {
   /* Display & Box Model */
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
 
   /* Visual */
-  border-radius: 50%;
+  border-radius: 4px;
   vertical-align: top;
 }
 
@@ -462,8 +441,8 @@ a:hover {
    ========================================================================== */
 
 @media (max-width: $screen-xs) {
-  .navbar-default .actions-nav>li>a {
-    min-width: 40px !important;
+  .navbar-default .actions-nav >li >a {
+    min-width: 40px;
   }
 }
 
