@@ -7,6 +7,9 @@
 .icon-nav {
   color: #555;
   line-height: 32px;
+  label {
+    @extend .btn;
+  }
   .btn-link {
     padding: 0;
     min-width: 32px;
@@ -19,7 +22,8 @@
       outline:0;
     }
     .fa {
-      font-size: 18px;
+      font-size: 20px;
+      line-height: 32px;
     }
     .fa+.fa {
       margin-left: -4px;
